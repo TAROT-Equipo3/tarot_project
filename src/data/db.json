@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+        "id": 1,
+        "name": "Hernan",
+        "target": "love"
+    }
+  ],
+  "historial": [
+    {
+        "id": 1,
+        "userId": 1,
+        "cards": ["cuervo", "manivela", "loco"]
+    }
+  ]
+}
