@@ -1,11 +1,9 @@
-import React from 'react'
-
 function Home() {
   return (
-    <div>
-      <h2> Esta es la Landing </h2>
+    <div className="w-full flex justify-center items-center text-white">
+      <h2>Esta es la Landing</h2>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

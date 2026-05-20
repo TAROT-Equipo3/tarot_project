@@ -4,13 +4,27 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-purple-800 text-white">
-      
-      <Header />
+    <div className="min-h-screen bg-[#4b2e2e] flex justify-center">
 
-   
+      {/* MOBILE CONTAINER */}
+      <div className="
+        w-full 
+        max-w-[375px] 
+        md:max-w-[768px] 
+        lg:max-w-[1200px]   // 👈 AQUI ESTÁ A CORREÇÃO
+        bg-purple-800 
+        flex flex-col
+      ">
 
-      <Footer />
+        <Header />
+
+        <main className="flex-grow flex items-center justify-center w-full">
+          <Outlet />
+        </main>
+
+        <Footer />
+
+      </div>
 
     </div>
   );

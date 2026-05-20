@@ -12,12 +12,17 @@ const Footer = () => {
       mt-auto
     ">
       <p className="
-        text-yellow-400 
-        text-xs 
-        md:text-sm 
-        tracking-widest
+        font-[Syne]
+        font-normal
+
+        text-yellow-400
+        text-[9px] md:text-[11px]
+
+        tracking-[0.3em]
+
+        opacity-80
       ">
-        ©2025 ASTRALIS ARCANA · BOOTCAMP FACTORIA F5
+        ©2026 ASTRALIS ARCANA, BOOTCAMP FACTORIA F5.
       </p>
     </footer>
   );
