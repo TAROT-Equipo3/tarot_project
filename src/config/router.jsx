@@ -6,3 +6,4 @@ export const router = createBrowserRouter([
     element: <App/>
     }
 ])
+

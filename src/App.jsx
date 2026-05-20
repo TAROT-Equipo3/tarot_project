@@ -8,9 +8,7 @@ function App() {
       
       <Header />
 
-      <main className="flex-grow flex items-center justify-center">
-        <Outlet /> {/* aqui entra Home, History, etc */}
-      </main>
+   
 
       <Footer />
 
