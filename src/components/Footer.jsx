@@ -1,12 +1,26 @@
 import React from 'react'
 
-function Footer() {
+const Footer = () => {
   return (
-    <div>
-      <h2>Esto es el footer </h2>
-    </div>
-  )
-}
+    <footer className="
+      w-full 
+      bg-gradient-to-r 
+      from-purple-900 
+      to-purple-700 
+      py-3 
+      text-center 
+      mt-auto
+    ">
+      <p className="
+        text-yellow-400 
+        text-xs 
+        md:text-sm 
+        tracking-widest
+      ">
+        ©2025 ASTRALIS ARCANA · BOOTCAMP FACTORIA F5
+      </p>
+    </footer>
+  );
+};
 
-export default Footer
-
+export default Footer;
