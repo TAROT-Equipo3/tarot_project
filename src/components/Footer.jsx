@@ -12,7 +12,7 @@ const Footer = () => {
       mt-auto
     ">
       <p className="
-        font-[Syne]
+        font-['Space_Mono']
         font-normal
 
         text-yellow-400
