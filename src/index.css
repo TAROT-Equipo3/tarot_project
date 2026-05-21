@@ -7,22 +7,41 @@ html, body, #root {
   margin: 0;
   padding: 0;
 }
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+@layer base {
+  :root {
+    /* Colores base */
+    --color-primary: #3A2659;
+    --color-secondary: #7C52BF;
+    --color-accent: #FFD700;
+    --color-white: #FFFFFF;
+    --color-gold-dark: #6C5E06;
+    --color-border-card-outer: #240F42;
+    --color-border-card-inner: rgba(108, 94, 6, 0.20);
+    --color-modal: rgba(0, 0, 0, 0.80);
+    
+    /* Fuentes */
+    --font-syne: 'Syne', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+}
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-  
+@layer components {
+  /* Clases reutilizables para degradados */
+  .bg-header-gradient {
+    background: linear-gradient(180deg, #3A2659 38.41%, #7C52BF 82.87%);
+  }
+  .bg-footer-gradient {
+    border-top: 1px solid var(--color-accent);
+    background: linear-gradient(180deg, #3A2659 0%, #7C52BF 100%);
+  }
+  .bg-body-gradient {
+    background: linear-gradient(180deg, #3A2659 38.41%, #7C52BF 82.87%);
+  }
+}
 
+@layer utilities {
+  /* Efectos de luz y sombra */
+  .shadow-card-selected { box-shadow: 0 0 15px 0 #FFD700; }
+  .shadow-hover-gold { box-shadow: 0 0 15px 0 #FCDD4D; }
+  .text-glow-gold { text-shadow: 0 0 15px #FFD700; }
 }
