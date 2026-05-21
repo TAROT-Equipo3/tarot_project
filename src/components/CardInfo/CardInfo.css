@@ -1,0 +1,217 @@
+.card-info-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-modal-overlay);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-info-overlay--visible {
+  opacity: 1;
+}
+
+.card-info-modal {
+  background: linear-gradient(135deg, #3a2659 0%, #240f42 100%);
+  border: var(--border-selected);
+  box-shadow: var(--shadow-selected);
+  border-radius: 1.25rem;
+  width: 90%;
+  max-width: 44rem;
+  padding: 2rem;
+  position: relative;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-info-modal--visible {
+  transform: scale(1) translateY(0);
+}
+
+.card-info-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.card-info-close:hover {
+  color: var(--color-yellow);
+  text-shadow: var(--text-shadow-gold);
+}
+
+.card-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-info-symbol {
+  color: var(--color-yellow);
+  font-size: 1.25rem;
+  text-shadow: var(--text-shadow-gold);
+}
+
+.card-info-badge {
+  background-color: var(--color-inner-border);
+  border: 1px solid var(--color-yellow);
+  padding: 0.25rem 1.25rem;
+  border-radius: 9999px;
+}
+
+.card-info-badge-text {
+  color: var(--color-yellow);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.card-info-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .card-info-body {
+    flex-direction: row;
+  }
+}
+
+.card-info-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-info-img-wrapper {
+  width: 10.5rem;
+  aspect-ratio: 2 / 3;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: var(--border-selected);
+  background-color: var(--color-lila-border);
+}
+
+.card-info-tarot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info-arcano-number {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-yellow);
+  letter-spacing: 0.05em;
+}
+
+.card-info-tarot-name {
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+  color: var(--color-white);
+}
+
+.card-info-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card-info-section-title {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: var(--color-yellow);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.card-info-meaning-text {
+  color: var(--color-white);
+  font-size: 0.937rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.card-info-divider {
+  text-align: center;
+  color: var(--color-yellow);
+  font-size: 0.875rem;
+}
+
+.card-info-stem-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-info-avatar-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid var(--color-yellow);
+}
+
+.card-info-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info-stem-name {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.card-info-stem-bio {
+  color: var(--color-white);
+  opacity: 0.8;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.card-info-footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-info-btn-close {
+  background-color: transparent;
+  border: 1px solid var(--color-yellow);
+  color: var(--color-yellow);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.card-info-btn-close:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-lila-border);
+  box-shadow: var(--shadow-hover);
+}
