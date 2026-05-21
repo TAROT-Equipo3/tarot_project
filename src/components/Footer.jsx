@@ -3,10 +3,8 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="
-      w-full 
-      bg-gradient-to-r 
-      from-purple-900 
-      to-purple-700 
+      w-full
+      bg-footer-gradient
       py-3 
       text-center 
       mt-auto
