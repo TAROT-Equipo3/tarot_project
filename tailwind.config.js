@@ -26,15 +26,14 @@ export default {
       textShadow: {
         "glow-gold": "0 0 15px #FFD700",
       },
-      // Añade tus degradados aquí
       backgroundImage: {
-        "header-gradient": "linear-gradient(180deg, #3A2659 38.41%, #7C52BF 82.87%)",
+        "header-gradient":
+          "linear-gradient(180deg, #3A2659 38.41%, #7C52BF 82.87%)",
         "footer-gradient": "linear-gradient(180deg, #3A2659 0%, #7C52BF 100%)",
-        "body-gradient": "linear-gradient(180deg, #3A2659 38.41%, #7C52BF 82.87%)",
-      }
+        "body-gradient":
+          "linear-gradient(180deg, #3A2659 38.41%, #7C52BF 82.87%)",
+      },
     },
   },
-  plugins: [
-    textShadow,
-  ],
+  plugins: [textShadow],
 };
