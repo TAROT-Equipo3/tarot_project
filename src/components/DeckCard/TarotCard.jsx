@@ -1,4 +1,5 @@
 import React from "react";
+import { CardBack } from "./CardBack";
 
 export const TarotCard = ({ onClick, isSelected, fanStyle }) => {
   return (
@@ -13,6 +14,7 @@ export const TarotCard = ({ onClick, isSelected, fanStyle }) => {
                   }`}
       style={fanStyle}
       onClick={onClick}
+      <CardBack />
     </div>
   );
 };
