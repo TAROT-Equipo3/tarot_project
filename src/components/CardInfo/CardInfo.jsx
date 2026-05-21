@@ -27,8 +27,8 @@ const CardInfo = ({ cardData, type, onClose }) => {
   const tarotMeaning = typeof meaning === "object" ? meaning?.tarot : meaning;
   const stemMeaning = typeof meaning === "object" ? meaning?.stem : meaning;
 
-  const TAROT_FALLBACK = "https://placeholder.com";
-  const AVATAR_FALLBACK = "https://placeholder.com";
+  const TAROT_FALLBACK = "https://picsum.photos/300/450";
+  const AVATAR_FALLBACK = "https://picsum.photos/200/200";
 
   const typeLabels = {
     PASADO: { label: "Pasado", symbol: "◁" },

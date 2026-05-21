@@ -11,7 +11,7 @@ function App() {
         w-full 
         max-w-[375px] 
         md:max-w-[768px] 
-        lg:max-w-[1200px]   // 👈 AQUI ESTÁ A CORREÇÃO
+        lg:max-w-[1200px]
         bg-purple-800 
         flex flex-col
       ">
