@@ -3,7 +3,7 @@ import { TarotCard } from './TarotCard';
 import { tarotDeckData } from '../../data/tarotData'
 
 
-const mockCards = Array.from({ length: 15 }, (_, i) => ({
+const mockCards = Array.from({ length: 22 }, (_, i) => ({
   id: i + 1,
   title: `Carta ${i + 1}`,
   scientistName: `Científica ${i + 1}`,
@@ -43,8 +43,6 @@ export const TarotDeck = () => {
   return (
     
     <div className="w-full min-h-screen flex flex-col items-center justify-center bg-purple-900 p-8 overflow-hidden text-center">
-      <h1 className="text-3xl text-yellow-300 font-bold mb-10">Tus Arcanos</h1>
-      
       
       <div className="relative w-48 h-80 mt-10">
         {mockCards.map((card, index) => {
