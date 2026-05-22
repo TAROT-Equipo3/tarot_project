@@ -2,22 +2,19 @@ const Header = () => {
   return (
     <header className="w-full overflow-hidden">
 
-      {/* Background */}
       <div className="
         w-full 
-        bg-gradient-to-b 
-        from-purple-500 
-        via-purple-700 
-        to-purple-900 
         py-3 md:py-5 
         flex 
         justify-center
+
+        bg-[linear-gradient(180deg,var(--purple-dark)_38%,var(--purple-light)_83%)]
       ">
 
         <h1 className="
           font-[Syne]
           font-extrabold
-          text-yellow-400
+          text-[var(--gold)]
 
           text-[28px] 
           sm:text-[36px] 
@@ -30,14 +27,15 @@ const Header = () => {
           leading-none
           text-center
           whitespace-nowrap
+
+          [text-shadow:0_0_15px_var(--gold)]
         ">
           ASTRALIS
         </h1>
 
       </div>
 
-      {/* Line */}
-      <div className="h-[2px] bg-yellow-400 w-full"></div>
+      <div className="h-[2px] bg-[var(--gold)] w-full"></div>
 
     </header>
   );
