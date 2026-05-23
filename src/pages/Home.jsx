@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import NamePopup from "../components/NamePopup";
+import ModalBase from "../components/ModalBase";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,8 +23,17 @@ function Home() {
   };
   return (
     <div className="w-full flex justify-center items-center text-white">
-      {isModalOpen && <NamePopup onSubmitName={handleSaveName} />}
+      <ModalBase isOpen={isModalOpen}>
+        <NamePopup onSubmitName={handleSaveName} />
+      </ModalBase>
       <h2>Esta es la Landing</h2>
+
+      {/*<div className="mt-6 p-4 bg-[var(--color-border-card-outer)] border border-[var(--color-border-card-inner)] rounded-xl inline-block">
+            <p className="text-sm font-[var(--font-mono)] text-[var(--color-accent)]">
+              🔮 Firma cósmica registrada: <span className="underline font-bold">{userName}</span>
+            </p>
+          </div>
+      */}
     </div>
   );
 }
