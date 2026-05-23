@@ -8,7 +8,7 @@ const mockCards = Array.from({ length: 22 }, (_, i) => ({
   scientistName: `Científica ${i + 1}`,
 }));
 
-export const TarotDeck = () => {
+export default function TarotDeck() {
   const [selectedCardIds, setSelectedCardIds] = useState([]);
 
   const handleCardClick = (id) => {
@@ -34,7 +34,7 @@ export const TarotDeck = () => {
   const verticalArcHeight = 5;
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-purple-900 p-8 overflow-hidden text-center">
+    <div className="w-full flex flex-col items-center justify-center p-8 overflow-hidden text-center font-syne">
       <div className="relative w-48 h-80 mt-10">
         {mockCards.map((card, index) => {
           const relIdx = index - midIndex;
@@ -61,7 +61,7 @@ export const TarotDeck = () => {
         })}
       </div>
 
-      <div className="mt-20 text-yellow-100 text-lg">
+      <div className="mt-20 text-accent font-mono text-lg text-shadow-glow-gold">
         Desliza para ver más cartas
       </div>
     </div>
