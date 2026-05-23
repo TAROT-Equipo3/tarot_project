@@ -10,11 +10,11 @@ const NamePopup = ({onSubmitName}) => {
     }
   };
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-modal backdrop-blur-sm-">
-      <div className="p-8 max-w-sm w-full mx-4 text-center rounded-xl bg-pink-100 border-solid ">
-        <h2>¿QUIÉN ME PREGUNTA?</h2>
-        <form>
-          <input type="text" placeholder="PON TU FIRMA CÓSMICA" required />
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-modal">
+      <div className="p-8 max-w-sm w-full mx-4 text-center rounded-xl bg-pink-100 border-solid shadow-[4px_4px_0px_0px_rgba(108,94,6,1.00)] outline outline-2 outline-offset-[-2px] outline-goldDark gap-3 flex flex-col">
+        <h2 className="text-center justify-center text-goldDark text-xs font-bold font-mono leading-3 tracking-wider">¿QUIÉN ME PREGUNTA?</h2>
+        <form className="flex justify-center gap-4">
+          <input type="text" placeholder="PON TU FIRMA CÓSMICA" required className="w-full text-center justify-center text-goldDark text-xs font-bold font-mono tracking-wider px-10 py-4 rounded-full outline outline-1 outline-offset-[-1px] outline-goldDark inline-flex flex-col items-center bg-pink-100 placeholder-yellow-800/40" />
           <button type="submit" aria-label="Escribir nombre y comenzar lectura">
             <svg
               xmlns="http://www.w3.org/2000/svg"
