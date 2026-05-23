@@ -3,9 +3,11 @@ import TarotDeck from "../components/TarotDeck";
 
 function Home() {
   return (
-    <div className="w-full h-screen bg-[#240F42] flex items-center justify-center overflow-hidden">
-      <TarotDeck />
-    </div>
+    <section>
+      <div className="w-full flex justify-center items-center">
+        <TarotDeck/>
+      </div>
+    </section>
   );
 }
 
