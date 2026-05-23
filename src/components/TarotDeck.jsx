@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TarotCard } from './TarotCard';
+import { TarotCard } from './TarotCard'
 import { tarotDeckData } from '../../data/tarotData'
 
 
