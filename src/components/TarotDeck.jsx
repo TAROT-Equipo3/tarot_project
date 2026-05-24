@@ -27,11 +27,11 @@ export default function TarotDeck() {
 
   const midIndex = (mockCards.length - 1) / 2;
 
-  const totalSpreadAngle = 80;
+  const totalSpreadAngle = 73;
   const anglePerCard = totalSpreadAngle / (mockCards.length - 1);
 
-  const horizontalSpread = 20;
-  const verticalArcHeight = 5;
+  const horizontalSpread = 18;
+  const verticalArcHeight = 4;
 
   return (
     <div className="w-full flex flex-col items-center justify-center p-8 overflow-hidden text-center font-syne">
@@ -66,4 +66,4 @@ export default function TarotDeck() {
       </div>
     </div>
   );
-};
+}
