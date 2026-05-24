@@ -10,7 +10,6 @@ export const router = createBrowserRouter([
     path: "/",
     element: <Home />,
     children: [
-      { index: true, element: <div className="text-white text-center p-8">Tablero aquí</div> },
       { path: "historial", element: <Historial /> },
       { path: "pasado/:id", element: <Past /> },
       { path: "presente/:id", element: <Present /> },

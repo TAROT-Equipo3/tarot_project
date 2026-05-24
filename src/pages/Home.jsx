@@ -11,12 +11,12 @@ import Footer from "../components/Footer";
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [userName, setUserName] = useState("");
-  const [selectedCards, setSelectedCards] = useState(["carta1"]); // Simulación activa
+  const [selectedCards, setSelectedCards] = useState([]); // Simulación activa
   const [timerTriggered, setTimerTriggered] = useState(false);
 
   useEffect(() => {
     if (timerTriggered || userName) return;
-    
+
     // Activa el modal automáticamente tras 800ms
     const timer = setTimeout(() => {
       setIsModalOpen(true);
@@ -30,13 +30,12 @@ function Home() {
   const handleSaveName = (name) => {
     setTimerTriggered(true); // 🔮 CORRECCIÓN 1: Freno de mano inmediato para el timer
     setUserName(name);
-    setIsModalOpen(false);   // Cierra el modal de forma definitiva
+    setIsModalOpen(false); // Cierra el modal de forma definitiva
   };
 
   return (
     // 🔮 CORRECCIÓN 2: Se añade 'items-center' aquí para centrar el contenedor móvil en pantallas grandes
     <div className="min-h-screen bg-[#4b2e2e] flex flex-col justify-center items-center">
-      
       {/* MOBILE CONTAINER */}
       <div
         className="
@@ -53,26 +52,15 @@ function Home() {
 
         {/* 🔮 CORRECCIÓN 3: Cambiado a flex-col para que el Outlet y los modales no se pisen de lado */}
         <main className="flex-grow flex flex-col items-center justify-center w-full relative min-h-[60vh]">
-
           <Outlet />
-          
+
           {/* T3-40: Modal del Nombre */}
           <ModalBase isOpen={isModalOpen}>
             <NamePopup onSubmitName={handleSaveName} />
           </ModalBase>
 
           {/* T3-41: Modal de Progreso */}
-          <ModalBase
-            isOpen={
-              !isModalOpen &&
-              userName !== "" &&
-              selectedCards.length > 0 &&
-              selectedCards.length < 3
-            }
-          >
-            <ModalSelectionProgress currentSelection={selectedCards.length} />
-          </ModalBase>
-          
+          <ModalSelectionProgress currentSelection={selectedCards.length} />
         </main>
 
         <Footer />
