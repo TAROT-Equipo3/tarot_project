@@ -1,33 +1,31 @@
-import { Outlet } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Importación de las páginas
+import Home from './pages/Home';
+import History from './pages/Historial.jsx';
+import Past from './pages/Past';
+import Present from './pages/Present';
+import Future from './pages/Future';
+
+// Aqui va importación de Contexto (si decidimos usarlo para compartir las 3 cartas)
+// import { TarotProvider } from './context/TarotContext';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#4b2e2e] flex justify-center">
-
-      {/* MOBILE CONTAINER */}
-      <div className="
-        w-full 
-        max-w-[375px] 
-        md:max-w-[768px] 
-        lg:max-w-[1200px]   // 👈 AQUI ESTÁ A CORREÇÃO
-        bg-purple-800 
-        flex flex-col
-      ">
-
-        <Header />
-
-        <main className="flex-grow flex items-center justify-center w-full">
-          <Outlet />
-        </main>
-
-        <Footer />
-
-      </div>
-
-    </div>
+    // <TarotProvider>
+      <Router>
+        <div className="app-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/historial" element={<Historial />} />
+            <Route path="/pasado/:id" element={<Past />} />
+            <Route path="/presente/:id" element={<Present />} />
+            <Route path="/futuro/:id" element={<Future />} />
+          </Routes>
+        </div>
+      </Router>
+    // </TarotProvider>
   );
+  
 }
 
 export default App;
