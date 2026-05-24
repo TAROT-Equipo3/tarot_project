@@ -4,9 +4,9 @@ const NamePopup = ({onSubmitName}) => {
   const [localName, setLocalName] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // 🔮 Ahora sí evitará que la página se recargue
     if (localName.trim() !== "") {
-      onSubmitName(localName); // Envia el nombre al padre (Home.jsx)
+      onSubmitName(localName); // Envía el nombre al padre (Home.jsx)
     }
   };
   return (
