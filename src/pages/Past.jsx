@@ -1,0 +1,1 @@
+// Vista detalle de la carta del pasado

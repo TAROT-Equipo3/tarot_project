@@ -1,3 +1,5 @@
+// Endpoints del json-server local
+
 import axios from "axios";
 
 
