@@ -6,4 +6,4 @@ const Present = () => {
   )
 }
 
-export default Present
+export default Present;
