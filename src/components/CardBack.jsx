@@ -1,3 +1,4 @@
+// Cara trasera de la carta — sin lógica de layout, solo visual
 import React from "react";
 
 export const CardBack = () => {

@@ -1,3 +1,5 @@
+// Carta individual — recibe fanStyle del padre para posicionarse en el abanico
+// La elevación al seleccionarse la carta
 import React from "react";
 import { CardBack } from "./CardBack";
 

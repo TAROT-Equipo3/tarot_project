@@ -1,8 +1,12 @@
+// Contenedor del abanico — maneja el layout responsive:
+// Mobile (< md): scroll horizontal con abanico centrado en MOBILE_CONTAINER_WIDTH
+// Tablet y Desktop (>= md): abanico centrado fijo sin scroll
+
 import React, { useState, useRef, useEffect } from "react";
 import { TarotCard } from "./TarotCard";
 import { tarotDeckData } from "../data/tarotData";
 
-const MOBILE_CONTAINER_WIDTH = 1400;
+const MOBILE_CONTAINER_WIDTH = 660;
 
 export default function TarotDeck() {
   const [selectedCardIds, setSelectedCardIds] = useState([]);
@@ -36,14 +40,20 @@ export default function TarotDeck() {
         className="block md:hidden w-full overflow-x-auto scrollbar-hide"
         style={{
           WebkitOverflowScrolling: "touch",
+          width: "100vw",
+          position: "relative",
+          left: "50%",
+          transform: "translateX(-50%)",
         }}
       >
         <div
           className="relative mt-10 "
           style={{
-            width: "1400px",
+            width: `${MOBILE_CONTAINER_WIDTH}px`,
             height: "440px",
             flexShrink: 0,
+            paddingLeft: "150px",
+            paddingRight: "150px",
           }}
         >
           {tarotDeckData.map((card, index) => {
