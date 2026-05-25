@@ -1,2 +1,7 @@
-// Vista detalle de la carta del futuro
-export default function Future() {}
+function Future() {
+  return (
+    <div>Future</div>
+  );
+}
+
+export default Future;

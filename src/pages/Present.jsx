@@ -1,2 +1,9 @@
-// Vista detalle de la carta del presente
-export default function Present(){}
+import React from 'react'
+
+const Present = () => {
+  return (
+    <div>Present</div>
+  )
+}
+
+export default Present;

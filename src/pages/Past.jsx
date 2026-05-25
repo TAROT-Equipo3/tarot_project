@@ -1,2 +1,9 @@
-// Vista detalle de la carta del pasado
-export default function Past(){}
+import React from 'react'
+
+const Past = () => {
+  return (
+    <div>Past</div>
+  )
+}
+
+export default Past;
