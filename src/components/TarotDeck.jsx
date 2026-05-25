@@ -5,6 +5,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { TarotCard } from "./TarotCard";
 import { tarotDeckData } from "../data/tarotData";
+import { CurvedText } from "./CurvedText";
 
 const MOBILE_CONTAINER_WIDTH = 660;
 
@@ -107,9 +108,7 @@ export default function TarotDeck() {
         </div>
       </div>
 
-      <p className="mt-6 text-[var(--color-accent)] font-mono text-lg text-glow-gold">
-        Desliza para ver más cartas
-      </p>
+      <CurvedText text="Desliza para ver más cartas" />
     </div>
   );
 }
