@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { TarotCard } from "./TarotCard";
 import { tarotDeckData } from "../data/tarotData";
 
+const MOBILE_CONTAINER_WIDTH = 1400;
+
 export default function TarotDeck() {
   const [selectedCardIds, setSelectedCardIds] = useState([]);
+  const scrollRef = React.useRef(null);
 
+  React.useEffect(() => {
+    if (scrollRef.current) {
+      const container = scrollRef.current;
+      container.scrollLeft =
+        (container.scrollWidth - container.clientWidth) / 2;
+    }
+  }, []);
   const handleCardClick = (id) => {
     setSelectedCardIds((prev) => {
       if (prev.includes(id)) return prev.filter((cardId) => cardId !== id);
@@ -13,7 +23,7 @@ export default function TarotDeck() {
     });
   };
 
-  const midIndex = (tarotDeckData.length - 1) / 2; 
+  const midIndex = (tarotDeckData.length - 1) / 2;
   const totalSpreadAngle = 73;
   const anglePerCard = totalSpreadAngle / (tarotDeckData.length - 1);
   const horizontalSpread = 14;
@@ -21,15 +31,51 @@ export default function TarotDeck() {
 
   return (
     <div className="w-full flex flex-col items-center justify-center p-8 font-syne bg-body-gradient min-h-screen">
-      <div className="w-full overflow-x-auto flex justify-center">
+      <div
+        ref={scrollRef}
+        className="block md:hidden w-full overflow-x-auto scrollbar-hide"
+        style={{
+          WebkitOverflowScrolling: "touch",
+        }}
+      >
+        <div
+          className="relative mt-10 "
+          style={{
+            width: "1400px",
+            height: "440px",
+            flexShrink: 0,
+          }}
+        >
+          {tarotDeckData.map((card, index) => {
+            const relIdx = index - midIndex;
+            const fanStyle = {
+              transform: `translateX(${relIdx * horizontalSpread}px) translateY(${Math.abs(relIdx) * verticalArcHeight}px) rotate(${relIdx * anglePerCard}deg)`,
+              zIndex: index,
+              transformOrigin: "bottom center",
+              left: `${MOBILE_CONTAINER_WIDTH / 2}px`,
+              top: "60px",
+              marginLeft: "-64px",
+            };
+            return (
+              <TarotCard
+                key={card.id}
+                title={card.title}
+                onClick={() => handleCardClick(card.id)}
+                isSelected={selectedCardIds.includes(card.id)}
+                fanStyle={fanStyle}
+              />
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="hidden md:flex w-full overflow-x-auto justify-center">
         <div
           className="relative mt-10"
           style={{ width: "700px", height: "440px", flexShrink: 0 }}
         >
           {tarotDeckData.map((card, index) => {
-          
             const relIdx = index - midIndex;
-
             const fanStyle = {
               transform: `translateX(${relIdx * horizontalSpread}px) translateY(${Math.abs(relIdx) * verticalArcHeight}px) rotate(${relIdx * anglePerCard}deg)`,
               zIndex: index,
@@ -38,7 +84,6 @@ export default function TarotDeck() {
               top: "60px",
               marginLeft: "-64px",
             };
-
             return (
               <TarotCard
                 key={card.id}
