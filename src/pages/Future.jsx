@@ -1,1 +1,7 @@
-// Vista detalle de la carta del futuro
+function Future() {
+  return (
+    <div>Future</div>
+  );
+}
+
+export default Future; // ← esta línea debe existir
