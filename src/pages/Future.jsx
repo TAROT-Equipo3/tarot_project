@@ -4,4 +4,4 @@ function Future() {
   );
 }
 
-export default Future; // ← esta línea debe existir
+export default Future;

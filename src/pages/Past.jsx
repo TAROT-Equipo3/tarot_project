@@ -6,4 +6,4 @@ const Past = () => {
   )
 }
 
-export default Past
+export default Past;
