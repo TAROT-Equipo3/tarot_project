@@ -1,12 +1,13 @@
 const Button = ({
   children,
   variant = "outline",
+  type = "button",
+  disabled = false,
   onClick,
   className = "",
 }) => {
-
   const base = `
-    font-['Space_Mono']
+    font-[var(--font-mono)]
     uppercase
     tracking-[0.2em]
 
@@ -15,33 +16,36 @@ const Button = ({
 
     rounded-full
     transition-all duration-300
-    cursor-pointer
+
+    disabled:opacity-50
+    disabled:cursor-not-allowed
   `;
 
   const variants = {
-
     outline: `
-      border-2 border-[#FFD700]
-      text-[#FFD700]
+      border-2 border-[var(--color-accent)]
+      text-[var(--color-accent)]
       bg-transparent
 
-      hover:shadow-[0_0_15px_#FCDD4D]
-      [text-shadow:0_0_10px_#FFD700]
+      hover:shadow-hover-gold
+      text-glow-gold
     `,
 
     primary: `
-      bg-[#FFD700]
-      text-[#240F42]
-      border-2 border-[#FFD700]
+      bg-[var(--color-accent)]
+      text-[var(--color-border-card-outer)]
+      border-2 border-[var(--color-accent)]
 
-      hover:shadow-[0_0_15px_#FCDD4D]
-    `
+      hover:shadow-hover-gold
+    `,
   };
 
   return (
     <button
+      type={type}
+      disabled={disabled}
       onClick={onClick}
-      className={`${base} ${variants[variant]} ${className}`}
+      className={`${base} ${variants[variant] || variants.outline} ${className}`}
     >
       {children}
     </button>
