@@ -43,17 +43,19 @@ const SelectionProgress = ({ isOpen, onClose, userName, cards }) => {
                 {label}
               </h2>
 
-              {/* Borde irregular */}
-              <div
-                className="outline outline-2 outline-accent rounded-lg overflow-hidden hover:shadow-glow-accent w-full h-64 md:max-w-[290px] md:h-[502.99px]"
-                style={{ filter: "url(#roughen)" }}
-              >
-                <img
-                  src={card?.image}
-                  alt={card?.name}
-                  className="w-full h-full object-contain"
-                />
-              </div>
+              {/* figure envuelve imagen + atribución del autor */}
+              <figure className="flex flex-col items-center gap-2 w-full">
+                <div
+                  className="outline outline-2 outline-accent rounded-lg overflow-hidden hover:shadow-glow-accent w-full h-64 md:max-w-[290px] md:h-[502.99px] bg-[#DDCCBF]"
+                  style={{ filter: "url(#roughen)" }}
+                >
+                  <img
+                    src={card?.arcaneImage?.imageSrc}
+                    alt={card?.arcaneName}
+                    className="w-full h-full object-center"
+                  />
+                </div>
+              </figure>
             </div>
           ))}
         </div>

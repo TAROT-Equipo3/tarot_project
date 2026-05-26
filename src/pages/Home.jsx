@@ -16,21 +16,33 @@ function Home() {
   const [selectedCards, setSelectedCards] = useState([]);
   const [timerTriggered, setTimerTriggered] = useState(false);
 
-  // 🧪 Temporal hasta tener BarajaComponent conectado
-  const testCards = {
-    pasado: {
-      name: "The Fool",
-      image: "https://www.sacred-texts.com/tarot/pkt/img/ar00.jpg",
-    },
-    presente: {
-      name: "The Magician",
-      image: "https://www.sacred-texts.com/tarot/pkt/img/ar01.jpg",
-    },
-    futuro: {
-      name: "The High Priestess",
-      image: "https://www.sacred-texts.com/tarot/pkt/img/ar02.jpg",
-    },
-  };
+  // 🧪 Testeo para poder ver el modal de las 3 cartas, substituir por seleccion real despues
+const testCards = {
+  pasado: {
+    arcaneName: "El Loco",
+    arcaneImage: {
+      imageSrc: "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
+      author: "Pamela Coleman Smith, Rider-Waite Tarot",
+      license: "Public domain"
+    }
+  },
+  presente: {
+    arcaneName: "El Mago",
+    arcaneImage:{
+      imageSrc: "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
+      author: "Pamela Coleman Smith, Rider-Waite Tarot",
+      license: "Public domain"
+    }
+  },
+  futuro: {
+    arcaneName: "La Sacerdotisa",
+    arcaneImage:{
+      imageSrc: "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
+      author: "Pamela Coleman Smith, Rider-Waite Tarot",
+      license: "Public domain"
+    }
+  }
+};
 
   useEffect(() => {
     if (timerTriggered || userName) return;
