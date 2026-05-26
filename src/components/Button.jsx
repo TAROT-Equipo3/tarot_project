@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Button = ({
   children,
   variant = "outline",
@@ -6,7 +8,7 @@ const Button = ({
   disabled = false,
   onClick,
   className = "",
-  icon,
+  icon = null,
   iconPosition = "right",
 }) => {
   const base = `
@@ -32,7 +34,8 @@ const Button = ({
 
   const variants = {
     outline: `
-      border border-accent
+      border
+      border-accent
       text-accent
       bg-transparent
 
@@ -41,7 +44,8 @@ const Button = ({
     `,
 
     primary: `
-      border border-accent
+      border
+      border-accent
       bg-accent
       text-border-card-outer
 
@@ -50,7 +54,8 @@ const Button = ({
     `,
 
     dark: `
-      border border-accent
+      border
+      border-accent
       bg-gold-dark
       text-white
 
@@ -59,7 +64,8 @@ const Button = ({
     `,
 
     ghost: `
-      border border-transparent
+      border
+      border-transparent
       bg-transparent
       text-accent
 
@@ -135,6 +141,18 @@ const Button = ({
       {icon && iconPosition === "right" && <span>{icon}</span>}
     </button>
   );
+};
+
+Button.propTypes = {
+  children: PropTypes.node,
+  variant: PropTypes.oneOf(["outline", "primary", "dark", "ghost", "icon"]),
+  size: PropTypes.oneOf(["xs", "sm", "md", "lg", "icon", "full"]),
+  type: PropTypes.oneOf(["button", "submit", "reset"]),
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  className: PropTypes.string,
+  icon: PropTypes.node,
+  iconPosition: PropTypes.oneOf(["left", "right"]),
 };
 
 export default Button;
