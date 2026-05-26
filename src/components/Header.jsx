@@ -14,9 +14,9 @@ const Header = () => {
       >
         <h1
           className="
-            font-[var(--font-syne)]
+            font-syne
             font-extrabold
-            text-[var(--color-accent)]
+            text-accent
 
             text-[28px]
             sm:text-[36px]
@@ -37,7 +37,7 @@ const Header = () => {
         </h1>
       </div>
 
-      <div className="h-[1px] bg-[var(--color-accent)] w-full opacity-80" />
+      <div className="h-[1px] bg-accent w-full opacity-80" />
     </header>
   );
 };

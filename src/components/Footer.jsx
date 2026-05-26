@@ -13,9 +13,9 @@ const Footer = () => {
     >
       <h2
         className="
-          font-[var(--font-syne)]
+          font-syne
           font-extrabold
-          text-[var(--color-accent)]
+          text-accent
 
           text-[26px]
           sm:text-[32px]
@@ -32,10 +32,10 @@ const Footer = () => {
       <p
         className="
           mt-3
-          font-[var(--font-mono)]
+          font-mono
           font-normal
 
-          text-[var(--color-accent)]
+          text-accent
           text-[7px]
           sm:text-[8px]
           md:text-[10px]
