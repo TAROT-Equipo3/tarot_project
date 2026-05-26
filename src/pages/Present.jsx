@@ -79,7 +79,7 @@ const Present = () => {
           <div className="w-full max-w-3xl flex flex-col items-center mx-auto">
             <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-6 mb-12">
               <div className="w-full md:w-1/2 flex flex-col gap-3 text-center md:text-left mt-2">
-                <p className="text-accent font-bold text-xs tracking-widest uppercase">
+                <p className="text-accent font-bold text-xl tracking-widest uppercase">
                   Nº ARCANO: {cardData.arcaneNumber}
                 </p>
                 <p className="text-purple-100 leading-relaxed text-lg font-syne text-justify md:text-left pr-0 md:pr-4">
