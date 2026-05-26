@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+// Componentes de interacción / Modales
 import NamePopup from "../components/NamePopup";
 import ModalBase from "../components/ModalBase";
 import ModalSelectionProgress from "../components/ModalSelectionProgress";
-import SelectionProgress from "../components/SelectionProgress"; // 👈 nuevo import
 
+// Contiene el Deck y dispara el Modal
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -40,31 +45,55 @@ function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#4b2e2e] flex flex-col justify-center items-center">
-      <div className="w-full max-w-[375px] md:max-w-[768px] lg:max-w-[1200px] bg-purple-800 flex flex-col min-h-screen">
+    <div className="app-container">
+      <div className="app-canvas">
+        
         <Header />
 
-        <main className="flex-grow flex flex-col items-center justify-center w-full relative min-h-[60vh]">
-          <Outlet />
+        {/* MAIN: Ahora con flex-col y centrado absoluto para replicar el diseño de una columna */}
+        <main className="app-main flex flex-col items-center justify-between w-full flex-1 px-4 py-6 md:py-10">
+          
+          {/* SECCIÓN 1: Textos de Bienvenida */}
+          <section className="flex flex-col items-center text-center gap-4 w-full">
+            <h1 className="text-3xl md:text-4xl font-bold text-accent uppercase tracking-wide">
+              Selecciona tu destino
+            </h1>
+            <p className="text-sm md:text-base font-mono max-w-[280px] md:max-w-[400px] text-white">
+              🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu camino.
+            </p>
+          </section>
 
-          {/* Modal del Nombre */}
-          <ModalBase isOpen={isModalOpen}>
-            <NamePopup onSubmitName={handleSaveName} />
-          </ModalBase>
+          {/* SECCIÓN 2: Indicador de Progreso */}
+          <section className="w-full flex justify-center my-6 md:my-8">
+            <ModalSelectionProgress currentSelection={selectedCards.length} />
+          </section>
 
-          {/* Modal de Progreso de Selección */}
-          <ModalSelectionProgress currentSelection={selectedCards.length} />
+          {/* SECCIÓN 3: El mazo de cartas */}
+          <section className="flex-1 w-full flex flex-col items-center justify-center relative min-h-[250px] md:min-h-[400px]">
+            
+            {/* Aquí se inyecta tu componente TarotDeck  */}
+            
+            <Outlet context={{ selectedCards, setSelectedCards }} />
+            
 
-          {/* 👈 Modal nuevo de tirada */}
-          <SelectionProgress
-            isOpen={isProgressModalOpen}
-            onClose={() => setIsProgressModalOpen(false)}
-            userName={userName}
-            cards={testCards}
-          />
+          </section>
+
+          {/* SECCIÓN 4: Botón de Historial */}
+          <section className="w-full flex justify-center mt-12 md:mt-16 mb-4">
+            <button className="px-8 py-2 md:py-3 border border-accent text-accent rounded-full font-mono text-xs md:text-sm tracking-wider hover:bg-accent hover:text-primary transition-all">
+              VER HISTORIAL DE TIRADAS
+            </button>
+          </section>
+
         </main>
 
         <Footer />
+
+        {/* Modales globales flotantes */}
+        <ModalBase isOpen={isModalOpen}>
+          <NamePopup onSubmitName={handleSaveName} />
+        </ModalBase>
+
       </div>
     </div>
   );
