@@ -55,23 +55,19 @@ const Present = () => {
   if (loading) {
     return (
       <div className="w-full min-h-screen bg-body-gradient flex flex-col justify-between">
-        <Header />
         <div className="flex items-center justify-center flex-grow">
           <p className="text-white text-xl font-semibold font-syne animate-pulse text-glow-gold">
             Cargando...
           </p>
         </div>
-        <Footer />
       </div>
     );
   }
 
   return (
     <div className="w-full min-h-screen bg-body-gradient flex flex-col justify-between select-none">
-      <Header />
-
       <main className="flex flex-col items-center justify-start p-4 flex-grow w-full pt-24 pb-12">
-        <h2 className="text-3xl font-syne font-extrabold text-accent uppercase tracking-widest text-glow-gold mb-10 text-center">
+        <h2 className="text-3xl font-syne font-extrabold text-accent uppercase tracking-widest  mb-10 text-center">
           PRESENTE
         </h2>
 
@@ -119,8 +115,6 @@ const Present = () => {
           Volver al Inicio
         </button>
       </main>
-
-      <Footer />
     </div>
   );
 };

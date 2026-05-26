@@ -12,7 +12,7 @@ const CardInfo = ({ cardData }) => {
 
   return (
     <div className="w-full flex flex-col items-center gap-6 mt-12 font-mono text-white">
-      <h4 className="text-accent font-syne font-bold tracking-widest text-base uppercase text-glow-gold text-center px-4">
+      <h4 className="text-accent font-syne font-bold tracking-widest text-base uppercase  text-center px-4">
         MUJER STEM: {stemName}
       </h4>
 

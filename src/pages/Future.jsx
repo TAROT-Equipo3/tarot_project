@@ -55,32 +55,28 @@ const Future = () => {
   if (loading) {
     return (
       <div className="w-full min-h-screen bg-body-gradient flex flex-col justify-between">
-        <Header />
         <div className="flex items-center justify-center flex-grow">
           <p className="text-white text-xl font-semibold font-syne animate-pulse text-glow-gold">
             Cargando...
           </p>
         </div>
-        <Footer />
       </div>
     );
   }
 
   return (
     <div className="w-full min-h-screen bg-body-gradient flex flex-col justify-between select-none">
-      <Header />
-
       <main className="flex flex-col items-center justify-start p-4 flex-grow w-full pt-24 pb-12">
-        {/* Хедер страницы: НАЗВАНИЕ ЭТАПА ВРЕМЕНИ */}
-        <h2 className="text-3xl font-syne font-extrabold text-accent uppercase tracking-widest text-glow-gold mb-10 text-center">
+        
+        <h2 className="text-3xl font-syne font-extrabold text-accent uppercase tracking-widest  mb-10 text-center">
           FUTURO
         </h2>
 
         {cardData && (
           <div className="w-full max-w-3xl flex flex-col items-center mx-auto">
-            {/* ВЕРХНИЙ БЛОК: Описание аркана СЛЕВА + Карта со стрелочками СПРАВА */}
+          
             <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-6 mb-12">
-              {/* Левая часть верхнего блока: Номер и текст (на десктопе выровнен по левому краю, ширина ограничена) */}
+              
               <div className="w-full md:w-1/2 flex flex-col gap-3 text-center md:text-left mt-2">
                 <p className="text-accent font-bold text-xl tracking-widest uppercase">
                   Nº ARCANO: {cardData.arcaneNumber}
@@ -122,8 +118,6 @@ const Future = () => {
           Volver al Inicio
         </button>
       </main>
-
-      <Footer />
     </div>
   );
 };
