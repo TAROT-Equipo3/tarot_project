@@ -7,11 +7,7 @@ import Footer from "../components/Footer";
 import NamePopup from "../components/NamePopup";
 import ModalBase from "../components/ModalBase";
 import ModalSelectionProgress from "../components/ModalSelectionProgress";
-
-// Contiene el Deck y dispara el Modal
-import { Outlet } from "react-router-dom";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import SelectionProgress from "../components/SelectionProgress";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,9 +18,18 @@ function Home() {
 
   // 🧪 Temporal hasta tener BarajaComponent conectado
   const testCards = {
-    pasado:   { name: "The Fool",            image: "https://www.sacred-texts.com/tarot/pkt/img/ar00.jpg" },
-    presente: { name: "The Magician",        image: "https://www.sacred-texts.com/tarot/pkt/img/ar01.jpg" },
-    futuro:   { name: "The High Priestess",  image: "https://www.sacred-texts.com/tarot/pkt/img/ar02.jpg" },
+    pasado: {
+      name: "The Fool",
+      image: "https://www.sacred-texts.com/tarot/pkt/img/ar00.jpg",
+    },
+    presente: {
+      name: "The Magician",
+      image: "https://www.sacred-texts.com/tarot/pkt/img/ar01.jpg",
+    },
+    futuro: {
+      name: "The High Priestess",
+      image: "https://www.sacred-texts.com/tarot/pkt/img/ar02.jpg",
+    },
   };
 
   useEffect(() => {
@@ -47,19 +52,18 @@ function Home() {
   return (
     <div className="app-container">
       <div className="app-canvas">
-        
         <Header />
 
         {/* MAIN: Ahora con flex-col y centrado absoluto para replicar el diseño de una columna */}
         <main className="app-main flex flex-col items-center justify-between w-full flex-1 px-4 py-6 md:py-10">
-          
           {/* SECCIÓN 1: Textos de Bienvenida */}
           <section className="flex flex-col items-center text-center gap-4 w-full">
             <h1 className="text-3xl md:text-4xl font-bold text-accent uppercase tracking-wide">
               Selecciona tu destino
             </h1>
             <p className="text-sm md:text-base font-mono max-w-[280px] md:max-w-[400px] text-white">
-              🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu camino.
+              🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu
+              camino.
             </p>
           </section>
 
@@ -70,12 +74,9 @@ function Home() {
 
           {/* SECCIÓN 3: El mazo de cartas */}
           <section className="flex-1 w-full flex flex-col items-center justify-center relative min-h-[250px] md:min-h-[400px]">
-            
             {/* Aquí se inyecta tu componente TarotDeck  */}
-            
-            <Outlet context={{ selectedCards, setSelectedCards }} />
-            
 
+            <Outlet context={{ selectedCards, setSelectedCards }} />
           </section>
 
           {/* SECCIÓN 4: Botón de Historial */}
@@ -84,7 +85,6 @@ function Home() {
               VER HISTORIAL DE TIRADAS
             </button>
           </section>
-
         </main>
 
         <Footer />
@@ -94,6 +94,12 @@ function Home() {
           <NamePopup onSubmitName={handleSaveName} />
         </ModalBase>
 
+        <SelectionProgress
+          isOpen={isProgressModalOpen}
+          onClose={() => setIsProgressModalOpen(false)}
+          userName={userName}
+          cards={testCards}
+        />
       </div>
     </div>
   );
