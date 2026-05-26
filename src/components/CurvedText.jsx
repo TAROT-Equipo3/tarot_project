@@ -7,7 +7,7 @@ export const CurvedText = ({ text }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <path id="curva" d="M 50,60 Q 250,0 450,60" />
+        <path id="curva" d="M 50,70 Q 250,-30 450,70" />
       </defs>
       <text
         fill="var(--color-accent)"
