@@ -1,27 +1,49 @@
-import React from 'react'
-
 const Footer = () => {
   return (
-    <footer className="
-      w-full 
-      py-3 
-      text-center 
-      mt-auto
+    <footer
+      className="
+        w-full
+        mt-auto
+        pt-5
+        pb-4
+        px-4
+        text-center
+        bg-footer-gradient
+      "
+    >
+      <h2
+        className="
+          font-syne
+          font-extrabold
+          text-accent
 
-      border-t border-[var(--gold)]
-      bg-[linear-gradient(180deg,var(--purple-dark)_0%,var(--purple-light)_100%)]
-    ">
-      <p className="
-        font-['Space_Mono']
-        font-normal
+          text-[26px]
+          sm:text-[32px]
+          md:text-[42px]
 
-        text-[var(--gold)]
-        text-[9px] md:text-[11px]
+          leading-none
+          tracking-[0.02em]
+          text-glow-gold
+        "
+      >
+        ASTRALIS
+      </h2>
 
-        tracking-[0.3em]
+      <p
+        className="
+          mt-3
+          font-mono
+          font-normal
 
-        opacity-80
-      ">
+          text-accent
+          text-[7px]
+          sm:text-[8px]
+          md:text-[10px]
+
+          tracking-[0.22em]
+          opacity-80
+        "
+      >
         ©2026 ASTRALIS ARCANA, BOOTCAMP FACTORIA F5.
       </p>
     </footer>

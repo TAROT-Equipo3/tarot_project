@@ -44,4 +44,6 @@ html, body, #root {
   .shadow-card-selected { box-shadow: 0 0 15px 0 #FFD700; }
   .shadow-hover-gold { box-shadow: 0 0 15px 0 #FCDD4D; }
   .text-glow-gold { text-shadow: 0 0 15px #FFD700; }
+  .shadow-solid-gold { box-shadow: 6px 6px 0px 0px var(--color-gold-dark);
+  }
 }
