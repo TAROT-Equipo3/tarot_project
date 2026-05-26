@@ -7,11 +7,21 @@ import { TarotCard } from "./TarotCard";
 import { tarotDeckData } from "../data/tarotData";
 import { CurvedText } from "./CurvedText";
 
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 const MOBILE_CONTAINER_WIDTH = 660;
 
-export default function TarotDeck() {
+export default function TarotDeck({ userName }) {
   const [selectedCardIds, setSelectedCardIds] = useState([]);
   const scrollRef = React.useRef(null);
+  const shuffledDeck = React.useMemo(() => shuffleArray(tarotDeckData), []);
 
   React.useEffect(() => {
     if (scrollRef.current) {
@@ -107,7 +117,6 @@ export default function TarotDeck() {
           })}
         </div>
       </div>
-
       <CurvedText text="Desliza para ver más cartas" />
     </div>
   );
