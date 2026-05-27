@@ -2,7 +2,7 @@
 // Mobile (< md): scroll horizontal con abanico centrado en MOBILE_CONTAINER_WIDTH
 // Tablet y Desktop (>= md): abanico centrado fijo sin scroll
 
-import React, { useState, useRef, useEffect, useMemo } from "react";
+import React, { useRef, useEffect, useMemo } from "react";
 import { TarotCard } from "./TarotCard";
 import { tarotDeckData } from "../data/tarotData";
 import { CurvedText } from "./CurvedText";
@@ -18,33 +18,17 @@ const shuffleArray = (array) => {
 
 const MOBILE_CONTAINER_WIDTH = 660;
 
-export default function TarotDeck({ userName }) {
-  const [selectedCardIds, setSelectedCardIds] = useState([]);
-  const scrollRef = React.useRef(null);
-  const shuffledDeck = React.useMemo(
-    () => shuffleArray(tarotDeckData),
-    [userName]
-  );
-  
-
-  useEffect(() => {
-    setSelectedCardIds([]);
-  }, [userName]);
+// ✅ selectedCardIds y onCardClick vienen de Home
+export default function TarotDeck({ userName, selectedCardIds, onCardClick }) {
+  const scrollRef = useRef(null);
+  const shuffledDeck = useMemo(() => shuffleArray(tarotDeckData), [userName]);
 
   useEffect(() => {
     if (scrollRef.current) {
       const container = scrollRef.current;
-      container.scrollLeft =
-        (container.scrollWidth - container.clientWidth) / 2;
+      container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
     }
   }, []);
-  const handleCardClick = (id) => {
-    setSelectedCardIds((prev) => {
-      if (prev.includes(id)) return prev.filter((cardId) => cardId !== id);
-      if (prev.length < 3) return [...prev, id];
-      return prev;
-    });
-  };
 
   const midIndex = (tarotDeckData.length - 1) / 2;
   const totalSpreadAngle = 73;
@@ -53,7 +37,8 @@ export default function TarotDeck({ userName }) {
   const verticalArcHeight = 4;
 
   return (
-    <div className="w-full flex flex-col items-center justify-center  font-syne">
+    <div className="w-full flex flex-col items-center justify-center font-syne">
+      {/* Mobile */}
       <div
         ref={scrollRef}
         className="block md:hidden w-full overflow-x-auto scrollbar-hide"
@@ -66,7 +51,7 @@ export default function TarotDeck({ userName }) {
         }}
       >
         <div
-          className="relative mt-10 "
+          className="relative mt-10"
           style={{
             width: `${MOBILE_CONTAINER_WIDTH}px`,
             height: "440px",
@@ -89,7 +74,7 @@ export default function TarotDeck({ userName }) {
               <TarotCard
                 key={card.id}
                 title={card.title}
-                onClick={() => handleCardClick(card.id)}
+                onClick={() => onCardClick(card)} // ✅ objeto completo
                 isSelected={selectedCardIds.includes(card.id)}
                 fanStyle={fanStyle}
               />
@@ -98,6 +83,7 @@ export default function TarotDeck({ userName }) {
         </div>
       </div>
 
+      {/* Desktop */}
       <div className="hidden md:flex w-full overflow-x-auto justify-center">
         <div
           className="relative mt-10"
@@ -117,7 +103,7 @@ export default function TarotDeck({ userName }) {
               <TarotCard
                 key={card.id}
                 title={card.title}
-                onClick={() => handleCardClick(card.id)}
+                onClick={() => onCardClick(card)} // ✅ objeto completo
                 isSelected={selectedCardIds.includes(card.id)}
                 fanStyle={fanStyle}
               />
