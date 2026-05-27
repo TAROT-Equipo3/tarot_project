@@ -2,7 +2,7 @@
 // Mobile (< md): scroll horizontal con abanico centrado en MOBILE_CONTAINER_WIDTH
 // Tablet y Desktop (>= md): abanico centrado fijo sin scroll
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import { TarotCard } from "./TarotCard";
 import { tarotDeckData } from "../data/tarotData";
 import { CurvedText } from "./CurvedText";
@@ -21,9 +21,17 @@ const MOBILE_CONTAINER_WIDTH = 660;
 export default function TarotDeck({ userName }) {
   const [selectedCardIds, setSelectedCardIds] = useState([]);
   const scrollRef = React.useRef(null);
-  const shuffledDeck = React.useMemo(() => shuffleArray(tarotDeckData), []);
+  const shuffledDeck = React.useMemo(
+    () => shuffleArray(tarotDeckData),
+    [userName]
+  );
+  
 
-  React.useEffect(() => {
+  useEffect(() => {
+    setSelectedCardIds([]);
+  }, [userName]);
+
+  useEffect(() => {
     if (scrollRef.current) {
       const container = scrollRef.current;
       container.scrollLeft =
@@ -45,7 +53,7 @@ export default function TarotDeck({ userName }) {
   const verticalArcHeight = 4;
 
   return (
-    <div className="w-full flex flex-col items-center justify-center p-8 font-syne bg-body-gradient min-h-screen">
+    <div className="w-full flex flex-col items-center justify-center  font-syne">
       <div
         ref={scrollRef}
         className="block md:hidden w-full overflow-x-auto scrollbar-hide"
@@ -67,7 +75,7 @@ export default function TarotDeck({ userName }) {
             paddingRight: "150px",
           }}
         >
-          {tarotDeckData.map((card, index) => {
+          {shuffledDeck.map((card, index) => {
             const relIdx = index - midIndex;
             const fanStyle = {
               transform: `translateX(${relIdx * horizontalSpread}px) translateY(${Math.abs(relIdx) * verticalArcHeight}px) rotate(${relIdx * anglePerCard}deg)`,
@@ -95,7 +103,7 @@ export default function TarotDeck({ userName }) {
           className="relative mt-10"
           style={{ width: "700px", height: "440px", flexShrink: 0 }}
         >
-          {tarotDeckData.map((card, index) => {
+          {shuffledDeck.map((card, index) => {
             const relIdx = index - midIndex;
             const fanStyle = {
               transform: `translateX(${relIdx * horizontalSpread}px) translateY(${Math.abs(relIdx) * verticalArcHeight}px) rotate(${relIdx * anglePerCard}deg)`,

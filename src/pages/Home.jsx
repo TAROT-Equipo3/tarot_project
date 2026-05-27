@@ -61,6 +61,7 @@ function Home() {
             {/* Aquí se inyecta tu componente TarotDeck  */}
 
             <TarotDeck
+              userName={userName}
               selectedCards={selectedCards}
               setSelectedCards={setSelectedCards}
             />
