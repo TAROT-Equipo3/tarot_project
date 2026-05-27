@@ -1,9 +1,10 @@
 import React from "react";
 
 import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Button from "../components/Button.jsx";
 
 // Componentes de interacción / Modales
 import NamePopup from "../components/NamePopup";
@@ -42,10 +43,12 @@ function Home() {
         <main className="app-main flex flex-col items-center justify-between w-full flex-1 px-4 py-6 md:py-10">
           {/* SECCIÓN 1: Textos de Bienvenida */}
           <section className="flex flex-col items-center text-center gap-4 w-full">
-            <h1 className="text-3xl md:text-4xl font-bold text-accent uppercase tracking-wide">
+            <h1 className="text-xl md:text-4xl font-mono font-bold text-accent  tracking-wide">
               Selecciona tu destino
             </h1>
             <p className="text-sm md:text-base font-mono max-w-[280px] md:max-w-[400px] text-white">
+              🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu
+              camino.
               🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu
               camino.
             </p>
@@ -69,9 +72,11 @@ function Home() {
 
           {/* SECCIÓN 4: Botón de Historial */}
           <section className="w-full flex justify-center mt-12 md:mt-16 mb-4">
-            <button className="px-8 py-2 md:py-3 border border-accent text-accent rounded-full font-mono text-xs md:text-sm tracking-wider hover:bg-accent hover:text-primary transition-all">
+            <Link to="/historial">
+            <Button variant="outline" size="md" className="font-normal">
               VER HISTORIAL DE TIRADAS
-            </button>
+            </Button>
+            </Link>
           </section>
         </main>
 
