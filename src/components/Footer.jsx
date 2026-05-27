@@ -16,14 +16,11 @@ const Footer = () => {
           font-syne
           font-extrabold
           text-accent
-
           text-[26px]
           sm:text-[32px]
           md:text-[42px]
-
           leading-none
           tracking-[0.02em]
-          text-glow-gold
         "
       >
         ASTRALIS
