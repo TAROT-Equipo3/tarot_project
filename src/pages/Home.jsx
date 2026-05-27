@@ -98,7 +98,7 @@ function Home() {
           {/* SECCIÓN 4: Botón de Historial */}
           <section className="w-full flex justify-center mt-12 md:mt-16 mb-4">
             <Link to="/historial">
-              <Button variant="outline" size="md" className="font-normal">
+              <Button variant="outline" size="lg" className="font-normal">
                 VER HISTORIAL DE TIRADAS
               </Button>
             </Link>
