@@ -1,3 +1,4 @@
+// src/pages/Home.jsx
 import { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Header from "../components/Header";
@@ -29,6 +30,17 @@ function Home() {
     setTimerTriggered(true);
     setUserName(name);
     setIsModalOpen(false);
+    
+    // AÑADIDO ESTRICTAMENTE NECESARIO: Guardar el nombre para el CRUD
+    localStorage.setItem("astralis_username", name);
+  };
+
+  // AÑADIDO ESTRICTAMENTE NECESARIO: Función para conectar con tu futuro Modal Overlay
+  const handleComenzarLectura = () => {
+    if (selectedCards.length === 3) {
+      // Aquí ejecutarás la lógica para ABRIR tu modal de las 3 cartas
+      console.log("Abrir modal de lectura con las cartas:", selectedCards);
+    }
   };
 
   return (
@@ -36,9 +48,7 @@ function Home() {
       <div className="app-canvas">
         <Header />
 
-        {/* MAIN: Ahora con flex-col y centrado absoluto para replicar el diseño de una columna */}
         <main className="app-main flex flex-col items-center justify-between w-full flex-1 px-4 py-6 md:py-10">
-          {/* SECCIÓN 1: Textos de Bienvenida */}
           <section className="flex flex-col items-center text-center gap-4 w-full">
             <h1 className="text-xl md:text-4xl font-mono font-bold text-accent  tracking-wide">
               Selecciona tu destino
@@ -49,19 +59,17 @@ function Home() {
             </p>
           </section>
 
-          {/* SECCIÓN 2: Indicador de Progreso */}
           <section className="w-full flex justify-center my-6 md:my-8">
-            <ModalSelectionProgress currentSelection={selectedCards.length} />
+            <ModalSelectionProgress 
+              currentSelection={selectedCards.length} 
+              onComenzarLectura={handleComenzarLectura} // Pasamos la función
+            />
           </section>
 
-          {/* SECCIÓN 3: El mazo de cartas */}
           <section className="flex-1 w-full flex flex-col items-center justify-center relative min-h-[250px] md:min-h-[400px]">
-            {/* Aquí se inyecta tu componente TarotDeck  */}
-
-            <Outlet context={{ selectedCards, setSelectedCards }} />
+            <Outlet context={{ selectedCards, setSelectedCards, handleComenzarLectura }} />
           </section>
 
-          {/* SECCIÓN 4: Botón de Historial */}
           <section className="w-full flex justify-center mt-12 md:mt-16 mb-4">
             <Link to="/historial">
             <Button variant="outline" size="md" className="font-normal">
@@ -73,7 +81,6 @@ function Home() {
 
         <Footer />
 
-        {/* Modales globales flotantes */}
         <ModalBase isOpen={isModalOpen}>
           <NamePopup onSubmitName={handleSaveName} />
         </ModalBase>
