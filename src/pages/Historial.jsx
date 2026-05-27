@@ -1,6 +1,7 @@
 // Lista del json-server
-import Header  from "../components/Header";
-import Footer  from "../components/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Button from "../components/Button.jsx";
 import { useState, useEffect } from "react";
 import {
   getHistorial,
@@ -8,7 +9,7 @@ import {
 } from "../services/historialApiService";
 import { HistorialList } from "../components/HistorialList";
 import { DeleteButton } from "../components/DeleteButton";
-
+import { Link } from "react-router-dom";
 
 export default function Historial() {
   const [historialItems, setHistorialItems] = useState([]);
@@ -86,8 +87,18 @@ export default function Historial() {
           <span>Borrar todo el historial</span>
           <DeleteButton onClick={handleClearAllHistory} variant="yellow" />
         </div>
-
-        <HistorialList history={historialItems} onDelete={handleDelete} />
+        <div>
+          <HistorialList history={historialItems} onDelete={handleDelete} />
+        </div>
+        <div>
+          <div className="w-full flex justify-center mt-12 md:mt-16 mb-8">
+            <Link to="/">
+              <Button variant="outline" size="md" className="font-normal">
+                volver al inicio
+              </Button>
+            </Link>
+          </div>
+        </div>
       </main>
       <Footer />
     </div>

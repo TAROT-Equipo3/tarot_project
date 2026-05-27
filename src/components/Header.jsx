@@ -12,7 +12,7 @@ const Header = () => {
           bg-header-gradient
         "
       >
-        <h1
+        <h2
           className="
             font-syne
             font-extrabold
@@ -30,11 +30,10 @@ const Header = () => {
             text-center
             whitespace-nowrap
 
-            text-glow-gold
           "
         >
           ASTRALIS
-        </h1>
+        </h2>
       </div>
 
       <div className="h-[1px] bg-accent w-full opacity-80" />
