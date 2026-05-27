@@ -1,21 +1,55 @@
 import React from "react";
 
 import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Button from "../components/Button.jsx";
 
 // Componentes de interacción / Modales
 import NamePopup from "../components/NamePopup";
 import ModalBase from "../components/ModalBase";
 import ModalSelectionProgress from "../components/ModalSelectionProgress";
 import TarotDeck from "../components/TarotDeck";
+import SelectionProgress from "../components/SelectionProgress";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isProgressModalOpen, setIsProgressModalOpen] = useState(false); // 👈 nuevo
   const [userName, setUserName] = useState("");
-  const [selectedCards, setSelectedCards] = useState([]); // Simulación activa
+  const [selectedCards, setSelectedCards] = useState([]);
   const [timerTriggered, setTimerTriggered] = useState(false);
+
+  // 🧪 Testeo para poder ver el modal de las 3 cartas, substituir por seleccion real despues
+  const testCards = {
+    pasado: {
+      arcaneName: "El Loco",
+      arcaneImage: {
+        imageSrc:
+          "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
+        author: "Pamela Coleman Smith, Rider-Waite Tarot",
+        license: "Public domain",
+      },
+    },
+    presente: {
+      arcaneName: "El Mago",
+      arcaneImage: {
+        imageSrc:
+          "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
+        author: "Pamela Coleman Smith, Rider-Waite Tarot",
+        license: "Public domain",
+      },
+    },
+    futuro: {
+      arcaneName: "La Sacerdotisa",
+      arcaneImage: {
+        imageSrc:
+          "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
+        author: "Pamela Coleman Smith, Rider-Waite Tarot",
+        license: "Public domain",
+      },
+    },
+  };
 
   useEffect(() => {
     if (timerTriggered || userName) return;
@@ -31,6 +65,7 @@ function Home() {
     setTimerTriggered(true);
     setUserName(name);
     setIsModalOpen(false);
+    setIsProgressModalOpen(true); // 👈 nuevo — abre el modal de progreso
   };
 
   return (
@@ -39,13 +74,13 @@ function Home() {
         <Header />
 
         {/* MAIN: Ahora con flex-col y centrado absoluto para replicar el diseño de una columna */}
-        <main className="app-main flex flex-col items-center justify-between w-full flex-1 px-4 py-6 md:py-10">
+        <main className="app-main flex flex-col items-center justify-between w-full flex-1 px-4 py-6 md:py-10 md:gap-12">
           {/* SECCIÓN 1: Textos de Bienvenida */}
           <section className="flex flex-col items-center text-center gap-4 w-full">
-            <h1 className="text-3xl md:text-4xl font-bold text-accent uppercase tracking-wide">
+            <h1 className="text-xl md:text-4xl font-mono font-bold text-accent  tracking-wide">
               Selecciona tu destino
             </h1>
-            <p className="text-sm md:text-base font-mono max-w-[280px] md:max-w-[400px] text-white">
+            <p className="text-sm md:text-2xl font-mono max-w-[370px] md:max-w-[816px] text-white md:leading-normal">
               🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu
               camino.
             </p>
@@ -69,9 +104,11 @@ function Home() {
 
           {/* SECCIÓN 4: Botón de Historial */}
           <section className="w-full flex justify-center mt-12 md:mt-16 mb-4">
-            <button className="px-8 py-2 md:py-3 border border-accent text-accent rounded-full font-mono text-xs md:text-sm tracking-wider hover:bg-accent hover:text-primary transition-all">
-              VER HISTORIAL DE TIRADAS
-            </button>
+            <Link to="/historial">
+              <Button variant="outline" size="lg" className="font-normal">
+                VER HISTORIAL DE TIRADAS
+              </Button>
+            </Link>
           </section>
         </main>
 
@@ -81,9 +118,17 @@ function Home() {
         <ModalBase isOpen={isModalOpen}>
           <NamePopup onSubmitName={handleSaveName} />
         </ModalBase>
+        {/*Prueba para ver modal con las 3 cartas */}
+        {/* <SelectionProgress
+          isOpen={isProgressModalOpen}
+          onClose={() => setIsProgressModalOpen(false)}
+          userName={userName}
+          cards={testCards}
+        /> */}
       </div>
     </div>
   );
 }
 
 export default Home;
+
