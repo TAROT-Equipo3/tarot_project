@@ -49,8 +49,6 @@ function Home() {
             <p className="text-sm md:text-base font-mono max-w-[280px] md:max-w-[400px] text-white">
               🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu
               camino.
-              🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu
-              camino.
             </p>
           </section>
 
