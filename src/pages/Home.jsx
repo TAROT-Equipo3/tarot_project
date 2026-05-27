@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Button from "../components/Button.jsx";
 
 // Componentes de interacción / Modales
 import NamePopup from "../components/NamePopup";
@@ -17,32 +18,35 @@ function Home() {
   const [timerTriggered, setTimerTriggered] = useState(false);
 
   // 🧪 Testeo para poder ver el modal de las 3 cartas, substituir por seleccion real despues
-const testCards = {
-  pasado: {
-    arcaneName: "El Loco",
-    arcaneImage: {
-      imageSrc: "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
-      author: "Pamela Coleman Smith, Rider-Waite Tarot",
-      license: "Public domain"
-    }
-  },
-  presente: {
-    arcaneName: "El Mago",
-    arcaneImage:{
-      imageSrc: "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
-      author: "Pamela Coleman Smith, Rider-Waite Tarot",
-      license: "Public domain"
-    }
-  },
-  futuro: {
-    arcaneName: "La Sacerdotisa",
-    arcaneImage:{
-      imageSrc: "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
-      author: "Pamela Coleman Smith, Rider-Waite Tarot",
-      license: "Public domain"
-    }
-  }
-};
+  const testCards = {
+    pasado: {
+      arcaneName: "El Loco",
+      arcaneImage: {
+        imageSrc:
+          "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
+        author: "Pamela Coleman Smith, Rider-Waite Tarot",
+        license: "Public domain",
+      },
+    },
+    presente: {
+      arcaneName: "El Mago",
+      arcaneImage: {
+        imageSrc:
+          "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
+        author: "Pamela Coleman Smith, Rider-Waite Tarot",
+        license: "Public domain",
+      },
+    },
+    futuro: {
+      arcaneName: "La Sacerdotisa",
+      arcaneImage: {
+        imageSrc:
+          "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
+        author: "Pamela Coleman Smith, Rider-Waite Tarot",
+        license: "Public domain",
+      },
+    },
+  };
 
   useEffect(() => {
     if (timerTriggered || userName) return;
@@ -70,7 +74,7 @@ const testCards = {
         <main className="app-main flex flex-col items-center justify-between w-full flex-1 px-4 py-6 md:py-10 md:gap-12">
           {/* SECCIÓN 1: Textos de Bienvenida */}
           <section className="flex flex-col items-center text-center gap-4 w-full">
-            <h1 className="text-3xl self-stretch h-14 text-center justify-center text-accent md:text-4xl font-bold font-syne leading-8 text-shadow-glow-gold mt-[40px]">
+            <h1 className="text-xl md:text-4xl font-mono font-bold text-accent  tracking-wide">
               Selecciona tu destino
             </h1>
             <p className="text-sm md:text-2xl font-mono max-w-[370px] md:max-w-[816px] text-white md:leading-normal">
@@ -93,9 +97,11 @@ const testCards = {
 
           {/* SECCIÓN 4: Botón de Historial */}
           <section className="w-full flex justify-center mt-12 md:mt-16 mb-4">
-            <button className="px-8 py-2 md:py-3 border border-accent text-accent rounded-full font-mono text-xs md:text-sm tracking-wider hover:bg-accent hover:text-primary transition-all">
-              VER HISTORIAL DE TIRADAS
-            </button>
+            <Link to="/historial">
+              <Button variant="outline" size="md" className="font-normal">
+                VER HISTORIAL DE TIRADAS
+              </Button>
+            </Link>
           </section>
         </main>
 
