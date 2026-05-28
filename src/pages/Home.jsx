@@ -1,105 +1,34 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
+
+// Contexto
+import { useTarot } from "../context/TarotContext";
+
+// Componentes
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Button from "../components/Button.jsx";
+import Button from "../components/Button";
 import NamePopup from "../components/NamePopup";
 import ModalBase from "../components/ModalBase";
 import ModalSelectionProgress from "../components/ModalSelectionProgress";
 import TarotDeck from "../components/TarotDeck";
 import SelectionProgress from "../components/SelectionProgress";
-import { getTarotCards } from "../services/tarotApiService"; //
-import { createHistoryItem } from "../services/historialApiService";
 
 function Home() {
-  const [isNameModalOpen, setIsNameModalOpen] = useState(false);
-  const [isSelectionProgressOpen, setIsSelectionProgressOpen] = useState(false);
-  const [userName, setUserName] = useState("");
-  const [timerTriggered, setTimerTriggered] = useState(false);
-  const [selectedCards, setSelectedCards] = useState([null, null, null]);
-  const [tarotApiData, setTarotApiData] = useState([]); // ✅ mazo completo de la API
-
-  // ✅ Carga única del mazo al montar
-  useEffect(() => {
-    getTarotCards()
-      .then(setTarotApiData)
-      .catch((err) => console.error("Error cargando cartas:", err));
-  }, []);
-
-  const selectedCardIds = useMemo(
-    () => selectedCards.filter(Boolean).map((c) => c.id),
-    [selectedCards],
-  );
-
-  const filledCount = selectedCards.filter(Boolean).length;
-  const isReadingReady = filledCount === 3;
-
-  // ✅ Cruza los ids seleccionados con los datos completos de la API
-  const cardsForModal = selectedCards.map((card) => {
-    if (!card) return null;
-    return (
-      tarotApiData.find((api) => String(api.id) === String(card.id)) ?? null
-    );
-  });
-
-  useEffect(() => {
-    setSelectedCards([null, null, null]);
-  }, [userName]);
-
-  useEffect(() => {
-    if (timerTriggered || userName) return;
-    const timer = setTimeout(() => setIsNameModalOpen(true), 800);
-    return () => clearTimeout(timer);
-  }, [timerTriggered, userName]);
-
-  const handleSaveName = (name) => {
-    setTimerTriggered(true);
-    setUserName(name);
-    setIsNameModalOpen(false);
-    localStorage.setItem("astralis_username", name);
-  };
-
-  const handleCardClick = (card) => {
-    setSelectedCards((prev) => {
-      const existingSlot = prev.findIndex((c) => c?.id === card.id);
-      if (existingSlot !== -1) {
-        const next = [...prev];
-        next[existingSlot] = null;
-        return next;
-      }
-      const freeSlot = prev.findIndex((c) => c === null);
-      if (freeSlot === -1) return prev;
-      const next = [...prev];
-      next[freeSlot] = card;
-      return next;
-    });
-  };
-  const navigate = useNavigate(); // Instanciamos el hook de navegación
-
-  // ✅ Función para guardar la tirada
-  const handleGuardarTirada = async () => {
-    // Verificamos que las 3 cartas estén cargadas (que no haya nulls)
-    if (cardsForModal.includes(null)) return;
-
-    // Estructuramos los datos tal cual los espera tu db.json
-    const nuevaTirada = {
-      userName: userName,
-      date: new Date().toLocaleString("es-ES"),
-      cards: {
-        pasado: cardsForModal[0],
-        presente: cardsForModal[1],
-        futuro: cardsForModal[2],
-      },
-    };
-
-    try {
-      await createHistoryItem(nuevaTirada);
-      setIsSelectionProgressOpen(false); // Cerramos el modal
-      navigate("/historial"); // Redirigimos a la página de historial
-    } catch (error) {
-      console.error("Hubo un problema guardando la lectura", error);
-    }
-  };
+  // Extraemos todo lo necesario del Contexto
+  const {
+    userName,
+    tarotApiData,
+    selectedCardIds,
+    cardsForModal,
+    filledCount,
+    isNameModalOpen,
+    isSelectionProgressOpen,
+    setIsSelectionProgressOpen,
+    handleSaveName,
+    handleCardClick,
+    handleGuardarTirada,
+  } = useTarot();
 
   return (
     <div className="app-container">
@@ -112,8 +41,7 @@ function Home() {
               Selecciona tu destino
             </h1>
             <p className="text-sm md:text-2xl font-mono max-w-[370px] md:max-w-[816px] text-white md:leading-normal">
-              🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu
-              camino.
+              🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu camino.
             </p>
           </section>
 
@@ -129,7 +57,7 @@ function Home() {
               userName={userName}
               selectedCardIds={selectedCardIds}
               onCardClick={handleCardClick}
-              deck={tarotApiData} // ✅ mazo real de la API
+              deck={tarotApiData}
             />
           </section>
 
@@ -152,7 +80,7 @@ function Home() {
           isOpen={isSelectionProgressOpen}
           onClose={() => setIsSelectionProgressOpen(false)}
           userName={userName}
-          cards={cardsForModal} // ✅ datos completos con arcaneImage
+          cards={cardsForModal}
           onSaveReading={handleGuardarTirada}
         />
       </div>

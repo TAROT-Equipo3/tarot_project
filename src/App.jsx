@@ -1,17 +1,16 @@
 //import "./App.css";
 import React from "react";
 import { Outlet } from "react-router-dom";
-// import { TarotProvider } from './context/TarotContext'; // Cuando lo uses, envuelve todo aquí
+// ✅ CORREGIDO: Un solo punto porque 'context' está al mismo nivel que 'pages' o 'components'
+import { TarotProvider } from './context/TarotContext'; 
 
 function App() {
   return (
-    // <TarotProvider>
+    <TarotProvider>
       <div className="app-container">
-        {/* Outlet renderizará Home, Historial, Past, etc., dependiendo de la URL */}
         <Outlet /> 
-        
       </div>
-    // </TarotProvider>
+    </TarotProvider>
   );
 }
 

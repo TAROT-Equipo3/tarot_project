@@ -1,17 +1,38 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ModalBase from "./ModalBase";
 import Button from "./Button";
 
-const POSITIONS = ["PASADO", "PRESENTE", "FUTURO"];
+// 1. Cambiamos 'path' por 'baseRoute' en español para que coincida con tu router
+const POSITIONS = [
+  { label: "PASADO", baseRoute: "pasado" },
+  { label: "PRESENTE", baseRoute: "presente" },
+  { label: "FUTURO", baseRoute: "futuro" },
+];
 
-const SelectionProgress = ({ isOpen, onClose, userName, cards, onSaveReading }) => {
+const SelectionProgress = ({
+  isOpen,
+  onClose,
+  userName,
+  cards,
+  onSaveReading,
+}) => {
+  // 2. Extraemos los IDs de las 3 cartas (ponemos un fallback por seguridad)
+  const idPasado = cards[0]?.id || "0";
+  const idPresente = cards[1]?.id || "0";
+  const idFuturo = cards[2]?.id || "0";
+
   return (
     <ModalBase isOpen={isOpen}>
       <div className="flex flex-col items-center px-6 py-10 gap-[4.3125rem] overflow-y-auto w-full h-full">
-        {/* Filtro para la textura de la carta */}
         <svg width="0" height="0" className="absolute">
           <filter id="roughen">
-            <feTurbulence type="turbulence" baseFrequency="0.065" numOctaves="2" result="noise" />
+            <feTurbulence
+              type="turbulence"
+              baseFrequency="0.065"
+              numOctaves="2"
+              result="noise"
+            />
             <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" />
           </filter>
         </svg>
@@ -21,18 +42,31 @@ const SelectionProgress = ({ isOpen, onClose, userName, cards, onSaveReading }) 
             {userName}, se ha abierto el portal para ti.
           </h1>
         </div>
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-accent/60 hover:text-accent font-mono text-xl cursor-pointer transition-colors"
+          aria-label="Cerrar lectura"
+        >
+          &#x2715; {/* Esto pinta una X elegante */}
+        </button>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-36 w-full">
-          {POSITIONS.map((label, i) => {
+          {POSITIONS.map((position, i) => {
             const card = cards[i];
 
+            // 3. Construimos la URL exacta que pide tu router.jsx
+            // Ejemplo: "/pasado/1/5/12"
+            const dynamicPath = `/${position.baseRoute}/${idPasado}/${idPresente}/${idFuturo}`;
+
             return (
-              <div
-                key={label}
-                className="flex flex-col items-center gap-3 w-full max-w-[150px] md:max-w-none md:w-80 md:gap-8 cursor-pointer"
+              <Link
+                to={dynamicPath}
+                state={{ cardData: card }} // Seguimos pasando la carta entera por state
+                key={position.label}
+                className="flex flex-col items-center gap-3 w-full max-w-[150px] md:max-w-none md:w-80 md:gap-8 cursor-pointer hover:scale-105 transition-transform duration-300"
               >
                 <h2 className="w-40 h-7 text-center justify-center text-accent text-2xl font-bold font-syne">
-                  {label}
+                  {position.label}
                 </h2>
 
                 <figure className="flex flex-col items-center gap-2 w-full">
@@ -55,12 +89,11 @@ const SelectionProgress = ({ isOpen, onClose, userName, cards, onSaveReading }) 
                     )}
                   </div>
                 </figure>
-              </div>
+              </Link>
             );
           })}
         </div>
 
-        {/* ✅ Aquí conectamos el onClick a la función de guardado */}
         <Button variant="outline" size="lg" onClick={onSaveReading}>
           GUARDAR TIRADA
         </Button>
