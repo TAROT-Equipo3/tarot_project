@@ -44,7 +44,7 @@ const SelectionProgress = ({
         </div>
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-accent/60 hover:text-accent font-mono text-xl cursor-pointer transition-colors"
+          className="absolute top-32 right-12 md:top-12 md:right-32 text-accent/60 hover:text-accent font-mono text-2xl cursor-pointer transition-colors font-semibold"
           aria-label="Cerrar lectura"
         >
           &#x2715; {/* Esto pinta una X elegante */}

@@ -19,67 +19,6 @@
       "cards": []
     },
     {
-      "nombre": "sdfsdf",
-      "fecha": "2026-05-28T18:13:23.550Z",
-      "cartas": {
-        "pasado": {
-          "id": "1",
-          "arcaneNumber": "0",
-          "arcaneName": "El Loco",
-          "arcaneDescription": "El viaje del Loco hacia el Mundo comienza en el número 0, un punto incierto donde todo es posible y se requiere una gran dosis de fe. Esta carta representa a quienes se aventuran en territorios inexplorados y llenos de misterio. Es la manifestación del impulso de lanzarse al abismo sin garantías.",
-          "arcaneImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
-            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
-            "license": "Public domain"
-          },
-          "goddessName": "Fei-Fei Li",
-          "goddessDescription": "Fei-Fei Li (Pekín - China) es una reconocida científica en el campo de la inteligencia artificial, aprendizaje automático, visión artificial, neurociencia cognitiva y neurociencia computacional. Es profesora en la Universidad de Stanford y co-directora del Instituto de IA centrado en el ser humano de la misma institución. Se unió a Google Cloud en su año sabático de la universidad donde trabajó para democratizar la tecnología de IA para negocios y desarrolladores. Es conocida por haber creado ImageNet, que ha revolucionado el campo del reconocimiento visual a gran escala. Además, su investigación en la visión por computadora, contribuyó significativamente a una línea de trabajo llamada Natural Scene Understanding, o más tarde, Story-telling of images. También es cofundadora y presidenta dela organización sin ánimos de lucro AI4ALL que se centra en educar a la próxima generación de tecnólogos, pensadores y líderes de la IA mediante la promoción de la diversidad y la inclusión a través de los principios de la AI centrados en el ser humano.",
-          "goddessImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Fei-Fei_Li_at_AI_for_Good_2017.jpg",
-            "author": "ITU Pictures, CC BY 2.0, via Wikimedia Commons",
-            "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
-          }
-        },
-        "presente": {
-          "id": "15",
-          "arcaneNumber": "XIV",
-          "arcaneName": "La Templanza",
-          "arcaneDescription": "La Templanza representa al alquimista que domina el arte de combinar con precisión los elementos necesarios para crear algo que trasciende sus partes individuales. Antes de enfrentar el caos y la intensidad sensorial que trae la carta XV, El Diablo, se atraviesa un estado de equilibrio simbolizado por la Templanza. Este es un espacio logrado gracias a la reflexión y la conciliación de fuerzas opuestas.",
-          "arcaneImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg",
-            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
-            "license": "Public domain"
-          },
-          "goddessName": "Nuria Oliver",
-          "goddessDescription": "Nuria Oliver (Alicante - España) es una ingeniera de telecomunicaciones y doctora en Inteligencia Artificial por el MIT, reconocida por su liderazgo en la investigación y aplicación de la IA para el bien social. Ha sido investigadora en Microsoft Research y ocupó cargos de dirección científica en Telefónica y Vodafone. Actualmente, es directora científica y cofundadora de ELLIS Alicante, unidad dedicada a la IA ética y responsable. Su trabajo se centra en el modelado del comportamiento humano mediante técnicas de IA, interacción persona-máquina y análisis de Big Data. Es autora de más de 200 publicaciones científicas y coinventora de 40 patentes. Ha recibido premios como el Premio Nacional de Informática, el Premio Rey Jaume I en Nuevas Tecnologías y el Premio Hipatia a la Excelencia Científica. Además, es miembro de la Real Academia de Ingeniería de España y Fellow de la ACM, IEEE y EurAI. Es una de las investigadoras más citadas en informática en España.",
-          "goddessImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Nuria_Oliver_portrait_3.jpg",
-            "author": "ester perez broto, CC BY-SA 2.0, via Wikimedia Commons",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
-          }
-        },
-        "futuro": {
-          "id": "3",
-          "arcaneNumber": "II",
-          "arcaneName": "La Sacerdotisa",
-          "arcaneDescription": "La carta número II nos invita a abrirnos a la receptividad y a conectar con nuestro universo interno. Representa el momento del encuentro profundo con uno mismo y con aquello que nos rodea, ya sea otra persona o un espacio simbólico, casi onírico, donde la intuición toma protagonismo y guía el camino.",
-          "arcaneImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
-            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
-            "license": "Public domain"
-          },
-          "goddessName": "Luisa Rubio Arribas",
-          "goddessDescription": "Luisa Rubio Arribas (Madrid - España) es una destacada experta en venture capital corporativo, innovación abierta y emprendimiento. Como directora de Wayra X, la plataforma de inversión temprana de Telefónica, lidera la selección e inversión en startups digitales de consumo, con participaciones de hasta 200.000 € en empresas de siete países, principalmente fuera de España y Latinoamérica. Durante su trayectoria profesional, ha trabajado en España y EEUU, impulsando iniciativas de innovación abierta que dieron lugar a más de 100 startups, gestionando inversiones, desinversiones y desarrollo de negocio. Además, es ponente y jurado en conferencias internacionales, colabora con publicaciones y ejerce como docente en emprendimiento e innovación abierta. Su liderazgo en Wayra X ha permitido constituir un portafolio sólido, construyendo alianzas estratégicas con startups digitales y fortaleciendo el ecosistema emprendedor global con perspectiva humana y colaborativa.",
-          "goddessImage": {
-            "imageSrc": "https://150sec.com/wp-content/uploads/2021/01/Luisa-7.jpg",
-            "author": "Wayra X",
-            "licenseUrl": "https://www.150sec.com/telefonica-backed-wayra-x-aims-to-take-100-digital-startups-to-new-heights/15300/"
-          }
-        }
-      },
-      "id": "Jl4v4hH3D3A"
-    },
-    {
       "userName": "ani",
       "date": "2026-05-28T18:19:00.883Z",
       "cards": {
@@ -383,6 +322,189 @@
         }
       },
       "id": "ANtw7JOsd10"
+    },
+    {
+      "userName": "oufdhgudfh",
+      "date": "28/5/2026, 23:25:02",
+      "cards": {
+        "pasado": {
+          "id": "1",
+          "arcaneNumber": "0",
+          "arcaneName": "El Loco",
+          "arcaneDescription": "El viaje del Loco hacia el Mundo comienza en el número 0, un punto incierto donde todo es posible y se requiere una gran dosis de fe. Esta carta representa a quienes se aventuran en territorios inexplorados y llenos de misterio. Es la manifestación del impulso de lanzarse al abismo sin garantías.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Fei-Fei Li",
+          "goddessDescription": "Fei-Fei Li (Pekín - China) es una reconocida científica en el campo de la inteligencia artificial, aprendizaje automático, visión artificial, neurociencia cognitiva y neurociencia computacional. Es profesora en la Universidad de Stanford y co-directora del Instituto de IA centrado en el ser humano de la misma institución. Se unió a Google Cloud en su año sabático de la universidad donde trabajó para democratizar la tecnología de IA para negocios y desarrolladores. Es conocida por haber creado ImageNet, que ha revolucionado el campo del reconocimiento visual a gran escala. Además, su investigación en la visión por computadora, contribuyó significativamente a una línea de trabajo llamada Natural Scene Understanding, o más tarde, Story-telling of images. También es cofundadora y presidenta dela organización sin ánimos de lucro AI4ALL que se centra en educar a la próxima generación de tecnólogos, pensadores y líderes de la IA mediante la promoción de la diversidad y la inclusión a través de los principios de la AI centrados en el ser humano.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Fei-Fei_Li_at_AI_for_Good_2017.jpg",
+            "author": "ITU Pictures, CC BY 2.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+          }
+        },
+        "presente": {
+          "id": "6",
+          "arcaneNumber": "V",
+          "arcaneName": "El Sumo Sacerdote",
+          "arcaneDescription": "La carta del Sumo Sacerdote encarna los principios del orden, las normas y los vínculos sociales. Actúa como figura de guía espiritual, portador de la sabiduría ancestral y de los sistemas de creencias que dan forma a nuestra comprensión del mundo. También representa el puente hacia lo sagrado, recordándonos el valor de la ética, la coherencia y la integridad en nuestro camino.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Kate Crawford",
+          "goddessDescription": "Kate Crawford (Sydney - Australia) es una investigadora y académica especializada en las implicaciones sociales y políticas de la inteligencia artificial. Co-fundadora del AI Now Institute en la Universidad de Nueva York, su trabajo se centra en cómo los sistemas de IA afectan la equidad, la privacidad y los derechos humanos. En su libro Atlas of AI, analiza cómo la IA está profundamente entrelazada con estructuras de poder y recursos naturales, describiéndola como una industria extractiva del siglo XXI. Crawford ha hablado y publicado artículos académicos sobre temas tales como las redes sociales, la regulación gubernamental del contenido de los medios, la interacción entre género y dispositivos móviles, gente joven y sexting, y big data. También ha explorado el impacto ambiental de la IA y aboga por una mayor transparencia y responsabilidad en su desarrollo y aplicación. Reconocida como una de las voces más influyentes en el campo de la inteligencia artificial, advierte sobre las consecuencias sociales y políticas que puede tener un uso irresponsable de esta tecnología.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/7/71/Kate_Crawford_by_flickr_user_andresmh.jpg",
+            "author": "andresmh, CC BY-SA 2.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+          }
+        },
+        "futuro": {
+          "id": "17",
+          "arcaneNumber": "XVI",
+          "arcaneName": "La Torre",
+          "arcaneDescription": "La Torre simboliza la rebelión y la interrupción abrupta de lo conocido. Representa un evento inesperado, poderoso tanto para destruir como para renovar. Es una revolución que transforma todo, pues nada volverá a ser igual. Frente al vacío, podemos resistir y caer o rendirnos y aprender a volar. Esta carta nos recuerda que al desaparecer las ataduras, las fronteras y los planes establecidos, el cielo se abre y el horizonte se ensancha, presentándonos un desafío que podemos elegir enfrentar o evitar.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Mira Murati",
+          "goddessDescription": "Mira Murati (Vlorë - Albania) es una ingeniera y empresaria. Tras obtener un doble grado en ingeniería mecánica e ingeniería en la Universidad de Dartmouth, inició su carrera en Tesla como jefa de producto del Model X. Posteriormente, trabajó en Leap Motion, especializada en interfaces de realidad aumentada, y en Zodiac Aerospace. En 2018 se unió a OpenAI, donde fue vicepresidenta de IA aplicada y CTO, liderando el desarrollo de modelos como ChatGPT, DALL·E y Codex. En 2023 fue CEO interina tras la salida de Sam Altman. En el año 2025, fundó Thinking Machines Lab, una startup de inteligencia artificial con el objetivo de desarrollar sistemas multimodales que trabajen de forma colaborativa con los usuarios y se adapten a una amplia gama de conocimientos humanos. La empresa ha recaudado 2.000 millones de dólares en una ronda de financiación, alcanzando una valoración de 12.000 millones de dólares. Thinking Machines Lab cuenta con un equipo de destacados investigadores de OpenAI, Meta, Google DeepMind y Mistral, y tiene como misión mejorar la comprensión y personalización de los sistemas de IA, promoviendo una ciencia abierta y colaborativa.",
+          "goddessImage": {
+            "imageSrc": "https://imagenes.elpais.com/resizer/v2/IWJXGSLOKRHKVIQEO4WX5JCXLY.jpg?auth=6f2b593f9c1132bab59ab6b729eb01e70c52e49cdb2d6894b7758f57d168eb1f&width=414",
+            "author": "Philip Pacheco (Bloomberg)",
+            "licenseUrl": "https://elpais.com/tecnologia/2023-12-13/quien-es-mira-murati-una-de-las-mujeres-mas-influyentes-del-mundo-en-2023.html"
+          }
+        }
+      },
+      "id": "7ztNG_VKLnQ"
+    },
+    {
+      "userName": "gogo",
+      "date": "28/5/2026, 23:25:55",
+      "cards": {
+        "pasado": {
+          "id": "10",
+          "arcaneNumber": "IX",
+          "arcaneName": "El Ermitaño",
+          "arcaneDescription": "La carta del Ermitaño simboliza una soledad fértil y elegida, un espacio de introspección donde la sabiduría nace del silencio y del encuentro con uno mismo. Su lámpara, la primera luz visible en los arcanos mayores sostenida por una figura humana, representa la guía interior que ilumina el camino del autoconocimiento. Es una invitación a observar, reflexionar y crecer desde dentro, lejos del ruido del mundo.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Kathryn Thornton",
+          "goddessDescription": "Kathryn Thornton (Montgomery - EEUU) es física y exastronauta de la NASA. Licenciada en Física por la Universidad de Auburn y doctora por la Universidad de Virginia, trabajó en el Ejército de EEUU Antes de ser seleccionada por la NASA en 1984, se convirtió en astronauta en 1985. Participó en cuatro misiones espaciales entre 1989 y 1995, acumulando más de 975 horas en órbita y 21 horas en caminatas espaciales. Destaca por ser la única mujer en reparar el telescopio Hubble en 1993. Tras dejar la NASA, fue profesora emérita en Ingeniería Mecánica y Aeroespacial en la Universidad de Virginia. Ha recibido múltiples premios y fue incluida en el Salón de la Fama de Astronautas en 2010 además de ser defensora de la participación femenina en la exploración espacial.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/d/d9/KathrynThornton.jpg",
+            "author": "NASA, Public domain, via Wikimedia Commons",
+            "licenseUrl": "Public domain"
+          }
+        },
+        "presente": {
+          "id": "16",
+          "arcaneNumber": "XV",
+          "arcaneName": "El Diablo",
+          "arcaneDescription": "La carta del Diablo aborda temas de opresión y libertad de elección. Nos confronta con nuestros temores y nos enseña que la única forma de vencerlos es nombrarlos, mirarlos de frente y aceptarlos. En el tarot, el Diablo está vinculado al libre albedrío, especialmente en los momentos en que parece más complicado ejercerlo. Representa la energía creativa, la fuerza erótica y dionisíaca que desata el caos y, a la vez, la libertad. Su mensaje sugiere que para salir del ciclo atrapante, solo hace falta romperlo.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Ghada Mohamed Amer",
+          "goddessDescription": "Ghada Mohamed Amer (Baréin - Egipto) es una destacada científica especializada en ingeniería eléctrica y telecomunicaciones, con enfoque en procesamiento de señales, sistemas de comunicación y tecnologías inalámbricas. Es Vicepresidenta de la Fundación Árabe de Ciencia y Tecnología, donde ha desarrollado y liderado más de 20 proyectos y programas para fomentar la innovación y el emprendimiento en el mundo árabe, contribuyendo al establecimiento de 142 startups en la región. Ha desarrollado investigaciones relevantes en áreas como comunicaciones móviles, redes de sensores y sistemas de comunicación óptica. Ha publicado numerosos artículos en revistas internacionales y conferencias, contribuyendo al avance tecnológico en su campo. También ha participado en proyectos de colaboración internacional y en la formación de nuevos profesionales en ingeniería. Su trabajo ha impulsado la innovación en tecnologías de comunicación en Egipto y a nivel global, consolidándose como una referente en la academia y la investigación científica.",
+          "goddessImage": {
+            "imageSrc": "https://i1.rgstatic.net/ii/profile.image/796422005874690-1566893211860_Q128/Ghada-Amer.jpg",
+            "author": "ResearchGate GmbH",
+            "licenseUrl": "https://www.researchgate.net/profile/Ghada-Amer/2"
+          }
+        },
+        "futuro": {
+          "id": "11",
+          "arcaneNumber": "X",
+          "arcaneName": "La Rueda de la Fortuna",
+          "arcaneDescription": "Esta carta simboliza la transformación, el destino y el compromiso personal. Nos recuerda que ciertos acontecimientos ocurren porque deben suceder, pero también nos impulsa a asumir el control de nuestra vida, tomar decisiones conscientes y ser responsables de nuestras elecciones para que el cambio se manifieste.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Dana Bolles",
+          "goddessDescription": "Dana Bolles (California - EEUU) es una ingeniera espacial y defensora de la inclusión en STEM que trabaja en la NASA desde 1995. Nacida sin brazos ni piernas, obtuvo su licenciatura en Ingeniería Mecánica en la Universidad Estatal de California en Long Beach y una maestría en Ingeniería de Rehabilitación en la Universidad Estatal de San Francisco. Su carrera en la NASA comenzó en el Centro Espacial Kennedy como ingeniera de seguridad de carga útil, y ha trabajado en varios centros de la NASA, incluyendo Ames y Goddard. Actualmente, lidera el equipo de tecnología de la información externa en la Dirección de Misiones Científicas de la NASA, gestionando el sitio web science.nasa.gov y liderando esfuerzos de modernización digital. Bolles es embajadora de la iniciativa IF/THEN de la AAAS, promoviendo la participación de mujeres en STEM, y participó en el vuelo parabólico de AstroAccess en 2021, evaluando la accesibilidad en la microgravedad. En 2014, recibió la Medalla de Igualdad de Oportunidades en el Empleo de la NASA.",
+          "goddessImage": {
+            "imageSrc": "https://www.nasa.gov/wp-content/uploads/2023/03/nhq202303020039-1.jpg",
+            "author": "NASA / Aubrey Gemignani",
+            "licenseUrl": "https://www.nasa.gov/image-article/dana-bolles-tecn%C3%B3loga-de-informaci%C3%B3n-externa/"
+          }
+        }
+      },
+      "id": "bTFxKAElUv8"
+    },
+    {
+      "userName": "gogo",
+      "date": "28/5/2026, 23:26:32",
+      "cards": {
+        "pasado": {
+          "id": "10",
+          "arcaneNumber": "IX",
+          "arcaneName": "El Ermitaño",
+          "arcaneDescription": "La carta del Ermitaño simboliza una soledad fértil y elegida, un espacio de introspección donde la sabiduría nace del silencio y del encuentro con uno mismo. Su lámpara, la primera luz visible en los arcanos mayores sostenida por una figura humana, representa la guía interior que ilumina el camino del autoconocimiento. Es una invitación a observar, reflexionar y crecer desde dentro, lejos del ruido del mundo.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Kathryn Thornton",
+          "goddessDescription": "Kathryn Thornton (Montgomery - EEUU) es física y exastronauta de la NASA. Licenciada en Física por la Universidad de Auburn y doctora por la Universidad de Virginia, trabajó en el Ejército de EEUU Antes de ser seleccionada por la NASA en 1984, se convirtió en astronauta en 1985. Participó en cuatro misiones espaciales entre 1989 y 1995, acumulando más de 975 horas en órbita y 21 horas en caminatas espaciales. Destaca por ser la única mujer en reparar el telescopio Hubble en 1993. Tras dejar la NASA, fue profesora emérita en Ingeniería Mecánica y Aeroespacial en la Universidad de Virginia. Ha recibido múltiples premios y fue incluida en el Salón de la Fama de Astronautas en 2010 además de ser defensora de la participación femenina en la exploración espacial.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/d/d9/KathrynThornton.jpg",
+            "author": "NASA, Public domain, via Wikimedia Commons",
+            "licenseUrl": "Public domain"
+          }
+        },
+        "presente": {
+          "id": "16",
+          "arcaneNumber": "XV",
+          "arcaneName": "El Diablo",
+          "arcaneDescription": "La carta del Diablo aborda temas de opresión y libertad de elección. Nos confronta con nuestros temores y nos enseña que la única forma de vencerlos es nombrarlos, mirarlos de frente y aceptarlos. En el tarot, el Diablo está vinculado al libre albedrío, especialmente en los momentos en que parece más complicado ejercerlo. Representa la energía creativa, la fuerza erótica y dionisíaca que desata el caos y, a la vez, la libertad. Su mensaje sugiere que para salir del ciclo atrapante, solo hace falta romperlo.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Ghada Mohamed Amer",
+          "goddessDescription": "Ghada Mohamed Amer (Baréin - Egipto) es una destacada científica especializada en ingeniería eléctrica y telecomunicaciones, con enfoque en procesamiento de señales, sistemas de comunicación y tecnologías inalámbricas. Es Vicepresidenta de la Fundación Árabe de Ciencia y Tecnología, donde ha desarrollado y liderado más de 20 proyectos y programas para fomentar la innovación y el emprendimiento en el mundo árabe, contribuyendo al establecimiento de 142 startups en la región. Ha desarrollado investigaciones relevantes en áreas como comunicaciones móviles, redes de sensores y sistemas de comunicación óptica. Ha publicado numerosos artículos en revistas internacionales y conferencias, contribuyendo al avance tecnológico en su campo. También ha participado en proyectos de colaboración internacional y en la formación de nuevos profesionales en ingeniería. Su trabajo ha impulsado la innovación en tecnologías de comunicación en Egipto y a nivel global, consolidándose como una referente en la academia y la investigación científica.",
+          "goddessImage": {
+            "imageSrc": "https://i1.rgstatic.net/ii/profile.image/796422005874690-1566893211860_Q128/Ghada-Amer.jpg",
+            "author": "ResearchGate GmbH",
+            "licenseUrl": "https://www.researchgate.net/profile/Ghada-Amer/2"
+          }
+        },
+        "futuro": {
+          "id": "11",
+          "arcaneNumber": "X",
+          "arcaneName": "La Rueda de la Fortuna",
+          "arcaneDescription": "Esta carta simboliza la transformación, el destino y el compromiso personal. Nos recuerda que ciertos acontecimientos ocurren porque deben suceder, pero también nos impulsa a asumir el control de nuestra vida, tomar decisiones conscientes y ser responsables de nuestras elecciones para que el cambio se manifieste.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Dana Bolles",
+          "goddessDescription": "Dana Bolles (California - EEUU) es una ingeniera espacial y defensora de la inclusión en STEM que trabaja en la NASA desde 1995. Nacida sin brazos ni piernas, obtuvo su licenciatura en Ingeniería Mecánica en la Universidad Estatal de California en Long Beach y una maestría en Ingeniería de Rehabilitación en la Universidad Estatal de San Francisco. Su carrera en la NASA comenzó en el Centro Espacial Kennedy como ingeniera de seguridad de carga útil, y ha trabajado en varios centros de la NASA, incluyendo Ames y Goddard. Actualmente, lidera el equipo de tecnología de la información externa en la Dirección de Misiones Científicas de la NASA, gestionando el sitio web science.nasa.gov y liderando esfuerzos de modernización digital. Bolles es embajadora de la iniciativa IF/THEN de la AAAS, promoviendo la participación de mujeres en STEM, y participó en el vuelo parabólico de AstroAccess en 2021, evaluando la accesibilidad en la microgravedad. En 2014, recibió la Medalla de Igualdad de Oportunidades en el Empleo de la NASA.",
+          "goddessImage": {
+            "imageSrc": "https://www.nasa.gov/wp-content/uploads/2023/03/nhq202303020039-1.jpg",
+            "author": "NASA / Aubrey Gemignani",
+            "licenseUrl": "https://www.nasa.gov/image-article/dana-bolles-tecn%C3%B3loga-de-informaci%C3%B3n-externa/"
+          }
+        }
+      },
+      "id": "Rq4Ngxd6cmw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
