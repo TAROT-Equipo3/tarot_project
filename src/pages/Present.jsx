@@ -56,7 +56,7 @@ const Present = () => {
         stemBio={cardData.goddessDescription}
       />
       <div className="mb-8">
-        <Button variant="outline" size="lg" onClick={() => navigate('/')}>VOLVER AL INICIO</Button>
+        <Button variant="outline" size="lg" onClick={() => navigate('/')}>VOLVER A LA TIRADA</Button>
       </div>
     </main>
   );

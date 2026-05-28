@@ -1,146 +1,6 @@
 {
   "historial": [
     {
-      "id": "1",
-      "userName": "Kiki",
-      "date": "14/05/2026",
-      "cards": []
-    },
-    {
-      "id": "2",
-      "userName": "Andrea",
-      "date": "24/05/2026",
-      "cards": []
-    },
-    {
-      "id": "3",
-      "userName": "Hernan",
-      "date": "24/05/2026",
-      "cards": []
-    },
-    {
-      "nombre": "sdfsdf",
-      "fecha": "2026-05-28T18:13:23.550Z",
-      "cartas": {
-        "pasado": {
-          "id": "1",
-          "arcaneNumber": "0",
-          "arcaneName": "El Loco",
-          "arcaneDescription": "El viaje del Loco hacia el Mundo comienza en el número 0, un punto incierto donde todo es posible y se requiere una gran dosis de fe. Esta carta representa a quienes se aventuran en territorios inexplorados y llenos de misterio. Es la manifestación del impulso de lanzarse al abismo sin garantías.",
-          "arcaneImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
-            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
-            "license": "Public domain"
-          },
-          "goddessName": "Fei-Fei Li",
-          "goddessDescription": "Fei-Fei Li (Pekín - China) es una reconocida científica en el campo de la inteligencia artificial, aprendizaje automático, visión artificial, neurociencia cognitiva y neurociencia computacional. Es profesora en la Universidad de Stanford y co-directora del Instituto de IA centrado en el ser humano de la misma institución. Se unió a Google Cloud en su año sabático de la universidad donde trabajó para democratizar la tecnología de IA para negocios y desarrolladores. Es conocida por haber creado ImageNet, que ha revolucionado el campo del reconocimiento visual a gran escala. Además, su investigación en la visión por computadora, contribuyó significativamente a una línea de trabajo llamada Natural Scene Understanding, o más tarde, Story-telling of images. También es cofundadora y presidenta dela organización sin ánimos de lucro AI4ALL que se centra en educar a la próxima generación de tecnólogos, pensadores y líderes de la IA mediante la promoción de la diversidad y la inclusión a través de los principios de la AI centrados en el ser humano.",
-          "goddessImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Fei-Fei_Li_at_AI_for_Good_2017.jpg",
-            "author": "ITU Pictures, CC BY 2.0, via Wikimedia Commons",
-            "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
-          }
-        },
-        "presente": {
-          "id": "15",
-          "arcaneNumber": "XIV",
-          "arcaneName": "La Templanza",
-          "arcaneDescription": "La Templanza representa al alquimista que domina el arte de combinar con precisión los elementos necesarios para crear algo que trasciende sus partes individuales. Antes de enfrentar el caos y la intensidad sensorial que trae la carta XV, El Diablo, se atraviesa un estado de equilibrio simbolizado por la Templanza. Este es un espacio logrado gracias a la reflexión y la conciliación de fuerzas opuestas.",
-          "arcaneImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg",
-            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
-            "license": "Public domain"
-          },
-          "goddessName": "Nuria Oliver",
-          "goddessDescription": "Nuria Oliver (Alicante - España) es una ingeniera de telecomunicaciones y doctora en Inteligencia Artificial por el MIT, reconocida por su liderazgo en la investigación y aplicación de la IA para el bien social. Ha sido investigadora en Microsoft Research y ocupó cargos de dirección científica en Telefónica y Vodafone. Actualmente, es directora científica y cofundadora de ELLIS Alicante, unidad dedicada a la IA ética y responsable. Su trabajo se centra en el modelado del comportamiento humano mediante técnicas de IA, interacción persona-máquina y análisis de Big Data. Es autora de más de 200 publicaciones científicas y coinventora de 40 patentes. Ha recibido premios como el Premio Nacional de Informática, el Premio Rey Jaume I en Nuevas Tecnologías y el Premio Hipatia a la Excelencia Científica. Además, es miembro de la Real Academia de Ingeniería de España y Fellow de la ACM, IEEE y EurAI. Es una de las investigadoras más citadas en informática en España.",
-          "goddessImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Nuria_Oliver_portrait_3.jpg",
-            "author": "ester perez broto, CC BY-SA 2.0, via Wikimedia Commons",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
-          }
-        },
-        "futuro": {
-          "id": "3",
-          "arcaneNumber": "II",
-          "arcaneName": "La Sacerdotisa",
-          "arcaneDescription": "La carta número II nos invita a abrirnos a la receptividad y a conectar con nuestro universo interno. Representa el momento del encuentro profundo con uno mismo y con aquello que nos rodea, ya sea otra persona o un espacio simbólico, casi onírico, donde la intuición toma protagonismo y guía el camino.",
-          "arcaneImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
-            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
-            "license": "Public domain"
-          },
-          "goddessName": "Luisa Rubio Arribas",
-          "goddessDescription": "Luisa Rubio Arribas (Madrid - España) es una destacada experta en venture capital corporativo, innovación abierta y emprendimiento. Como directora de Wayra X, la plataforma de inversión temprana de Telefónica, lidera la selección e inversión en startups digitales de consumo, con participaciones de hasta 200.000 € en empresas de siete países, principalmente fuera de España y Latinoamérica. Durante su trayectoria profesional, ha trabajado en España y EEUU, impulsando iniciativas de innovación abierta que dieron lugar a más de 100 startups, gestionando inversiones, desinversiones y desarrollo de negocio. Además, es ponente y jurado en conferencias internacionales, colabora con publicaciones y ejerce como docente en emprendimiento e innovación abierta. Su liderazgo en Wayra X ha permitido constituir un portafolio sólido, construyendo alianzas estratégicas con startups digitales y fortaleciendo el ecosistema emprendedor global con perspectiva humana y colaborativa.",
-          "goddessImage": {
-            "imageSrc": "https://150sec.com/wp-content/uploads/2021/01/Luisa-7.jpg",
-            "author": "Wayra X",
-            "licenseUrl": "https://www.150sec.com/telefonica-backed-wayra-x-aims-to-take-100-digital-startups-to-new-heights/15300/"
-          }
-        }
-      },
-      "id": "Jl4v4hH3D3A"
-    },
-    {
-      "userName": "ani",
-      "date": "2026-05-28T18:19:00.883Z",
-      "cards": {
-        "pasado": {
-          "id": "6",
-          "arcaneNumber": "V",
-          "arcaneName": "El Sumo Sacerdote",
-          "arcaneDescription": "La carta del Sumo Sacerdote encarna los principios del orden, las normas y los vínculos sociales. Actúa como figura de guía espiritual, portador de la sabiduría ancestral y de los sistemas de creencias que dan forma a nuestra comprensión del mundo. También representa el puente hacia lo sagrado, recordándonos el valor de la ética, la coherencia y la integridad en nuestro camino.",
-          "arcaneImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg",
-            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
-            "license": "Public domain"
-          },
-          "goddessName": "Kate Crawford",
-          "goddessDescription": "Kate Crawford (Sydney - Australia) es una investigadora y académica especializada en las implicaciones sociales y políticas de la inteligencia artificial. Co-fundadora del AI Now Institute en la Universidad de Nueva York, su trabajo se centra en cómo los sistemas de IA afectan la equidad, la privacidad y los derechos humanos. En su libro Atlas of AI, analiza cómo la IA está profundamente entrelazada con estructuras de poder y recursos naturales, describiéndola como una industria extractiva del siglo XXI. Crawford ha hablado y publicado artículos académicos sobre temas tales como las redes sociales, la regulación gubernamental del contenido de los medios, la interacción entre género y dispositivos móviles, gente joven y sexting, y big data. También ha explorado el impacto ambiental de la IA y aboga por una mayor transparencia y responsabilidad en su desarrollo y aplicación. Reconocida como una de las voces más influyentes en el campo de la inteligencia artificial, advierte sobre las consecuencias sociales y políticas que puede tener un uso irresponsable de esta tecnología.",
-          "goddessImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/7/71/Kate_Crawford_by_flickr_user_andresmh.jpg",
-            "author": "andresmh, CC BY-SA 2.0, via Wikimedia Commons",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
-          }
-        },
-        "presente": {
-          "id": "16",
-          "arcaneNumber": "XV",
-          "arcaneName": "El Diablo",
-          "arcaneDescription": "La carta del Diablo aborda temas de opresión y libertad de elección. Nos confronta con nuestros temores y nos enseña que la única forma de vencerlos es nombrarlos, mirarlos de frente y aceptarlos. En el tarot, el Diablo está vinculado al libre albedrío, especialmente en los momentos en que parece más complicado ejercerlo. Representa la energía creativa, la fuerza erótica y dionisíaca que desata el caos y, a la vez, la libertad. Su mensaje sugiere que para salir del ciclo atrapante, solo hace falta romperlo.",
-          "arcaneImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
-            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
-            "license": "Public domain"
-          },
-          "goddessName": "Ghada Mohamed Amer",
-          "goddessDescription": "Ghada Mohamed Amer (Baréin - Egipto) es una destacada científica especializada en ingeniería eléctrica y telecomunicaciones, con enfoque en procesamiento de señales, sistemas de comunicación y tecnologías inalámbricas. Es Vicepresidenta de la Fundación Árabe de Ciencia y Tecnología, donde ha desarrollado y liderado más de 20 proyectos y programas para fomentar la innovación y el emprendimiento en el mundo árabe, contribuyendo al establecimiento de 142 startups en la región. Ha desarrollado investigaciones relevantes en áreas como comunicaciones móviles, redes de sensores y sistemas de comunicación óptica. Ha publicado numerosos artículos en revistas internacionales y conferencias, contribuyendo al avance tecnológico en su campo. También ha participado en proyectos de colaboración internacional y en la formación de nuevos profesionales en ingeniería. Su trabajo ha impulsado la innovación en tecnologías de comunicación en Egipto y a nivel global, consolidándose como una referente en la academia y la investigación científica.",
-          "goddessImage": {
-            "imageSrc": "https://i1.rgstatic.net/ii/profile.image/796422005874690-1566893211860_Q128/Ghada-Amer.jpg",
-            "author": "ResearchGate GmbH",
-            "licenseUrl": "https://www.researchgate.net/profile/Ghada-Amer/2"
-          }
-        },
-        "futuro": {
-          "id": "5",
-          "arcaneNumber": "IV",
-          "arcaneName": "El Emperador",
-          "arcaneDescription": "La carta número IV representa al Emperador, emblema de estructura, autoridad y seguridad. El número cuatro evoca la solidez de un hogar, con sus muros que contienen y protegen. Así como abril, el cuarto mes, marca el momento en que la energía combativa de la vida hace florecer la tierra, el Emperador canaliza la fuerza hacia el orden y la permanencia, guiando el crecimiento con determinación y propósito.",
-          "arcaneImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
-            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
-            "license": "Public domain"
-          },
-          "goddessName": "Shalini Kapoor",
-          "goddessDescription": "Shalini Kapoor (Bareilly - India) estudió Ingeniería Informática en la Universidad de Lucknow y obtuvo un MBA en Sistemas de Información en SP Jain (Mumbai). Tras iniciar su carrera en HCL, pasó a IBM, donde en más de dos décadas ascendió a roles clave en IoT, IA y soluciones empresariales, siendo la primera mujer en India en ser nombrada IBM Fellow. Fundó la ONG Ankurit Foundation (2014) para fomentar STEM en niños, organizó ferias para más de 3.000 estudiantes y promovió la inclusión de IA en el currículo escolar. Es autora de AI for You: The New Game Changer y actualmente es Chief Technologist para AWS en India/APJ, liderando iniciativas de IA, sostenibilidad y transformación digital.",
-          "goddessImage": {
-            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Shalini_Kapoor_%28IBM%29_Sep_2023.jpg",
-            "author": "DrhSR, CC BY-SA 4.0, via Wikimedia Commons",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
-          }
-        }
-      },
-      "id": "Oxj-wOCZcps"
-    },
-    {
       "userName": "moncherito",
       "date": "28/5/2026, 20:23:52",
       "cards": {
@@ -383,6 +243,128 @@
         }
       },
       "id": "ANtw7JOsd10"
+    },
+    {
+      "userName": "bixo",
+      "date": "28/5/2026, 23:06:54",
+      "cards": {
+        "pasado": {
+          "id": "19",
+          "arcaneNumber": "XVIII",
+          "arcaneName": "La Luna",
+          "arcaneDescription": "Bajo el resplandor de la luna se despierta el espíritu libre del bosque, acompañado por una mirada cargada de intuición. La luz lunar distorsiona la realidad, mostrando un reflejo fantástico en lugar de la verdad directa. La carta de la Luna simboliza la incertidumbre más que las respuestas, representando la magia en su estado más puro, susceptible de múltiples interpretaciones. Es el mundo interior, lo cambiante, lo imaginario y lo oculto. La Luna surge en un espacio donde lo interno y lo externo se entrelazan, un lugar capaz de crear nuevos universos.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Reshma Saujani",
+          "goddessDescription": "Reshma Saujani (Illinois - EEUU) es una activista, abogada y autora reconocida por fundar Girls Who Code, una organización sin fines de lucro dedicada a reducir la brecha de género en la tecnología, y Moms First (anteriormente Marshall Plan for Moms), que aboga por políticas laborales que apoyen a las madres trabajadoras. Comenzó su carrera como abogada y organizadora política, siendo la primera mujer indoamericana (descendiente del pueblo Gujarati) en postularse para el Congreso de EE. UU. en 2010. Su TED Talk, 'Teach girls bravery, not perfection', ha sido vista por más de 54 millones de personas y su libro Brave, Not Perfect se convirtió en un bestseller del New York Times. Ha sido reconocida en listas como Fortune 40 Under 40 y Forbes Most Powerful Women Changing the World.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/a/aa/2018-prathamusa-reshma-saujani.jpg",
+            "author": "Fuzheado, CC BY-SA 4.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+          }
+        },
+        "presente": {
+          "id": "5",
+          "arcaneNumber": "IV",
+          "arcaneName": "El Emperador",
+          "arcaneDescription": "La carta número IV representa al Emperador, emblema de estructura, autoridad y seguridad. El número cuatro evoca la solidez de un hogar, con sus muros que contienen y protegen. Así como abril, el cuarto mes, marca el momento en que la energía combativa de la vida hace florecer la tierra, el Emperador canaliza la fuerza hacia el orden y la permanencia, guiando el crecimiento con determinación y propósito.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Shalini Kapoor",
+          "goddessDescription": "Shalini Kapoor (Bareilly - India) estudió Ingeniería Informática en la Universidad de Lucknow y obtuvo un MBA en Sistemas de Información en SP Jain (Mumbai). Tras iniciar su carrera en HCL, pasó a IBM, donde en más de dos décadas ascendió a roles clave en IoT, IA y soluciones empresariales, siendo la primera mujer en India en ser nombrada IBM Fellow. Fundó la ONG Ankurit Foundation (2014) para fomentar STEM en niños, organizó ferias para más de 3.000 estudiantes y promovió la inclusión de IA en el currículo escolar. Es autora de AI for You: The New Game Changer y actualmente es Chief Technologist para AWS en India/APJ, liderando iniciativas de IA, sostenibilidad y transformación digital.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Shalini_Kapoor_%28IBM%29_Sep_2023.jpg",
+            "author": "DrhSR, CC BY-SA 4.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+          }
+        },
+        "futuro": {
+          "id": "4",
+          "arcaneNumber": "III",
+          "arcaneName": "La Emperatriz",
+          "arcaneDescription": "La carta número III nos conecta con la energía de la creación en su forma más esencial. La Emperatriz tiene el poder de transformar lo que toca, impregnándolo de vitalidad y dinamismo. Representa la fertilidad, la abundancia y la acción constante. Es el impulso creativo nacido del amor, donde el caos se convierte en vida.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/d/d2/RWS_Tarot_03_Empress.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Elena García Armada",
+          "goddessDescription": "Elena García Armada (Valladolid - España) es doctora en ingeniería industrial y robótica, es investigadora del CSIC desde el año 2007. Su investigación clave ha sido el desarrollo de músculos robóticos biomiméticos e integrados en exoesqueletos pediátricos para rehabilitación, especialmente el exoesqueleto ATLAS, pionero mundial, certificado como producto sanitario en 2021. Investigadora enfocada en la transferencia tecnológica y emprendedora, fundó Marsi Bionics en 2013 que se dedica a investigación y desarrollo de tecnologías sanitarias, el cual ha recibido numerosos premios por innovación tecnológica y su impacto social. Además en el año 2020, García Armada fue reconocida como una de las 30 mujeres más influyentes del mundo en el ámbito de la robótica por Robohub, plataforma estadounidense dedicada a la divulgación científica.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Elena_Garc%C3%ADa_Armada_en_los_Reconocimientos_8_de_Marzo._D%C3%ADa_de_la_Mujer_%282018%29.jpg",
+            "author": "Cristina Cifuentes, CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+          }
+        }
+      },
+      "id": "9YRKPcshxYk"
+    },
+    {
+      "userName": "andre",
+      "date": "28/5/2026, 23:35:58",
+      "cards": {
+        "pasado": {
+          "id": "8",
+          "arcaneNumber": "VII",
+          "arcaneName": "El Carro",
+          "arcaneDescription": "La carta del Carro retoma la energía del Mago y la convierte en impulso firme, guiado por la voluntad, la determinación y la confianza en uno mismo. Representa un avance que nace de una necesidad profunda: el fuego interior que impulsa, supera barreras y abre rutas desconocidas. Es una fuerza que no se detiene, movida por el propósito y el coraje.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Azucena Hernández Palmero",
+          "goddessDescription": "Azucena Hernández Palmero (España) es una emprendedora española, licenciada en Ciencias de la Información por la Universidad Complutense de Madrid, especializada en motor, comunicación y ciberseguridad. Inició su carrera en 1990 como periodista en la sección de motor del Diario Sol, y tras más de 30 años probando vehículos y sistemas, fue record-woman de velocidad en la Saab Talladega Challenge en 1996. Dirigió proyectos en medios como Car&Driver, El Mundo del Automóvil o Autofácil, y ya en el año 2013 alertaba sobre la necesidad de ciberseguridad en automoción. En 2018 fundó Grupo CYBENTIA y en 2019 EUROCYBCAR, empresa pionera en ciberseguridad para la movilidad. Inventó el Test EUROCYBCAR en 2018, herramienta que mide y certifica la seguridad digital de vehículos. En 2022, junto a AENOR, lanzó el primer certificado de ciberseguridad vehicular del mundo. Además, fundó HackerCar, medio especializado en ciberseguridad y automoción. Reconocida como una de las 100 mujeres referentes en ciberseguridad según Hacking Gender Barriers, y en 2024 Forbes la incluyó varias veces en su ranking de “changemakers” y entre las 35 mujeres líderes en tecnología en España.",
+          "goddessImage": {
+            "imageSrc": "https://ampea.eus/wp-content/uploads/AZUCENA-HERNANDEZ_-4.jpeg",
+            "author": "AMPEA",
+            "licenseUrl": "https://ampea.eus/eurocybcar-y-azucena-hernandez-a-la-vanguardia-de-la-ciberseguridad-en-coches-nuevos-desde-el-6-de-julio/"
+          }
+        },
+        "presente": {
+          "id": "7",
+          "arcaneNumber": "VI",
+          "arcaneName": "Los Amantes",
+          "arcaneDescription": "La carta de los Amantes representa el amor en su dimensión activa: una elección consciente, un compromiso que se manifiesta en el mundo. Simboliza la unión de lo femenino y lo masculino, la fusión de polaridades que da origen a la plenitud. De este encuentro nacen la compasión, la ternura y, por supuesto, el amor como fuerza transformadora.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_06_Lovers.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Elizabeth Churchill",
+          "goddessDescription": "Elizabeth Churchill (Calcuta - India) es psicóloga, experta en interacción humano-computadora y computación social. Estudió Psicología Experimental y Sistemas Basados en Conocimiento. Actualmente es directora de la experiencia de usuario en Google, investiga y hace presentaciones acerca de temas relacionados a las ciencias de la computación, psicología, diseño, análisis y antropología para hacer la experiencia del usuario más precisa y eficiente. Ha publicado más de 200 artículos científicos, posee más de 50 patentes y es coautora/coeditora de al menos 7 libros en HCI, interacción social, agentes conversacionales y computación ubicua. Ha sido reconocida con varios premios y ha recibido doctorados honorarios. Su trabajo ha transformado herramientas de diseño como Material Design en Google, impactando a millones de usuarios y desarrolladores. Ha convertido a Flutter en una herramienta moderna y poderosa para crear experiencias de usuario ricas y coherentes en múltiples plataformas, facilitando el despliegue rápido de interfaces elegantes, personalizadas y premiadas.",
+          "goddessImage": {
+            "imageSrc": "https://staticcdn.mbzuai.ac.ae/mbzuaiwpprd01/2024/05/ElizabethChurchill-487px.jpg",
+            "author": "Mohamed bin Zayed University of Artificial Intelligence",
+            "licenseUrl": "https://mbzuai.ac.ae/study/faculty/elizabeth-churchill/"
+          }
+        },
+        "futuro": {
+          "id": "9",
+          "arcaneNumber": "VIII",
+          "arcaneName": "La Fuerza",
+          "arcaneDescription": "La carta de la Fuerza no alude a la violencia ni al dominio físico, sino a la armonía con nuestra esencia más profunda. Habla de vivir con autenticidad, de habitar el mundo desde el ser, no desde la lucha. Representa una energía constante y serena, una presencia firme que actúa sin imponerse. La Fuerza nos invita a responder con amor en medio de un entorno marcado por el miedo y la hostilidad, evocando la pureza instintiva y el espíritu libre de los animales.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "María Fernández Guajardo",
+          "goddessDescription": "María Fernández Guajardo (Zaragoza - España) es una destacada ejecutiva tecnológica española con más de 25 años de experiencia en el desarrollo de productos innovadores a nivel global. Licenciada en Ingeniería Técnica Industrial por la Universidad de Zaragoza y formada en gestión empresarial en Berkeley, la ha llevado a Silicon Valley donde ha desempeñado roles clave en empresas como Meta y Google. En Meta, lideró la transformación de productos de video y audio en Facebook, además de establecer Oculus for Business, una iniciativa centrada en aplicaciones laborales de realidad aumentada y virtual. Actualmente, es Directora Senior de Producto en Google, donde lidera el equipo de Gmail, impulsando la productividad de los usuarios mediante innovaciones en inteligencia artificial generativa. Ha sido galardonada con varios reconocimientos incluyendo el Women of Influence 2017. Su trayectoria ejemplifica el liderazgo y la innovación en el ámbito tecnológico, sirviendo de inspiración para futuras generaciones de profesionales.",
+          "goddessImage": {
+            "imageSrc": "https://images.squarespace-cdn.com/content/v1/65b264f5afd06c4f1a213202/3a34fca5-5c36-422d-a367-0283ade267a9/Photo+Maria+Fernandez.jpg",
+            "author": "Club de Ejecutivas Españolas",
+            "licenseUrl": "https://www.clubejecutivas.com/noticias/maria-fernandez-guajardo-publica-su-primer-libro"
+          }
+        }
+      },
+      "id": "EuYRDuwsg5Y"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
