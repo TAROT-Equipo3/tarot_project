@@ -36,7 +36,7 @@ const SelectionProgress = ({ isOpen, onClose, userName, cards = [] }) => {
 
                 <figure className="flex flex-col items-center gap-2 w-full">
                   <div
-                    className="outline outline-2 outline-accent rounded-lg overflow-hidden hover:shadow-glow-accent w-full h-64 md:max-w-[290px] md:h-[502.99px] bg-[#DDCCBF]"
+                    className="outline outline-2 outline-accent rounded-lg overflow-hidden hover:shadow-glow-hover-card w-full h-64 md:max-w-[290px] md:h-[502.99px] bg-[#DDCCBF]"
                     style={{ filter: "url(#roughen)" }}
                   >
                     {card?.arcaneImage?.imageSrc ? (
