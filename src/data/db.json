@@ -17,6 +17,189 @@
       "userName": "Hernan",
       "date": "24/05/2026",
       "cards": []
+    },
+    {
+      "nombre": "sdfsdf",
+      "fecha": "2026-05-28T18:13:23.550Z",
+      "cartas": {
+        "pasado": {
+          "id": "1",
+          "arcaneNumber": "0",
+          "arcaneName": "El Loco",
+          "arcaneDescription": "El viaje del Loco hacia el Mundo comienza en el número 0, un punto incierto donde todo es posible y se requiere una gran dosis de fe. Esta carta representa a quienes se aventuran en territorios inexplorados y llenos de misterio. Es la manifestación del impulso de lanzarse al abismo sin garantías.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Fei-Fei Li",
+          "goddessDescription": "Fei-Fei Li (Pekín - China) es una reconocida científica en el campo de la inteligencia artificial, aprendizaje automático, visión artificial, neurociencia cognitiva y neurociencia computacional. Es profesora en la Universidad de Stanford y co-directora del Instituto de IA centrado en el ser humano de la misma institución. Se unió a Google Cloud en su año sabático de la universidad donde trabajó para democratizar la tecnología de IA para negocios y desarrolladores. Es conocida por haber creado ImageNet, que ha revolucionado el campo del reconocimiento visual a gran escala. Además, su investigación en la visión por computadora, contribuyó significativamente a una línea de trabajo llamada Natural Scene Understanding, o más tarde, Story-telling of images. También es cofundadora y presidenta dela organización sin ánimos de lucro AI4ALL que se centra en educar a la próxima generación de tecnólogos, pensadores y líderes de la IA mediante la promoción de la diversidad y la inclusión a través de los principios de la AI centrados en el ser humano.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Fei-Fei_Li_at_AI_for_Good_2017.jpg",
+            "author": "ITU Pictures, CC BY 2.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+          }
+        },
+        "presente": {
+          "id": "15",
+          "arcaneNumber": "XIV",
+          "arcaneName": "La Templanza",
+          "arcaneDescription": "La Templanza representa al alquimista que domina el arte de combinar con precisión los elementos necesarios para crear algo que trasciende sus partes individuales. Antes de enfrentar el caos y la intensidad sensorial que trae la carta XV, El Diablo, se atraviesa un estado de equilibrio simbolizado por la Templanza. Este es un espacio logrado gracias a la reflexión y la conciliación de fuerzas opuestas.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Nuria Oliver",
+          "goddessDescription": "Nuria Oliver (Alicante - España) es una ingeniera de telecomunicaciones y doctora en Inteligencia Artificial por el MIT, reconocida por su liderazgo en la investigación y aplicación de la IA para el bien social. Ha sido investigadora en Microsoft Research y ocupó cargos de dirección científica en Telefónica y Vodafone. Actualmente, es directora científica y cofundadora de ELLIS Alicante, unidad dedicada a la IA ética y responsable. Su trabajo se centra en el modelado del comportamiento humano mediante técnicas de IA, interacción persona-máquina y análisis de Big Data. Es autora de más de 200 publicaciones científicas y coinventora de 40 patentes. Ha recibido premios como el Premio Nacional de Informática, el Premio Rey Jaume I en Nuevas Tecnologías y el Premio Hipatia a la Excelencia Científica. Además, es miembro de la Real Academia de Ingeniería de España y Fellow de la ACM, IEEE y EurAI. Es una de las investigadoras más citadas en informática en España.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Nuria_Oliver_portrait_3.jpg",
+            "author": "ester perez broto, CC BY-SA 2.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+          }
+        },
+        "futuro": {
+          "id": "3",
+          "arcaneNumber": "II",
+          "arcaneName": "La Sacerdotisa",
+          "arcaneDescription": "La carta número II nos invita a abrirnos a la receptividad y a conectar con nuestro universo interno. Representa el momento del encuentro profundo con uno mismo y con aquello que nos rodea, ya sea otra persona o un espacio simbólico, casi onírico, donde la intuición toma protagonismo y guía el camino.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Luisa Rubio Arribas",
+          "goddessDescription": "Luisa Rubio Arribas (Madrid - España) es una destacada experta en venture capital corporativo, innovación abierta y emprendimiento. Como directora de Wayra X, la plataforma de inversión temprana de Telefónica, lidera la selección e inversión en startups digitales de consumo, con participaciones de hasta 200.000 € en empresas de siete países, principalmente fuera de España y Latinoamérica. Durante su trayectoria profesional, ha trabajado en España y EEUU, impulsando iniciativas de innovación abierta que dieron lugar a más de 100 startups, gestionando inversiones, desinversiones y desarrollo de negocio. Además, es ponente y jurado en conferencias internacionales, colabora con publicaciones y ejerce como docente en emprendimiento e innovación abierta. Su liderazgo en Wayra X ha permitido constituir un portafolio sólido, construyendo alianzas estratégicas con startups digitales y fortaleciendo el ecosistema emprendedor global con perspectiva humana y colaborativa.",
+          "goddessImage": {
+            "imageSrc": "https://150sec.com/wp-content/uploads/2021/01/Luisa-7.jpg",
+            "author": "Wayra X",
+            "licenseUrl": "https://www.150sec.com/telefonica-backed-wayra-x-aims-to-take-100-digital-startups-to-new-heights/15300/"
+          }
+        }
+      },
+      "id": "Jl4v4hH3D3A"
+    },
+    {
+      "userName": "ani",
+      "date": "2026-05-28T18:19:00.883Z",
+      "cards": {
+        "pasado": {
+          "id": "6",
+          "arcaneNumber": "V",
+          "arcaneName": "El Sumo Sacerdote",
+          "arcaneDescription": "La carta del Sumo Sacerdote encarna los principios del orden, las normas y los vínculos sociales. Actúa como figura de guía espiritual, portador de la sabiduría ancestral y de los sistemas de creencias que dan forma a nuestra comprensión del mundo. También representa el puente hacia lo sagrado, recordándonos el valor de la ética, la coherencia y la integridad en nuestro camino.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Kate Crawford",
+          "goddessDescription": "Kate Crawford (Sydney - Australia) es una investigadora y académica especializada en las implicaciones sociales y políticas de la inteligencia artificial. Co-fundadora del AI Now Institute en la Universidad de Nueva York, su trabajo se centra en cómo los sistemas de IA afectan la equidad, la privacidad y los derechos humanos. En su libro Atlas of AI, analiza cómo la IA está profundamente entrelazada con estructuras de poder y recursos naturales, describiéndola como una industria extractiva del siglo XXI. Crawford ha hablado y publicado artículos académicos sobre temas tales como las redes sociales, la regulación gubernamental del contenido de los medios, la interacción entre género y dispositivos móviles, gente joven y sexting, y big data. También ha explorado el impacto ambiental de la IA y aboga por una mayor transparencia y responsabilidad en su desarrollo y aplicación. Reconocida como una de las voces más influyentes en el campo de la inteligencia artificial, advierte sobre las consecuencias sociales y políticas que puede tener un uso irresponsable de esta tecnología.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/7/71/Kate_Crawford_by_flickr_user_andresmh.jpg",
+            "author": "andresmh, CC BY-SA 2.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+          }
+        },
+        "presente": {
+          "id": "16",
+          "arcaneNumber": "XV",
+          "arcaneName": "El Diablo",
+          "arcaneDescription": "La carta del Diablo aborda temas de opresión y libertad de elección. Nos confronta con nuestros temores y nos enseña que la única forma de vencerlos es nombrarlos, mirarlos de frente y aceptarlos. En el tarot, el Diablo está vinculado al libre albedrío, especialmente en los momentos en que parece más complicado ejercerlo. Representa la energía creativa, la fuerza erótica y dionisíaca que desata el caos y, a la vez, la libertad. Su mensaje sugiere que para salir del ciclo atrapante, solo hace falta romperlo.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Ghada Mohamed Amer",
+          "goddessDescription": "Ghada Mohamed Amer (Baréin - Egipto) es una destacada científica especializada en ingeniería eléctrica y telecomunicaciones, con enfoque en procesamiento de señales, sistemas de comunicación y tecnologías inalámbricas. Es Vicepresidenta de la Fundación Árabe de Ciencia y Tecnología, donde ha desarrollado y liderado más de 20 proyectos y programas para fomentar la innovación y el emprendimiento en el mundo árabe, contribuyendo al establecimiento de 142 startups en la región. Ha desarrollado investigaciones relevantes en áreas como comunicaciones móviles, redes de sensores y sistemas de comunicación óptica. Ha publicado numerosos artículos en revistas internacionales y conferencias, contribuyendo al avance tecnológico en su campo. También ha participado en proyectos de colaboración internacional y en la formación de nuevos profesionales en ingeniería. Su trabajo ha impulsado la innovación en tecnologías de comunicación en Egipto y a nivel global, consolidándose como una referente en la academia y la investigación científica.",
+          "goddessImage": {
+            "imageSrc": "https://i1.rgstatic.net/ii/profile.image/796422005874690-1566893211860_Q128/Ghada-Amer.jpg",
+            "author": "ResearchGate GmbH",
+            "licenseUrl": "https://www.researchgate.net/profile/Ghada-Amer/2"
+          }
+        },
+        "futuro": {
+          "id": "5",
+          "arcaneNumber": "IV",
+          "arcaneName": "El Emperador",
+          "arcaneDescription": "La carta número IV representa al Emperador, emblema de estructura, autoridad y seguridad. El número cuatro evoca la solidez de un hogar, con sus muros que contienen y protegen. Así como abril, el cuarto mes, marca el momento en que la energía combativa de la vida hace florecer la tierra, el Emperador canaliza la fuerza hacia el orden y la permanencia, guiando el crecimiento con determinación y propósito.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Shalini Kapoor",
+          "goddessDescription": "Shalini Kapoor (Bareilly - India) estudió Ingeniería Informática en la Universidad de Lucknow y obtuvo un MBA en Sistemas de Información en SP Jain (Mumbai). Tras iniciar su carrera en HCL, pasó a IBM, donde en más de dos décadas ascendió a roles clave en IoT, IA y soluciones empresariales, siendo la primera mujer en India en ser nombrada IBM Fellow. Fundó la ONG Ankurit Foundation (2014) para fomentar STEM en niños, organizó ferias para más de 3.000 estudiantes y promovió la inclusión de IA en el currículo escolar. Es autora de AI for You: The New Game Changer y actualmente es Chief Technologist para AWS en India/APJ, liderando iniciativas de IA, sostenibilidad y transformación digital.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Shalini_Kapoor_%28IBM%29_Sep_2023.jpg",
+            "author": "DrhSR, CC BY-SA 4.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+          }
+        }
+      },
+      "id": "Oxj-wOCZcps"
+    },
+    {
+      "userName": "moncherito",
+      "date": "28/5/2026, 20:23:52",
+      "cards": {
+        "pasado": {
+          "id": "14",
+          "arcaneNumber": "XIII",
+          "arcaneName": "La Muerte",
+          "arcaneDescription": "El arcano número XIII corresponde a la Muerte, pero no simboliza un final absoluto. Por eso se ubica en el centro de los arcanos, marcando un momento crucial de cambio. La Muerte representa la transformación y la transición de una etapa a otra. Para poder avanzar, es necesario soltar aquello que frena nuestro crecimiento. Esta carta nos anima a dejar atrás lo que ha cumplido su ciclo y permitir que algo nuevo surja.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/d/d7/RWS_Tarot_13_Death.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Silvina Moschini",
+          "goddessDescription": "Silvina Moschini (Tandil - Argentina) es una empresaria reconocida como pionera en la economía digital y la inclusión laboral femenina. En 2020, se convirtió en la primera mujer latinoamericana en liderar una empresa unicornio, TransparentBusiness, una plataforma de gestión de trabajo remoto valorada en más de 1.600 millones de dólares. Además, es fundadora de SheWorks!, una plataforma que conecta a mujeres con empleos flexibles y remotos, y de Unicoin, una criptomoneda respaldada por activos digitales. Moschini ha sido reconocida con premios como el EQUALS in Tech Award y el Women in Tech Lifetime Achievement Award, y ha sido nombrada Mujer de la Década por el Women Economic Forum. Como mentora y oradora, ha participado en iniciativas de ONU Mujeres y el G20, y ha sido productora ejecutiva del programa de televisión Unicorn Hunters, que conecta emprendedores con inversores globales.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/1/18/Silvina_Moschini_photo.jpg",
+            "author": "Silvina Moschini, CC0, via Wikimedia Commons",
+            "licenseUrl": "Public domain"
+          }
+        },
+        "presente": {
+          "id": "12",
+          "arcaneNumber": "XI",
+          "arcaneName": "La Justicia",
+          "arcaneDescription": "La carta número XI representa la ley del karma, la relación entre causa y efecto. Su figura, directa y enigmática, nos enfrenta con la verdad sin rodeos. A través de esta carta aprendemos a ser objetivos y a cosechar las consecuencias de nuestras acciones. Además, la Justicia encarna ideales elevados y nos exhorta a defender diariamente un mundo más justo, libre e inclusivo, apoyando a quienes sufren opresión.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Joy Buolamwini",
+          "goddessDescription": "Joy Buolamwini (Edmonton - Canadá) es una científica informática y activista digital destacada por su investigación sobre sesgos raciales y de género en sistemas de reconocimiento facial. Su tesis de maestría en el MIT, titulada Gender Shades, reveló disparidades significativas en la precisión de estos sistemas, lo que llevó a empresas como IBM, Microsoft y Amazon a revisar sus tecnologías. Fundó la Algorithmic Justice League, una organización que utiliza la investigación y el arte para sensibilizar sobre los impactos sociales de la inteligencia artificial y se esta manera combatir la injusticia algorítmica. Ha recibido premios como la Beca Rhodes y ha sido reconocida en listas como TIME 100 Next y Forbes 30 Under 30. Su charla TED y libro Unmasking AI han impulsado el debate sobre la ética en la IA, poniendo de manifiesto cómo el racismo, el sexismo y otras formas de discriminación se manifiestan en los algoritmos. Continúa asesorando a gobiernos y empresas para promover políticas de IA más justas y equitativas.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Joy_Buolamwini%2C_2018_%28cropped%29.jpg",
+            "author": "Niccolò Caranti, CC BY-SA 4.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+          }
+        },
+        "futuro": {
+          "id": "2",
+          "arcaneNumber": "I",
+          "arcaneName": "El Mago",
+          "arcaneDescription": "La carta número I corresponde al Mago, símbolo de nuestro poder interior y de aquellas habilidades que aún no han salido plenamente a la luz. El Mago representa a quien, con destreza y voluntad, puede alcanzar cualquier objetivo. Es una carta que habla de iniciativa, claridad mental y decisión, conectando tanto con lo tangible como con lo intangible, especialmente con la percepción y la visión interior.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Susan Kare",
+          "goddessDescription": "Susan Kare (Ithaca - EEUU) es una artista y diseñadora gráfica, famosa por su trabajo pionero en Apple durante los años 80. Fue la responsable de diseñar muchos de los íconos, tipografías y elementos visuales del primer Macintosh, como el ícono de la papelera, el del reloj y la fuente Chicago, usada en interfaces de Apple y en el iPod, siendo pionera del pixel art. Su estilo simple y funcional definió la estética de las primeras interfaces gráficas de usuario, haciendo la tecnología más accesible y amigable. Después trabajó en NeXT junto a Steve Jobs en el rol de directora creativa y tras esa etapa se lanzó como freelance y se convirtió en la diseñadora con la cartera de clientes más impresionante del mundo: Microsoft, IBM, Sony Pictures, Motorola, Intel, Facebook... Su trabajo ha sido ampliamente reconocido como fundamental para el diseño digital y la interacción humano-computadora lo cual sigue siendo determinante en el modo en que millones de personas interactúan con la tecnología. En 2015 fue contratada por Pinterest como Jefa de Diseño de Producto, donde sigue trabajando en la actualidad.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/8/88/SusanKare2019photo.jpg",
+            "author": "Cooper Hewitt, CC BY 3.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+          }
+        }
+      },
+      "id": "uhjLiGPdBI8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

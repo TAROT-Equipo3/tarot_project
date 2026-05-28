@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/Button.jsx";
@@ -8,7 +8,8 @@ import ModalBase from "../components/ModalBase";
 import ModalSelectionProgress from "../components/ModalSelectionProgress";
 import TarotDeck from "../components/TarotDeck";
 import SelectionProgress from "../components/SelectionProgress";
-import { getTarotCards } from "../services/tarotApiService"; // ✅
+import { getTarotCards } from "../services/tarotApiService"; //
+import { createHistoryItem } from "../services/historialApiService";
 
 function Home() {
   const [isNameModalOpen, setIsNameModalOpen] = useState(false);
@@ -27,7 +28,7 @@ function Home() {
 
   const selectedCardIds = useMemo(
     () => selectedCards.filter(Boolean).map((c) => c.id),
-    [selectedCards]
+    [selectedCards],
   );
 
   const filledCount = selectedCards.filter(Boolean).length;
@@ -36,7 +37,9 @@ function Home() {
   // ✅ Cruza los ids seleccionados con los datos completos de la API
   const cardsForModal = selectedCards.map((card) => {
     if (!card) return null;
-    return tarotApiData.find((api) => String(api.id) === String(card.id)) ?? null;
+    return (
+      tarotApiData.find((api) => String(api.id) === String(card.id)) ?? null
+    );
   });
 
   useEffect(() => {
@@ -71,6 +74,32 @@ function Home() {
       return next;
     });
   };
+  const navigate = useNavigate(); // Instanciamos el hook de navegación
+
+  // ✅ Función para guardar la tirada
+  const handleGuardarTirada = async () => {
+    // Verificamos que las 3 cartas estén cargadas (que no haya nulls)
+    if (cardsForModal.includes(null)) return;
+
+    // Estructuramos los datos tal cual los espera tu db.json
+    const nuevaTirada = {
+      userName: userName,
+      date: new Date().toLocaleString("es-ES"),
+      cards: {
+        pasado: cardsForModal[0],
+        presente: cardsForModal[1],
+        futuro: cardsForModal[2],
+      },
+    };
+
+    try {
+      await createHistoryItem(nuevaTirada);
+      setIsSelectionProgressOpen(false); // Cerramos el modal
+      navigate("/historial"); // Redirigimos a la página de historial
+    } catch (error) {
+      console.error("Hubo un problema guardando la lectura", error);
+    }
+  };
 
   return (
     <div className="app-container">
@@ -83,7 +112,8 @@ function Home() {
               Selecciona tu destino
             </h1>
             <p className="text-sm md:text-2xl font-mono max-w-[370px] md:max-w-[816px] text-white md:leading-normal">
-              🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu camino.
+              🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu
+              camino.
             </p>
           </section>
 
@@ -123,6 +153,7 @@ function Home() {
           onClose={() => setIsSelectionProgressOpen(false)}
           userName={userName}
           cards={cardsForModal} // ✅ datos completos con arcaneImage
+          onSaveReading={handleGuardarTirada}
         />
       </div>
     </div>

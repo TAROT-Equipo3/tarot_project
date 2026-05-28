@@ -4,10 +4,11 @@ import Button from "./Button";
 
 const POSITIONS = ["PASADO", "PRESENTE", "FUTURO"];
 
-const SelectionProgress = ({ isOpen, onClose, userName, cards = [] }) => {
+const SelectionProgress = ({ isOpen, onClose, userName, cards, onSaveReading }) => {
   return (
     <ModalBase isOpen={isOpen}>
       <div className="flex flex-col items-center px-6 py-10 gap-[4.3125rem] overflow-y-auto w-full h-full">
+        {/* Filtro para la textura de la carta */}
         <svg width="0" height="0" className="absolute">
           <filter id="roughen">
             <feTurbulence type="turbulence" baseFrequency="0.065" numOctaves="2" result="noise" />
@@ -59,7 +60,8 @@ const SelectionProgress = ({ isOpen, onClose, userName, cards = [] }) => {
           })}
         </div>
 
-        <Button variant="outline" size="lg">
+        {/* ✅ Aquí conectamos el onClick a la función de guardado */}
+        <Button variant="outline" size="lg" onClick={onSaveReading}>
           GUARDAR TIRADA
         </Button>
       </div>
