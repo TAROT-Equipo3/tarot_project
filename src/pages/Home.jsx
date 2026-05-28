@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/Button.jsx";
@@ -41,6 +41,18 @@ function Home() {
   const handleSaveName = (name) => {
     setTimerTriggered(true);
     setUserName(name);
+    setIsModalOpen(false);
+    
+    // AÑADIDO ESTRICTAMENTE NECESARIO: Guardar el nombre para el CRUD
+    localStorage.setItem("astralis_username", name);
+  };
+
+  // AÑADIDO ESTRICTAMENTE NECESARIO: Función para conectar con tu futuro Modal Overlay
+  const handleComenzarLectura = () => {
+    if (selectedCards.length === 3) {
+      // Aquí ejecutarás la lógica para ABRIR tu modal de las 3 cartas
+      console.log("Abrir modal de lectura con las cartas:", selectedCards);
+    }
     setIsNameModalOpen(false);
   };
 

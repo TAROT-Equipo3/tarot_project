@@ -1,3 +1,4 @@
+// src/router.jsx
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../pages/Home";
@@ -13,9 +14,9 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "historial", element: <Historial /> },
-      { path: "pasado/:id", element: <Past /> },
-      { path: "presente/:id", element: <Present /> },
-      { path: "futuro/:id", element: <Future /> },
+      { path: "pasado/:idPasado/:idPresente/:idFuturo", element: <Past /> },
+      { path: "presente/:idPasado/:idPresente/:idFuturo", element: <Present /> },
+      { path: "futuro/:idPasado/:idPresente/:idFuturo", element: <Future /> },
     ],
   },
 ]);
