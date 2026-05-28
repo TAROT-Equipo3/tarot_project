@@ -15,7 +15,7 @@ import SelectionProgress from "../components/SelectionProgress";
 function Home() {
   const {
     userName,
-    tarotApiData,
+    shuffledDeck,
     selectedCardIds,
     cardsForModal,
     filledCount,
@@ -55,7 +55,7 @@ function Home() {
               userName={userName}
               selectedCardIds={selectedCardIds}
               onCardClick={handleCardClick}
-              deck={tarotApiData}
+              deck={shuffledDeck}
             />
           </section>
 

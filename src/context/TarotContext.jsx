@@ -5,6 +5,15 @@ import { createHistoryItem } from "../services/historialApiService";
 
 const TarotContext = createContext();
 
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 export function TarotProvider({ children }) {
   const navigate = useNavigate();
 
@@ -14,6 +23,7 @@ export function TarotProvider({ children }) {
   const [timerTriggered, setTimerTriggered] = useState(false);
   const [selectedCards, setSelectedCards] = useState([null, null, null]);
   const [tarotApiData, setTarotApiData] = useState([]);
+  const [shuffledDeck, setShuffledDeck] = useState([]);
 
   const filledCount = selectedCards.filter(Boolean).length;
 
@@ -31,7 +41,10 @@ export function TarotProvider({ children }) {
 
   useEffect(() => {
     getTarotCards()
-      .then(setTarotApiData)
+      .then((cards) => {
+        setTarotApiData(cards);
+        setShuffledDeck(shuffleArray(cards));
+      })
       .catch((err) => console.error("Error cargando cartas:", err));
   }, []);
 
@@ -95,12 +108,14 @@ export function TarotProvider({ children }) {
     setUserName("");
     setTimerTriggered(false);
     setIsSelectionProgressOpen(false);
+    setShuffledDeck(shuffleArray(tarotApiData));
     localStorage.removeItem("astralis_username");
   };
 
   const value = {
     userName,
     tarotApiData,
+    shuffledDeck,
     selectedCardIds,
     cardsForModal,
     filledCount,

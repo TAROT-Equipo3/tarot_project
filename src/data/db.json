@@ -749,6 +749,189 @@
         }
       },
       "id": "yoNoAqOp4ac"
+    },
+    {
+      "userName": "Bebesitabebelin",
+      "date": "29/5/2026, 0:16:07",
+      "cards": {
+        "pasado": {
+          "id": "12",
+          "arcaneNumber": "XI",
+          "arcaneName": "La Justicia",
+          "arcaneDescription": "La carta número XI representa la ley del karma, la relación entre causa y efecto. Su figura, directa y enigmática, nos enfrenta con la verdad sin rodeos. A través de esta carta aprendemos a ser objetivos y a cosechar las consecuencias de nuestras acciones. Además, la Justicia encarna ideales elevados y nos exhorta a defender diariamente un mundo más justo, libre e inclusivo, apoyando a quienes sufren opresión.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Joy Buolamwini",
+          "goddessDescription": "Joy Buolamwini (Edmonton - Canadá) es una científica informática y activista digital destacada por su investigación sobre sesgos raciales y de género en sistemas de reconocimiento facial. Su tesis de maestría en el MIT, titulada Gender Shades, reveló disparidades significativas en la precisión de estos sistemas, lo que llevó a empresas como IBM, Microsoft y Amazon a revisar sus tecnologías. Fundó la Algorithmic Justice League, una organización que utiliza la investigación y el arte para sensibilizar sobre los impactos sociales de la inteligencia artificial y se esta manera combatir la injusticia algorítmica. Ha recibido premios como la Beca Rhodes y ha sido reconocida en listas como TIME 100 Next y Forbes 30 Under 30. Su charla TED y libro Unmasking AI han impulsado el debate sobre la ética en la IA, poniendo de manifiesto cómo el racismo, el sexismo y otras formas de discriminación se manifiestan en los algoritmos. Continúa asesorando a gobiernos y empresas para promover políticas de IA más justas y equitativas.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Joy_Buolamwini%2C_2018_%28cropped%29.jpg",
+            "author": "Niccolò Caranti, CC BY-SA 4.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+          }
+        },
+        "presente": {
+          "id": "22",
+          "arcaneNumber": "XXI",
+          "arcaneName": "El Mundo",
+          "arcaneDescription": "La carta final de los arcanos mayores, el Mundo, representa tanto un cierre como un nuevo comienzo. Marca la culminación de un ciclo y la realización del destino que nos propusimos alcanzar. Es un punto de partida desde cero, que nos invita a renovarnos y explorar nuevamente. El Mundo nos impulsa a salir de nuestra zona de confort antes de que se convierta en una prisión dorada. Aquí llegamos y desde aquí partimos, siguiendo el ritmo cíclico de los arcanos. Esta carta está profundamente ligada al viaje interior y al descubrimiento constante.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Alicia Asín",
+          "goddessDescription": "Alicia Asín Pérez (Zaragoza - España) es una destacada ingeniera informática y empresaria, cofundadora y CEO de Libelium, empresa especializada en soluciones de Internet de las Cosas (IoT) aplicadas a ciudades inteligentes, agricultura de precisión y sostenibilidad medioambiental. Licenciada en Ingeniería Informática por la Universidad de Zaragoza y con formación en ESADE y Cambridge Judge Business School, Asín ha sido pionera en la integración de IoT con inteligencia artificial y Big Data. Desde su fundación en 2006, Libelium ha desplegado sus tecnologías en más de 120 países y exporta el 90% de su facturación. Su labor ha sido reconocida con múltiples premios, en 2023, recibió la Medalla al Mérito Profesional del Gobierno de Aragón, destacando su contribución al desarrollo tecnológico y la visibilidad de las mujeres en carreras STEM. Además, es autora del libro Toma el control de tus datos (2024), donde reflexiona sobre la privacidad y el uso ético de la tecnología. Asín ha sido una voz decisiva en la promoción de la tecnología sostenible y su impacto positivo en la sociedad.",
+          "goddessImage": {
+            "imageSrc": "https://img.lavdg.com/sc/IQ7kePCJCJ9oAmnIFC_wYC8bW2k=/480x/2019/11/06/00121573058581801421204/Foto/HN7C6F1_174127.jpg",
+            "author": "Oliver Duch ",
+            "licenseUrl": "https://www.lavozdegalicia.es/noticia/coruna/2019/11/07/contando-verdad-chicas-ingenieria/0003_201911H7C6996.htm"
+          }
+        },
+        "futuro": {
+          "id": "16",
+          "arcaneNumber": "XV",
+          "arcaneName": "El Diablo",
+          "arcaneDescription": "La carta del Diablo aborda temas de opresión y libertad de elección. Nos confronta con nuestros temores y nos enseña que la única forma de vencerlos es nombrarlos, mirarlos de frente y aceptarlos. En el tarot, el Diablo está vinculado al libre albedrío, especialmente en los momentos en que parece más complicado ejercerlo. Representa la energía creativa, la fuerza erótica y dionisíaca que desata el caos y, a la vez, la libertad. Su mensaje sugiere que para salir del ciclo atrapante, solo hace falta romperlo.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Ghada Mohamed Amer",
+          "goddessDescription": "Ghada Mohamed Amer (Baréin - Egipto) es una destacada científica especializada en ingeniería eléctrica y telecomunicaciones, con enfoque en procesamiento de señales, sistemas de comunicación y tecnologías inalámbricas. Es Vicepresidenta de la Fundación Árabe de Ciencia y Tecnología, donde ha desarrollado y liderado más de 20 proyectos y programas para fomentar la innovación y el emprendimiento en el mundo árabe, contribuyendo al establecimiento de 142 startups en la región. Ha desarrollado investigaciones relevantes en áreas como comunicaciones móviles, redes de sensores y sistemas de comunicación óptica. Ha publicado numerosos artículos en revistas internacionales y conferencias, contribuyendo al avance tecnológico en su campo. También ha participado en proyectos de colaboración internacional y en la formación de nuevos profesionales en ingeniería. Su trabajo ha impulsado la innovación en tecnologías de comunicación en Egipto y a nivel global, consolidándose como una referente en la academia y la investigación científica.",
+          "goddessImage": {
+            "imageSrc": "https://i1.rgstatic.net/ii/profile.image/796422005874690-1566893211860_Q128/Ghada-Amer.jpg",
+            "author": "ResearchGate GmbH",
+            "licenseUrl": "https://www.researchgate.net/profile/Ghada-Amer/2"
+          }
+        }
+      },
+      "id": "N9elEoPbyI0"
+    },
+    {
+      "userName": "Bebesitabebelin",
+      "date": "29/5/2026, 0:16:23",
+      "cards": {
+        "pasado": {
+          "id": "12",
+          "arcaneNumber": "XI",
+          "arcaneName": "La Justicia",
+          "arcaneDescription": "La carta número XI representa la ley del karma, la relación entre causa y efecto. Su figura, directa y enigmática, nos enfrenta con la verdad sin rodeos. A través de esta carta aprendemos a ser objetivos y a cosechar las consecuencias de nuestras acciones. Además, la Justicia encarna ideales elevados y nos exhorta a defender diariamente un mundo más justo, libre e inclusivo, apoyando a quienes sufren opresión.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Joy Buolamwini",
+          "goddessDescription": "Joy Buolamwini (Edmonton - Canadá) es una científica informática y activista digital destacada por su investigación sobre sesgos raciales y de género en sistemas de reconocimiento facial. Su tesis de maestría en el MIT, titulada Gender Shades, reveló disparidades significativas en la precisión de estos sistemas, lo que llevó a empresas como IBM, Microsoft y Amazon a revisar sus tecnologías. Fundó la Algorithmic Justice League, una organización que utiliza la investigación y el arte para sensibilizar sobre los impactos sociales de la inteligencia artificial y se esta manera combatir la injusticia algorítmica. Ha recibido premios como la Beca Rhodes y ha sido reconocida en listas como TIME 100 Next y Forbes 30 Under 30. Su charla TED y libro Unmasking AI han impulsado el debate sobre la ética en la IA, poniendo de manifiesto cómo el racismo, el sexismo y otras formas de discriminación se manifiestan en los algoritmos. Continúa asesorando a gobiernos y empresas para promover políticas de IA más justas y equitativas.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Joy_Buolamwini%2C_2018_%28cropped%29.jpg",
+            "author": "Niccolò Caranti, CC BY-SA 4.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+          }
+        },
+        "presente": {
+          "id": "22",
+          "arcaneNumber": "XXI",
+          "arcaneName": "El Mundo",
+          "arcaneDescription": "La carta final de los arcanos mayores, el Mundo, representa tanto un cierre como un nuevo comienzo. Marca la culminación de un ciclo y la realización del destino que nos propusimos alcanzar. Es un punto de partida desde cero, que nos invita a renovarnos y explorar nuevamente. El Mundo nos impulsa a salir de nuestra zona de confort antes de que se convierta en una prisión dorada. Aquí llegamos y desde aquí partimos, siguiendo el ritmo cíclico de los arcanos. Esta carta está profundamente ligada al viaje interior y al descubrimiento constante.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Alicia Asín",
+          "goddessDescription": "Alicia Asín Pérez (Zaragoza - España) es una destacada ingeniera informática y empresaria, cofundadora y CEO de Libelium, empresa especializada en soluciones de Internet de las Cosas (IoT) aplicadas a ciudades inteligentes, agricultura de precisión y sostenibilidad medioambiental. Licenciada en Ingeniería Informática por la Universidad de Zaragoza y con formación en ESADE y Cambridge Judge Business School, Asín ha sido pionera en la integración de IoT con inteligencia artificial y Big Data. Desde su fundación en 2006, Libelium ha desplegado sus tecnologías en más de 120 países y exporta el 90% de su facturación. Su labor ha sido reconocida con múltiples premios, en 2023, recibió la Medalla al Mérito Profesional del Gobierno de Aragón, destacando su contribución al desarrollo tecnológico y la visibilidad de las mujeres en carreras STEM. Además, es autora del libro Toma el control de tus datos (2024), donde reflexiona sobre la privacidad y el uso ético de la tecnología. Asín ha sido una voz decisiva en la promoción de la tecnología sostenible y su impacto positivo en la sociedad.",
+          "goddessImage": {
+            "imageSrc": "https://img.lavdg.com/sc/IQ7kePCJCJ9oAmnIFC_wYC8bW2k=/480x/2019/11/06/00121573058581801421204/Foto/HN7C6F1_174127.jpg",
+            "author": "Oliver Duch ",
+            "licenseUrl": "https://www.lavozdegalicia.es/noticia/coruna/2019/11/07/contando-verdad-chicas-ingenieria/0003_201911H7C6996.htm"
+          }
+        },
+        "futuro": {
+          "id": "16",
+          "arcaneNumber": "XV",
+          "arcaneName": "El Diablo",
+          "arcaneDescription": "La carta del Diablo aborda temas de opresión y libertad de elección. Nos confronta con nuestros temores y nos enseña que la única forma de vencerlos es nombrarlos, mirarlos de frente y aceptarlos. En el tarot, el Diablo está vinculado al libre albedrío, especialmente en los momentos en que parece más complicado ejercerlo. Representa la energía creativa, la fuerza erótica y dionisíaca que desata el caos y, a la vez, la libertad. Su mensaje sugiere que para salir del ciclo atrapante, solo hace falta romperlo.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Ghada Mohamed Amer",
+          "goddessDescription": "Ghada Mohamed Amer (Baréin - Egipto) es una destacada científica especializada en ingeniería eléctrica y telecomunicaciones, con enfoque en procesamiento de señales, sistemas de comunicación y tecnologías inalámbricas. Es Vicepresidenta de la Fundación Árabe de Ciencia y Tecnología, donde ha desarrollado y liderado más de 20 proyectos y programas para fomentar la innovación y el emprendimiento en el mundo árabe, contribuyendo al establecimiento de 142 startups en la región. Ha desarrollado investigaciones relevantes en áreas como comunicaciones móviles, redes de sensores y sistemas de comunicación óptica. Ha publicado numerosos artículos en revistas internacionales y conferencias, contribuyendo al avance tecnológico en su campo. También ha participado en proyectos de colaboración internacional y en la formación de nuevos profesionales en ingeniería. Su trabajo ha impulsado la innovación en tecnologías de comunicación en Egipto y a nivel global, consolidándose como una referente en la academia y la investigación científica.",
+          "goddessImage": {
+            "imageSrc": "https://i1.rgstatic.net/ii/profile.image/796422005874690-1566893211860_Q128/Ghada-Amer.jpg",
+            "author": "ResearchGate GmbH",
+            "licenseUrl": "https://www.researchgate.net/profile/Ghada-Amer/2"
+          }
+        }
+      },
+      "id": "Xwmm-whrSSo"
+    },
+    {
+      "userName": "hiiii",
+      "date": "29/5/2026, 0:16:43",
+      "cards": {
+        "pasado": {
+          "id": "5",
+          "arcaneNumber": "IV",
+          "arcaneName": "El Emperador",
+          "arcaneDescription": "La carta número IV representa al Emperador, emblema de estructura, autoridad y seguridad. El número cuatro evoca la solidez de un hogar, con sus muros que contienen y protegen. Así como abril, el cuarto mes, marca el momento en que la energía combativa de la vida hace florecer la tierra, el Emperador canaliza la fuerza hacia el orden y la permanencia, guiando el crecimiento con determinación y propósito.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Shalini Kapoor",
+          "goddessDescription": "Shalini Kapoor (Bareilly - India) estudió Ingeniería Informática en la Universidad de Lucknow y obtuvo un MBA en Sistemas de Información en SP Jain (Mumbai). Tras iniciar su carrera en HCL, pasó a IBM, donde en más de dos décadas ascendió a roles clave en IoT, IA y soluciones empresariales, siendo la primera mujer en India en ser nombrada IBM Fellow. Fundó la ONG Ankurit Foundation (2014) para fomentar STEM en niños, organizó ferias para más de 3.000 estudiantes y promovió la inclusión de IA en el currículo escolar. Es autora de AI for You: The New Game Changer y actualmente es Chief Technologist para AWS en India/APJ, liderando iniciativas de IA, sostenibilidad y transformación digital.",
+          "goddessImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Shalini_Kapoor_%28IBM%29_Sep_2023.jpg",
+            "author": "DrhSR, CC BY-SA 4.0, via Wikimedia Commons",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+          }
+        },
+        "presente": {
+          "id": "21",
+          "arcaneNumber": "XX",
+          "arcaneName": "El Juicio",
+          "arcaneDescription": "La carta del Juicio aparece casi al final del viaje que comenzó con el Loco y culmina con el Mundo. Es una carta clave que marca la conclusión del proceso evolutivo que representan los arcanos mayores. Nos invita a tomar una acción definitiva: responder a nuestra verdadera vocación. El Juicio simboliza esa llamada profunda, la misión que nos guía en la vida. Antes de llegar a esta etapa, debimos mirar dentro de nosotros mismos, descubrir nuestra esencia auténtica y el mensaje que queremos compartir con el mundo. Cumplido este paso con sinceridad, alcanzaremos la verdadera libertad.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/d/dd/RWS_Tarot_20_Judgement.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Barbarita Lara",
+          "goddessDescription": "Barbarita Lara Martínez (Santiago - Chile) es una ingeniera de ejecución en informática, reconocida por su contribución a la innovación tecnológica con impacto social. Es directora general y cofundadora de EMERCOM, una empresa dedicada a desarrollar soluciones disruptivas de comunicación. En 2015, ideó el Sistema de Información de Emergencia (SiE), una plataforma que permite enviar mensajes de emergencia a la población afectada por desastres naturales, incluso sin conexión a internet o redes móviles, utilizando ondas de radio y tecnología de alta frecuencia. Este sistema le permitió obtener una patente en 2017 y ha sido destacado por el MIT Technology Review como uno de los innovadores menores de 35 años en América Latina. Además, ha sido reconocida con premios como el Premio Ada Byron a la Mujer Tecnóloga en Chile 2022 y ha sido incluida en la lista de las 50 mujeres más poderosas de Chile en 2024 por la revista Forbes. Su trabajo ha sido fundamental para promover la participación de las mujeres en el ámbito STEM y para desarrollar tecnologías que mejoren la resiliencia de las comunidades ante emergencias.",
+          "goddessImage": {
+            "imageSrc": "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/C658/production/_103367705_2f0a7921-8eb9-447f-a5af-6e8435c667b2.jpg.webp",
+            "author": "BBC News Mundo",
+            "licenseUrl": "https://www.bbc.com/mundo/noticias-45472111"
+          }
+        },
+        "futuro": {
+          "id": "11",
+          "arcaneNumber": "X",
+          "arcaneName": "La Rueda de la Fortuna",
+          "arcaneDescription": "Esta carta simboliza la transformación, el destino y el compromiso personal. Nos recuerda que ciertos acontecimientos ocurren porque deben suceder, pero también nos impulsa a asumir el control de nuestra vida, tomar decisiones conscientes y ser responsables de nuestras elecciones para que el cambio se manifieste.",
+          "arcaneImage": {
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg",
+            "author": "Pamela Coleman Smith, Rider-Waite Tarot",
+            "license": "Public domain"
+          },
+          "goddessName": "Dana Bolles",
+          "goddessDescription": "Dana Bolles (California - EEUU) es una ingeniera espacial y defensora de la inclusión en STEM que trabaja en la NASA desde 1995. Nacida sin brazos ni piernas, obtuvo su licenciatura en Ingeniería Mecánica en la Universidad Estatal de California en Long Beach y una maestría en Ingeniería de Rehabilitación en la Universidad Estatal de San Francisco. Su carrera en la NASA comenzó en el Centro Espacial Kennedy como ingeniera de seguridad de carga útil, y ha trabajado en varios centros de la NASA, incluyendo Ames y Goddard. Actualmente, lidera el equipo de tecnología de la información externa en la Dirección de Misiones Científicas de la NASA, gestionando el sitio web science.nasa.gov y liderando esfuerzos de modernización digital. Bolles es embajadora de la iniciativa IF/THEN de la AAAS, promoviendo la participación de mujeres en STEM, y participó en el vuelo parabólico de AstroAccess en 2021, evaluando la accesibilidad en la microgravedad. En 2014, recibió la Medalla de Igualdad de Oportunidades en el Empleo de la NASA.",
+          "goddessImage": {
+            "imageSrc": "https://www.nasa.gov/wp-content/uploads/2023/03/nhq202303020039-1.jpg",
+            "author": "NASA / Aubrey Gemignani",
+            "licenseUrl": "https://www.nasa.gov/image-article/dana-bolles-tecn%C3%B3loga-de-informaci%C3%B3n-externa/"
+          }
+        }
+      },
+      "id": "YDDNXR5QWas"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
