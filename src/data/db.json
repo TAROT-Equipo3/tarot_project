@@ -1,6 +1,12 @@
 {
   "historial": [
     {
+      "id": "1",
+      "userName": "Johanna",
+      "date": "14/05/2026",
+      "cards": []
+    },
+    {
       "id": "2",
       "userName": "Andrea",
       "date": "24/05/2026",

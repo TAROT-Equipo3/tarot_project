@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import {
   getHistorial,
   deleteHistoryItem,
+  updateHistoryName,
 } from "../services/historialApiService";
 import { HistorialList } from "../components/HistorialList";
 import { DeleteButton } from "../components/DeleteButton";
@@ -38,7 +39,21 @@ export default function Historial() {
       console.error(error);
     }
   };
-
+  const handleEditItem = async (id, newName) => {
+    // Verificamos que el nombre no esté vacío
+    if (newName && newName.trim() !== "") {
+      try {
+        // Hacemos el PATCH a la base de datos
+        const updatedItem = await updateHistoryName(id, { userName: newName });
+        
+        // Actualizamos la pantalla
+        setHistorialItems(historialItems.map(r => r.id === id ? updatedItem : r));
+      } catch (error) {
+        console.error("Error al actualizar el nombre:", error);
+      }
+    }
+  };
+  
   // Funcion borrar TODO el historial
   const handleClearAllHistory = async () => {
     const confirmDelete = window.confirm(
@@ -88,7 +103,11 @@ export default function Historial() {
           <DeleteButton onClick={handleClearAllHistory} variant="yellow" />
         </div>
         <div>
-          <HistorialList history={historialItems} onDelete={handleDelete} />
+          <HistorialList
+            history={historialItems}
+            onDelete={handleDelete}
+            onEdit={handleEditItem}
+          />
         </div>
         <div>
           <div className="w-full flex justify-center mt-12 md:mt-16 mb-8">

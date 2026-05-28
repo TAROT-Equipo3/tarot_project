@@ -1,6 +1,6 @@
 import { HistorialCardItem } from "./HistorialCardItem";
 
-export const HistorialList = ({ history, onDelete }) => {
+export const HistorialList = ({ history, onDelete, onEdit }) => {
   if (history.length === 0) {
     return <p className="text-center text-white font-mono">No hay tiradas guardadas aún.</p>;
   }
@@ -12,6 +12,7 @@ export const HistorialList = ({ history, onDelete }) => {
           key={item.id} 
           item={item} 
           onDelete={onDelete}
+          onEdit={onEdit} 
         />
       ))}
     </div>
