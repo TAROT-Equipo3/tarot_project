@@ -8,7 +8,6 @@ const TarotContext = createContext();
 export function TarotProvider({ children }) {
   const navigate = useNavigate();
 
-  // --- Estados centralizados ---
   const [isNameModalOpen, setIsNameModalOpen] = useState(false);
   const [isSelectionProgressOpen, setIsSelectionProgressOpen] = useState(false);
   const [userName, setUserName] = useState("");
@@ -18,7 +17,6 @@ export function TarotProvider({ children }) {
 
   const filledCount = selectedCards.filter(Boolean).length;
 
-  // --- Cómputos y Memorizaciones ---
   const selectedCardIds = useMemo(
     () => selectedCards.filter(Boolean).map((c) => c.id),
     [selectedCards]
@@ -31,7 +29,6 @@ export function TarotProvider({ children }) {
     });
   }, [selectedCards, tarotApiData]);
 
-  // --- Efectos ---
   useEffect(() => {
     getTarotCards()
       .then(setTarotApiData)
@@ -48,7 +45,6 @@ export function TarotProvider({ children }) {
     return () => clearTimeout(timer);
   }, [timerTriggered, userName]);
 
-  // --- Handlers ---
   const handleSaveName = (name) => {
     setTimerTriggered(true);
     setUserName(name);
@@ -94,7 +90,14 @@ export function TarotProvider({ children }) {
     }
   };
 
-  // Exponemos exactamente lo que los componentes necesitan consumir
+  const handleRestartReading = () => {
+    setSelectedCards([null, null, null]);
+    setUserName("");
+    setTimerTriggered(false);
+    setIsSelectionProgressOpen(false);
+    localStorage.removeItem("astralis_username");
+  };
+
   const value = {
     userName,
     tarotApiData,
@@ -107,12 +110,12 @@ export function TarotProvider({ children }) {
     handleSaveName,
     handleCardClick,
     handleGuardarTirada,
+    handleRestartReading,
   };
 
   return <TarotContext.Provider value={value}>{children}</TarotContext.Provider>;
 }
 
-// Custom hook para usar el contexto de forma limpia
 export function useTarot() {
   const context = useContext(TarotContext);
   if (!context) {

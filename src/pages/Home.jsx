@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// Contexto
 import { useTarot } from "../context/TarotContext";
 
-// Componentes
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
@@ -15,7 +13,6 @@ import TarotDeck from "../components/TarotDeck";
 import SelectionProgress from "../components/SelectionProgress";
 
 function Home() {
-  // Extraemos todo lo necesario del Contexto
   const {
     userName,
     tarotApiData,
@@ -28,6 +25,7 @@ function Home() {
     handleSaveName,
     handleCardClick,
     handleGuardarTirada,
+    handleRestartReading,
   } = useTarot();
 
   return (
@@ -82,6 +80,7 @@ function Home() {
           userName={userName}
           cards={cardsForModal}
           onSaveReading={handleGuardarTirada}
+          onRestart={handleRestartReading}
         />
       </div>
     </div>
