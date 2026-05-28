@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ModalBase from "./ModalBase";
 import Button from "./Button";
 
-// 1. Cambiamos 'path' por 'baseRoute' en español para que coincida con tu router
 const POSITIONS = [
   { label: "PASADO", baseRoute: "pasado" },
   { label: "PRESENTE", baseRoute: "presente" },
@@ -16,8 +15,8 @@ const SelectionProgress = ({
   userName,
   cards,
   onSaveReading,
+  onRestart,
 }) => {
-  // 2. Extraemos los IDs de las 3 cartas (ponemos un fallback por seguridad)
   const idPasado = cards[0]?.id || "0";
   const idPresente = cards[1]?.id || "0";
   const idFuturo = cards[2]?.id || "0";
@@ -42,26 +41,24 @@ const SelectionProgress = ({
             {userName}, se ha abierto el portal para ti.
           </h1>
         </div>
+
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-accent/60 hover:text-accent font-mono text-xl cursor-pointer transition-colors"
+          className="absolute top-32 right-12 md:top-12 md:right-32 text-accent/60 hover:text-accent font-mono text-2xl cursor-pointer transition-colors font-semibold"
           aria-label="Cerrar lectura"
         >
-          &#x2715; {/* Esto pinta una X elegante */}
+          &#x2715;
         </button>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-36 w-full">
           {POSITIONS.map((position, i) => {
             const card = cards[i];
-
-            // 3. Construimos la URL exacta que pide tu router.jsx
-            // Ejemplo: "/pasado/1/5/12"
             const dynamicPath = `/${position.baseRoute}/${idPasado}/${idPresente}/${idFuturo}`;
 
             return (
               <Link
                 to={dynamicPath}
-                state={{ cardData: card }} // Seguimos pasando la carta entera por state
+                state={{ cardData: card }}
                 key={position.label}
                 className="flex flex-col items-center gap-3 w-full max-w-[150px] md:max-w-none md:w-80 md:gap-8 cursor-pointer hover:scale-105 transition-transform duration-300"
               >
@@ -94,9 +91,14 @@ const SelectionProgress = ({
           })}
         </div>
 
-        <Button variant="outline" size="lg" onClick={onSaveReading}>
-          GUARDAR TIRADA
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button variant="outline" size="lg" onClick={onSaveReading}>
+            GUARDAR TIRADA
+          </Button>
+          <Button variant="outline" size="lg" onClick={onRestart}>
+            REINICIAR TIRADA
+          </Button>
+        </div>
       </div>
     </ModalBase>
   );
