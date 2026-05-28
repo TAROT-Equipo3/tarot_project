@@ -1,30 +1,18 @@
-import React, { useRef, useEffect, useMemo } from "react";
+import React, { useRef, useEffect } from "react";
 import { TarotCard } from "./TarotCard";
 import { CurvedText } from "./CurvedText";
-
-const shuffleArray = (array) => {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-};
 
 const MOBILE_CONTAINER_WIDTH = 660;
 
 export default function TarotDeck({ userName, selectedCardIds, onCardClick, deck = [] }) {
-  // ✅ deck viene de Home (datos reales de la API)
   const scrollRef = useRef(null);
-  const shuffledDeck = useMemo(() => shuffleArray(deck), [userName, deck]);
-  // ↑ deck en dependencias para cuando lleguen los datos asíncronos
 
   useEffect(() => {
     if (scrollRef.current) {
       const container = scrollRef.current;
       container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
     }
-  }, [shuffledDeck]); // ✅ recentrar cuando el deck cargue
+  }, [deck]);
 
   const midIndex = (deck.length - 1) / 2;
   const totalSpreadAngle = 73;
@@ -32,7 +20,6 @@ export default function TarotDeck({ userName, selectedCardIds, onCardClick, deck
   const horizontalSpread = 14;
   const verticalArcHeight = 4;
 
-  // ✅ Mientras carga la API
   if (deck.length === 0) {
     return (
       <div className="w-full flex items-center justify-center h-64">
@@ -42,7 +29,7 @@ export default function TarotDeck({ userName, selectedCardIds, onCardClick, deck
   }
 
   const renderCards = (containerWidth) =>
-    shuffledDeck.map((card, index) => {
+    deck.map((card, index) => {
       const relIdx = index - midIndex;
       const fanStyle = {
         transform: `translateX(${relIdx * horizontalSpread}px) translateY(${Math.abs(relIdx) * verticalArcHeight}px) rotate(${relIdx * anglePerCard}deg)`,
@@ -55,7 +42,7 @@ export default function TarotDeck({ userName, selectedCardIds, onCardClick, deck
       return (
         <TarotCard
           key={card.id}
-          title={card.arcaneName} // ✅ API usa arcaneName, no title
+          title={card.arcaneName}
           onClick={() => onCardClick(card)}
           isSelected={selectedCardIds.includes(card.id)}
           fanStyle={fanStyle}
