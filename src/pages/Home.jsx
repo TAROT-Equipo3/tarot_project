@@ -14,7 +14,6 @@ function Home() {
   const [isSelectionProgressOpen, setIsSelectionProgressOpen] = useState(false);
   const [userName, setUserName] = useState("");
   const [timerTriggered, setTimerTriggered] = useState(false);
-  
 
   // ✅ Array de 3 posiciones: [pasado, presente, futuro] — cada una card|null
   const [selectedCards, setSelectedCards] = useState([null, null, null]);
@@ -41,16 +40,13 @@ function Home() {
   const handleSaveName = (name) => {
     setTimerTriggered(true);
     setUserName(name);
-    setIsModalOpen(false);
-    
-    // AÑADIDO ESTRICTAMENTE NECESARIO: Guardar el nombre para el CRUD
-    localStorage.setItem("astralis_username", name);
+    setIsNameModalOpen(false); // ✅ Corregido
+    localStorage.setItem("astralis_username", name); // ✅ Corregido (dentro de la función)
   };
 
   // AÑADIDO ESTRICTAMENTE NECESARIO: Función para conectar con tu futuro Modal Overlay
   const handleComenzarLectura = () => {
     if (selectedCards.length === 3) {
-      // Aquí ejecutarás la lógica para ABRIR tu modal de las 3 cartas
       console.log("Abrir modal de lectura con las cartas:", selectedCards);
     }
     setIsNameModalOpen(false);
