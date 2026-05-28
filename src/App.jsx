@@ -1,3 +1,5 @@
+//import "./App.css";
+import React from "react";
 import { Outlet } from "react-router-dom";
 // import { TarotProvider } from './context/TarotContext'; // Cuando lo uses, envuelve todo aquí
 
