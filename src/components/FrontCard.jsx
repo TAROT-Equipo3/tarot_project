@@ -14,7 +14,7 @@ const FrontCard = ({ image, altText = "Carta del Tarot" }) => {
 
       {/* 2. Tu componente con el estilo de filtro aplicado */}
       <div 
-        className="w-56 md:w-72 rounded-xl shadow-card-selected border-[3px] border-accent p-1.5 bg-border-card-outer mx-auto flex-shrink-0 overflow-hidden"
+        className="w-56 md:w-72 max-h-60 rounded-xl shadow-card-selected border-[3px] border-accent p-1.5 bg-border-card-outer mx-auto flex-shrink-0 overflow-hidden"
         style={{ filter: "url(#roughen)" }} // <--- Aquí aplicamos el efecto
       >
         <img

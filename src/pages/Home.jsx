@@ -35,15 +35,16 @@ function Home() {
 
         <main className="app-main flex flex-col items-center justify-between w-full flex-1 px-4 py-6 md:py-10 md:gap-12">
           <section className="flex flex-col items-center text-center gap-4 w-full">
-            <h1 className="text-xl md:text-4xl font-mono font-bold text-accent tracking-wide">
+            <h1 className="text-xl md:text-2xl font-mono font-bold text-accent tracking-wide">
               Selecciona tu destino
             </h1>
-            <p className="text-sm md:text-2xl font-mono max-w-[370px] md:max-w-[816px] text-white md:leading-normal">
-              🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu camino.
+            <p className="text-sm md:text-xl font-mono max-w-[370px] md:max-w-[816px] text-white md:leading-normal">
+              🔮 Concéntrate... y elige 3 cartas para que el oráculo revele tu
+              camino.
             </p>
           </section>
 
-          <section className="w-full flex justify-center my-6 md:my-8">
+          <section className="w-full flex justify-center my-4 md:my-4">
             <ModalSelectionProgress
               currentSelection={filledCount}
               onStartReading={() => setIsSelectionProgressOpen(true)}
@@ -59,7 +60,7 @@ function Home() {
             />
           </section>
 
-          <section className="w-full flex justify-center mt-12 md:mt-16 mb-4">
+          <section className="w-full flex justify-center mb-4">
             <Link to="/historial">
               <Button variant="outline" size="lg" className="font-normal">
                 VER HISTORIAL DE TIRADAS

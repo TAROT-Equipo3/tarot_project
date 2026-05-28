@@ -81,6 +81,7 @@ export function TarotProvider({ children }) {
     });
   };
 
+  // ✅ Función corregida (limpia y sin duplicados)
   const handleGuardarTirada = async () => {
     if (cardsForModal.includes(null)) return;
 
@@ -96,8 +97,8 @@ export function TarotProvider({ children }) {
 
     try {
       await createHistoryItem(nuevaTirada);
-      setIsSelectionProgressOpen(false);
-      navigate("/historial");
+      // Aquí ya no navegamos ni cerramos el modal, 
+      // dejamos que SelectionProgress.jsx maneje su propio estado de "Guardado".
     } catch (error) {
       console.error("Hubo un problema guardando la lectura", error);
     }

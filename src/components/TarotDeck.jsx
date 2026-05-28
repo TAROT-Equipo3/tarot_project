@@ -51,24 +51,25 @@ export default function TarotDeck({ userName, selectedCardIds, onCardClick, deck
     });
 
   return (
-    <div className="w-full flex flex-col items-center justify-center font-syne">
+    <div className="w-full flex flex-col items-center justify-center font-syne pb-12 ">
       {/* Mobile */}
       <div
         ref={scrollRef}
-        className="block md:hidden w-full overflow-x-auto scrollbar-hide"
+        className="block md:hidden w-full overflow-x-auto scrollbar-thin scrollbar-thumb-accent/20 scrollbar-track-transparent mb-8"
         style={{
           WebkitOverflowScrolling: "touch",
           width: "100vw",
           position: "relative",
           left: "50%",
           transform: "translateX(-50%)",
+          scrollbarColor: "var(--color-white) transparent"
         }}
       >
         <div
-          className="relative mt-10"
+          className="relative mt-10 "
           style={{
             width: `${MOBILE_CONTAINER_WIDTH}px`,
-            height: "440px",
+            height: "480px",
             flexShrink: 0,
             paddingLeft: "150px",
             paddingRight: "150px",
@@ -81,7 +82,7 @@ export default function TarotDeck({ userName, selectedCardIds, onCardClick, deck
       {/* Desktop */}
       <div className="hidden md:flex w-full overflow-x-auto justify-center">
         <div
-          className="relative mt-10"
+          className="relative"
           style={{ width: "700px", height: "440px", flexShrink: 0 }}
         >
           {renderCards(null)}
