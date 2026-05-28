@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/Button.jsx";
@@ -8,17 +8,23 @@ import ModalBase from "../components/ModalBase";
 import ModalSelectionProgress from "../components/ModalSelectionProgress";
 import TarotDeck from "../components/TarotDeck";
 import SelectionProgress from "../components/SelectionProgress";
+import { getTarotCards } from "../services/tarotApiService"; // ✅
 
 function Home() {
   const [isNameModalOpen, setIsNameModalOpen] = useState(false);
   const [isSelectionProgressOpen, setIsSelectionProgressOpen] = useState(false);
   const [userName, setUserName] = useState("");
   const [timerTriggered, setTimerTriggered] = useState(false);
-
-  // ✅ Array de 3 posiciones: [pasado, presente, futuro] — cada una card|null
   const [selectedCards, setSelectedCards] = useState([null, null, null]);
+  const [tarotApiData, setTarotApiData] = useState([]); // ✅ mazo completo de la API
 
-  // IDs para que TarotDeck sepa qué marcar
+  // ✅ Carga única del mazo al montar
+  useEffect(() => {
+    getTarotCards()
+      .then(setTarotApiData)
+      .catch((err) => console.error("Error cargando cartas:", err));
+  }, []);
+
   const selectedCardIds = useMemo(
     () => selectedCards.filter(Boolean).map((c) => c.id),
     [selectedCards]
@@ -26,6 +32,12 @@ function Home() {
 
   const filledCount = selectedCards.filter(Boolean).length;
   const isReadingReady = filledCount === 3;
+
+  // ✅ Cruza los ids seleccionados con los datos completos de la API
+  const cardsForModal = selectedCards.map((card) => {
+    if (!card) return null;
+    return tarotApiData.find((api) => String(api.id) === String(card.id)) ?? null;
+  });
 
   useEffect(() => {
     setSelectedCards([null, null, null]);
@@ -40,44 +52,24 @@ function Home() {
   const handleSaveName = (name) => {
     setTimerTriggered(true);
     setUserName(name);
-    setIsNameModalOpen(false); // ✅ Corregido
-    localStorage.setItem("astralis_username", name); // ✅ Corregido (dentro de la función)
-  };
-
-  // AÑADIDO ESTRICTAMENTE NECESARIO: Función para conectar con tu futuro Modal Overlay
-  const handleComenzarLectura = () => {
-    if (selectedCards.length === 3) {
-      console.log("Abrir modal de lectura con las cartas:", selectedCards);
-    }
     setIsNameModalOpen(false);
+    localStorage.setItem("astralis_username", name);
   };
 
-  // ✅ Seleccionar ocupa el primer slot libre, deseleccionar libera su slot
   const handleCardClick = (card) => {
     setSelectedCards((prev) => {
       const existingSlot = prev.findIndex((c) => c?.id === card.id);
-
       if (existingSlot !== -1) {
-        // Deseleccionar — liberar ese slot
         const next = [...prev];
         next[existingSlot] = null;
         return next;
       }
-
-      // Seleccionar — primer slot libre
       const freeSlot = prev.findIndex((c) => c === null);
-      if (freeSlot === -1) return prev; // ya hay 3, ignorar
+      if (freeSlot === -1) return prev;
       const next = [...prev];
       next[freeSlot] = card;
       return next;
     });
-  };
-
-  // Formato que espera SelectionProgress
-  const cardsForModal = {
-    pasado: selectedCards[0] ?? null,
-    presente: selectedCards[1] ?? null,
-    futuro: selectedCards[2] ?? null,
   };
 
   return (
@@ -95,11 +87,10 @@ function Home() {
             </p>
           </section>
 
-          {/* ✅ Tarjeta de progreso — recibe filledCount */}
           <section className="w-full flex justify-center my-6 md:my-8">
             <ModalSelectionProgress
               currentSelection={filledCount}
-              onStartReading={() => setIsSelectionProgressOpen(true)} // ✅ abre el modal grande
+              onStartReading={() => setIsSelectionProgressOpen(true)}
             />
           </section>
 
@@ -108,6 +99,7 @@ function Home() {
               userName={userName}
               selectedCardIds={selectedCardIds}
               onCardClick={handleCardClick}
+              deck={tarotApiData} // ✅ mazo real de la API
             />
           </section>
 
@@ -126,12 +118,11 @@ function Home() {
           <NamePopup onSubmitName={handleSaveName} />
         </ModalBase>
 
-        {/* ✅ Modal grande — solo se abre al pulsar "Comenzar lectura" */}
         <SelectionProgress
           isOpen={isSelectionProgressOpen}
           onClose={() => setIsSelectionProgressOpen(false)}
           userName={userName}
-          cards={cardsForModal}
+          cards={cardsForModal} // ✅ datos completos con arcaneImage
         />
       </div>
     </div>

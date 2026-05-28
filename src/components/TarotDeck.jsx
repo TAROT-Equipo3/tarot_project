@@ -1,10 +1,5 @@
-// Contenedor del abanico — maneja el layout responsive:
-// Mobile (< md): scroll horizontal con abanico centrado en MOBILE_CONTAINER_WIDTH
-// Tablet y Desktop (>= md): abanico centrado fijo sin scroll
-
 import React, { useRef, useEffect, useMemo } from "react";
 import { TarotCard } from "./TarotCard";
-import { tarotDeckData } from "../data/tarotData";
 import { CurvedText } from "./CurvedText";
 
 const shuffleArray = (array) => {
@@ -18,23 +13,55 @@ const shuffleArray = (array) => {
 
 const MOBILE_CONTAINER_WIDTH = 660;
 
-// ✅ selectedCardIds y onCardClick vienen de Home
-export default function TarotDeck({ userName, selectedCardIds, onCardClick }) {
+export default function TarotDeck({ userName, selectedCardIds, onCardClick, deck = [] }) {
+  // ✅ deck viene de Home (datos reales de la API)
   const scrollRef = useRef(null);
-  const shuffledDeck = useMemo(() => shuffleArray(tarotDeckData), [userName]);
+  const shuffledDeck = useMemo(() => shuffleArray(deck), [userName, deck]);
+  // ↑ deck en dependencias para cuando lleguen los datos asíncronos
 
   useEffect(() => {
     if (scrollRef.current) {
       const container = scrollRef.current;
       container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
     }
-  }, []);
+  }, [shuffledDeck]); // ✅ recentrar cuando el deck cargue
 
-  const midIndex = (tarotDeckData.length - 1) / 2;
+  const midIndex = (deck.length - 1) / 2;
   const totalSpreadAngle = 73;
-  const anglePerCard = totalSpreadAngle / (tarotDeckData.length - 1);
+  const anglePerCard = totalSpreadAngle / (deck.length - 1);
   const horizontalSpread = 14;
   const verticalArcHeight = 4;
+
+  // ✅ Mientras carga la API
+  if (deck.length === 0) {
+    return (
+      <div className="w-full flex items-center justify-center h-64">
+        <span className="text-accent font-syne animate-pulse">Invocando el mazo...</span>
+      </div>
+    );
+  }
+
+  const renderCards = (containerWidth) =>
+    shuffledDeck.map((card, index) => {
+      const relIdx = index - midIndex;
+      const fanStyle = {
+        transform: `translateX(${relIdx * horizontalSpread}px) translateY(${Math.abs(relIdx) * verticalArcHeight}px) rotate(${relIdx * anglePerCard}deg)`,
+        zIndex: index,
+        transformOrigin: "bottom center",
+        left: containerWidth ? `${containerWidth / 2}px` : "50%",
+        top: "60px",
+        marginLeft: "-64px",
+      };
+      return (
+        <TarotCard
+          key={card.id}
+          title={card.arcaneName} // ✅ API usa arcaneName, no title
+          onClick={() => onCardClick(card)}
+          isSelected={selectedCardIds.includes(card.id)}
+          fanStyle={fanStyle}
+        />
+      );
+    });
 
   return (
     <div className="w-full flex flex-col items-center justify-center font-syne">
@@ -60,26 +87,7 @@ export default function TarotDeck({ userName, selectedCardIds, onCardClick }) {
             paddingRight: "150px",
           }}
         >
-          {shuffledDeck.map((card, index) => {
-            const relIdx = index - midIndex;
-            const fanStyle = {
-              transform: `translateX(${relIdx * horizontalSpread}px) translateY(${Math.abs(relIdx) * verticalArcHeight}px) rotate(${relIdx * anglePerCard}deg)`,
-              zIndex: index,
-              transformOrigin: "bottom center",
-              left: `${MOBILE_CONTAINER_WIDTH / 2}px`,
-              top: "60px",
-              marginLeft: "-64px",
-            };
-            return (
-              <TarotCard
-                key={card.id}
-                title={card.title}
-                onClick={() => onCardClick(card)} // ✅ objeto completo
-                isSelected={selectedCardIds.includes(card.id)}
-                fanStyle={fanStyle}
-              />
-            );
-          })}
+          {renderCards(MOBILE_CONTAINER_WIDTH)}
         </div>
       </div>
 
@@ -89,28 +97,10 @@ export default function TarotDeck({ userName, selectedCardIds, onCardClick }) {
           className="relative mt-10"
           style={{ width: "700px", height: "440px", flexShrink: 0 }}
         >
-          {shuffledDeck.map((card, index) => {
-            const relIdx = index - midIndex;
-            const fanStyle = {
-              transform: `translateX(${relIdx * horizontalSpread}px) translateY(${Math.abs(relIdx) * verticalArcHeight}px) rotate(${relIdx * anglePerCard}deg)`,
-              zIndex: index,
-              transformOrigin: "bottom center",
-              left: "50%",
-              top: "60px",
-              marginLeft: "-64px",
-            };
-            return (
-              <TarotCard
-                key={card.id}
-                title={card.title}
-                onClick={() => onCardClick(card)} // ✅ objeto completo
-                isSelected={selectedCardIds.includes(card.id)}
-                fanStyle={fanStyle}
-              />
-            );
-          })}
+          {renderCards(null)}
         </div>
       </div>
+
       <CurvedText text="Desliza para ver más cartas" />
     </div>
   );
