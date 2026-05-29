@@ -1,0 +1,30 @@
+import axios from "axios";
+
+// Esta es tu única "fuente de la verdad" para la URL
+const API_URL = "http://localhost:3000/historial";
+
+export async function getHistorial() {
+  const response = await axios.get(API_URL);
+  console.log(response.data)
+  return response.data;
+}
+
+export async function deleteHistoryItem(id) {
+    await axios.delete(`${API_URL}/${id}`);
+}
+
+
+export const updateHistoryName = async (id, updatedData) => {
+  const response = await axios.patch(`${API_URL}/${id}`, updatedData);
+  return response.data;
+}
+
+export const createHistoryItem = async (newData) => {
+  try {
+    const response = await axios.post(API_URL, newData);
+    return response.data;
+  } catch (error) {
+    console.error("Error al crear la tirada:", error);
+    throw error;
+  }
+};

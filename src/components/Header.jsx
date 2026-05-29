@@ -1,44 +1,25 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <header className="w-full overflow-hidden">
-
-      {/* Background */}
-      <div className="
-        w-full 
-        bg-gradient-to-b 
-        from-purple-500 
-        via-purple-700 
-        to-purple-900 
-        py-3 md:py-5 
-        flex 
-        justify-center
-      ">
-
-        <h1 className="
-          font-[Syne]
-          font-extrabold
-          text-yellow-400
-
-          text-[28px] 
-          sm:text-[36px] 
-          md:text-[48px] 
-          lg:text-[56px]
-
-          tracking-[0.01em] 
-          md:tracking-[0.02em]
-
-          leading-none
-          text-center
-          whitespace-nowrap
-        ">
-          ASTRALIS
-        </h1>
-
+      {/* Contenedor Principal con Degradado */}
+      <div className="w-full py-3 md:py-5 flex justify-center items-center bg-header-gradient">
+        <Link to="/" aria-label="Go to home">
+          <h2 className="
+            font-syne font-extrabold text-accent leading-none text-center 
+            cursor-pointer whitespace-nowrap
+            text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px]
+            tracking-[0.01em] md:tracking-[0.02em]
+          ">
+            ASTRALIS
+          </h2>
+        </Link>
       </div>
 
-      {/* Line */}
-      <div className="h-[2px] bg-yellow-400 w-full"></div>
-
+      {/* Línea divisoria decorativa */}
+      <div className="h-[1px] w-full bg-accent opacity-80" />
     </header>
   );
 };
