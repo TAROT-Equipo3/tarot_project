@@ -22,6 +22,7 @@ export default {
       boxShadow: {
         "glow-accent": "0 0 15px 0 #FFD700",
         "glow-hover": "0 0 15px 0 #FCDD4D",
+        "glow-hover-card":"0 0 60px 0 #FFD700"
       },
       textShadow: {
         "glow-gold": "0 0 15px #FFD700",

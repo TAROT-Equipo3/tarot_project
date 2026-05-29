@@ -1,73 +1,35 @@
-import React from "react";
+// src/components/FrontCard.jsx
+import PropTypes from "prop-types";
 
-const FrontCard = ({ cardData, type, onClose }) => {
-  if (!cardData) {
-    return (
-      <div className="text-center text-purple-600 font-bold p-4">
-        Cargando...
-      </div>
-    );
-  }
-
-  const { id, name, image, meaning, tarotName, tarotImage, arcanoNumber } =
-    cardData;
-
-  const tarotMeaning =
-    typeof meaning === "object"
-      ? meaning?.tarot
-      : "Significado de la carta tarot aquí...";
-  const stemMeaning = typeof meaning === "object" ? meaning?.stem : meaning;
-
-  const TAROT_FALLBACK = "https://placeholder.com";
-  const AVATAR_FALLBACK = "https://placeholder.com";
-
+const FrontCard = ({ image, altText = "Carta del Tarot" }) => {
   return (
-    <div className="flex flex-col items-center bg-white border border-purple-200 rounded-2xl p-6 shadow-xl max-w-md mx-auto my-4 text-gray-800">
-      <div className="bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
-        <span>{type}</span>
-      </div>
+    <>
+      {/* 1. Filtro SVG oculto que define el efecto de rugosidad */}
+      <svg width="0" height="0" className="absolute pointer-events-none">
+        <filter id="roughen">
+          <feTurbulence type="turbulence" baseFrequency="0.065" numOctaves="2" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" />
+        </filter>
+      </svg>
 
-      <div className="w-full h-64 overflow-hidden rounded-xl mb-4 bg-gray-100 flex items-center justify-center">
+      {/* 2. Tu componente con el estilo de filtro aplicado */}
+      <div 
+        className="w-56 md:w-72 rounded-xl shadow-card-selected border-[3px] border-accent p-1.5 bg-border-card-outer mx-auto flex-shrink-0 overflow-hidden"
+        style={{ filter: "url(#roughen)" }} // <--- Aquí aplicamos el efecto
+      >
         <img
-          src={tarotImage || TAROT_FALLBACK}
-          alt={tarotName || "Carta Tarot"}
-          className="w-full h-full object-cover"
+          src={image}
+          alt={altText}
+          className="w-full h-auto rounded-lg object-cover block"
         />
       </div>
-
-      <div className="text-center mb-6 w-full border-b border-gray-100 pb-4">
-        <p className="text-xs text-purple-500 font-bold tracking-widest mb-1">
-          Nº ARCANO: {arcanoNumber || id}
-        </p>
-        <p className="text-sm text-gray-600 italic px-2">{tarotMeaning}</p>
-      </div>
-
-      <div className="flex flex-col items-center w-full bg-purple-50 rounded-xl p-4 text-center">
-        <h4 className="text-sm font-bold text-purple-900 uppercase tracking-wide mb-3">
-          MUJER STEM: {name}
-        </h4>
-
-        <div className="w-20 h-20 overflow-hidden rounded-full border-2 border-purple-300 mb-3 shadow-sm bg-gray-200">
-          <img
-            src={image || AVATAR_FALLBACK}
-            alt={name || "Mujer STEM"}
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <p className="text-xs text-gray-700 leading-relaxed max-w-xs">
-          {stemMeaning || "Biografía de la contemporánea aquí..."}
-        </p>
-      </div>
-
-      <button
-        className="mt-6 w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2.5 px-4 rounded-xl transition duration-200 text-sm tracking-wide shadow-md"
-        onClick={onClose}
-      >
-        VOLVER A INICIO
-      </button>
-    </div>
+    </>
   );
+};
+
+FrontCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  altText: PropTypes.string,
 };
 
 export default FrontCard;

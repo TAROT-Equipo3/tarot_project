@@ -1,35 +1,57 @@
-import React, { useState } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
-const CardInfo = ({ cardData }) => {
-  const [avatarError, setAvatarError] = useState(false);
-  const FALLBACK = "https://unsplash.com";
-
-  if (!cardData) return null;
-
-  const stemName = cardData.goddessName;
-  const stemBio = cardData.goddessDescription;
-  const stemImage = cardData.goddessImage?.imageSrc;
-
+const CardInfo = ({ 
+  cardNumber, 
+  meaning, 
+  stemName, 
+  stemLocation, // Mantenida aunque no se renderiza en el JSX original
+  stemImage, 
+  stemBio 
+}) => {
   return (
-    <div className="w-full flex flex-col items-center gap-6 mt-12 font-mono text-white">
-      <h4 className="text-accent font-syne font-bold tracking-widest text-base uppercase  text-center px-4">
-        MUJER STEM: {stemName}
-      </h4>
+    <div className="w-full max-w-lg mx-auto px-4 md:px-0 mt-8 mb-8 font-mono text-justify md:text-left">
+      
+      {/* SECCIÓN DEL ARCANO */}
+      <section className="mb-10">
+        <h3 className="text-accent text-[12px] font-bold uppercase tracking-widest mb-4">
+          Nº ARCANO: {cardNumber}
+        </h3>
+        <p className="text-white text-[11px] md:text-[13px] leading-loose">
+          {meaning}
+        </p>
+      </section>
 
-      <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-accent shadow-card-selected bg-cardOuter flex-shrink-0 my-2 relative">
-        <img
-          src={avatarError || !stemImage ? FALLBACK : stemImage}
-          alt=""
-          className="w-full h-full object-cover"
-          onError={() => setAvatarError(true)}
-        />
-      </div>
+      {/* SECCIÓN DE LA MUJER STEM */}
+      <section className="pt-10 border-t border-white/10">
+        <h3 className="text-accent text-[12px] font-bold uppercase tracking-widest mb-6 text-center">
+          MUJER STEM: {stemName}
+        </h3>
 
-      <p className="text-purple-100 leading-relaxed text-lg font-syne text-justify w-full max-w-2xl px-4 md:px-0">
-        {stemBio}
-      </p>
+        <div className="flex justify-center mb-8">
+          <img
+            src={stemImage}
+            alt={`Retrato de ${stemName}`}
+            className="w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-accent shadow-card-selected object-cover"
+          />
+        </div>
+
+        <p className="text-white text-[11px] md:text-[13px] leading-loose">
+          {stemBio}
+        </p>
+      </section>
+      
     </div>
   );
+};
+
+CardInfo.propTypes = {
+  cardNumber: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  meaning: PropTypes.string.isRequired,
+  stemName: PropTypes.string.isRequired,
+  stemLocation: PropTypes.string.isRequired,
+  stemImage: PropTypes.string.isRequired,
+  stemBio: PropTypes.string.isRequired,
 };
 
 export default CardInfo;

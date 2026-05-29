@@ -1,225 +1,99 @@
-# 🃏 Contemporary Goddesses Tarot
+🃏 Contemporary Goddesses Tarot
+Aplicación web interactiva de lectura de tarot digital que combina simbolismo esotérico con un homenaje a mujeres referentes del ámbito STEM, asociando una diosa a cada carta.
 
-## 📌 Descripción del Proyecto
+🟡 Estado: En desarrollo · 📄 Proyecto educativo – Bootcamp FemCoders
 
-Contemporary Goddesses Tarot es una aplicación web interactiva que permite al usuario realizar una lectura de tarot digital basada en tres fases: pasado, presente y futuro.
+---
+🚀 Instalación
+`bash
+git clone https://github.com/fabileoruf/tarot-repo.git
+cd tarot_project
+npm install
+npm run dev
+`
 
-El proyecto combina el simbolismo del tarot con un enfoque contemporáneo, mostrando mujeres referentes del ámbito STEM asociadas a cada carta, como homenaje a su impacto en un sector tradicionalmente masculinizado.
+`bash
+# Backend local
+npm run server
+`
+---
+🧠 Funcionalidades
+Lectura de Tarot
+Visualización de 22 cartas desde la API
+Selección de 3 cartas (pasado, presente, futuro) Aleatoreamente
+Significado e imagen de la diosa STEM asociada y Arcano
 
-## 👥 Enlace presentación
-
-## 👥 Proceso de instalación
-- Paso 1 
-    Git clone del repo
-- Paso 2 
- npm install
- npm run dev (visualizar)
- npm run server 
+Historial (CRUD)
+Create: Guardar la fecha y nombre de usuario por cada lectura realizada
+Read: Mostrar el significado de cada carta / Mostrar la diosa contemporánea asociada a la carta elegida
+Update : Actualizar la información de nombre de usuario de las lecturas guardadas
+Delete: Eliminar la lectura guardada seleccionada / vaciar el historial de lecturas guardadas
 
 ---
 
-## 👥 Equipo
+⚙️ Stack Tecnológico
+| Área | Tecnologías |
+|------|------------|
+| Frontend | React.js, Vite, Tailwind CSS |
+| Datos | Axios, json-server |
+| Testing | Vitest |
+| Diseño | Figma, Stitch |
+| Gestión | Jira, Confluence, Git & GitHub |
+🔗 API
+`
+GET  https://6872278c76a5723aacd3cbb3.mockapi.io/api/v1/tarot
+GET  https://6872278c76a5723aacd3cbb3.mockapi.io/api/v1/tarot/:id
 
-- Fabiana Leonardo  
-- Andrea Tapia  
-- Johanna Monroy  
-- Nayeli C M  
-- Siuzanna Vachaganian  
 
 ---
 
-## 🎯 Objetivos
+## 🏗️ Estructura
 
-- Crear una experiencia de usuario interactiva y fluida  
-- Consumir datos dinámicos desde una API  
-- Implementar lógica de selección de cartas  
-- Gestionar un historial persistente de lecturas  
-- Aplicar buenas prácticas de desarrollo frontend  
-
----
-## 🌐  Lenguaje
-
-- Pagina en castellano
-- Desarrollo en inglés
-
----
-
-## 🧠 Funcionalidades
-
-### 🎴 Lectura de Tarot
-- Mostrar 22 cartas desde la API  
-- Selección de máximo 3 cartas:
-  - Pasado  
-  - Presente  
-  - Futuro  
-- Visualización del significado  
-- Mostrar la diosa STEM asociada  
-- Evitar cartas duplicadas  
-
-### 🗂️ Gestión de Historial (CRUD)
-- Guardar lectura  
-- Editar nombre del usuario  
-- Eliminar lectura individual  
-- Eliminar todo el historial  
-
----
-
-## ⚙️ Stack Tecnológico
-
-### Frontend
-- React.js  
-- Vite  
-- Tailwind CSS  
-
-### Gestión de datos
-- Axios  
-- json-server  
-
-### Testing
-- Vitest  
-
----
-
-## 🛠 Herramientas de Trabajo
-
-- 🎨 Figma → diseño UI (wireframes y prototipos)  
-- 🎨 Stitch → generación de diseño visual  
-- 📋 Jira → gestión de tareas y sprints  
-- 📚 Confluence → documentación del proyecto  
-- 💻 VS Code → desarrollo  
-- 🔀 Git & GitHub → control de versiones  
-
----
-
-## 🔗 API
-
-- https://6872278c76a5723aacd3cbb3.mockapi.io/api/v1/tarot  
-- https://6872278c76a5723aacd3cbb3.mockapi.io/api/v1/tarot/:id  
-
----
-
-## 🏗️ Estructura del Proyecto
-
-
+````
+public/
 src/
-├──assets/
-├── img/ 
-├── components/  
-├── data/  
-├── pages/  
-├── services/  
-├── hooks/  
-├── utils/  
-├── styles/  
-├── tests/  
-├── Apps.jsx/  
-└── main.jsx  
-
-
----
-
-## 🎨 Diseño (UI/UX)
-
-- Wireframes en Figma (Mobile + Desktop)  
-- Diseño generado con Stitch  
-- Enfoque responsive (Mobile First)  
+├── assets/
+├── components/
+├── config/
+│   └── router.jsx
+├── context/
+├── data/
+├── pages/
+├── services/
+├── App.jsx
+├── index.css
+├── main.jsx
+````
 
 ---
 
 ## 🔄 Flujo de Usuario
 
-1. Usuario accede a la aplicación  
-2. Visualiza 22 cartas boca abajo  
-3. Selecciona 3 cartas  
-4. Visualiza interpretación  
-5. Guarda la lectura  
-6. Consulta historial  
-
----
-
-## 📊 Metodología
-
-### Scrum
-- Trabajo por sprints  
-- Gestión en Jira  
-- Seguimiento con Kanban  
-
-### Flujo de trabajo
-- Branches feature/*  
-- Pull Requests obligatorios  
-- Code Review entre compañeros  
+1. Accede a la app
+2. Visualiza 22 cartas boca abajo
+3. Selecciona 3 cartas (pasado · presente · futuro)
+4. Ve la interpretación + diosa STEM asociada
+5. Guarda la lectura
+6. Consulta el historial
+↺ Nueva lectura → vuelve al inicio
 
 ---
 
 ## 🔀 Git Workflow
 
-- main → producción  
-- dev → integración  
-- feature/* → desarrollo  
+| Rama | Uso |
+|------|-----|
+| main | Producción |
+| dev | Integración |
+| feature/* | Desarrollo |
 
-### Commits
-- feat:  
-- fix:  
-- refactor:  
-- test:  
-
----
-
-## 🧪 Testing
-
-- Tests unitarios con Vitest  
-- Validación de lógica de cartas y CRUD  
+Commits: feat: · fix: · refactor: · test:`
+Pull Requests obligatorios con code review.
 
 ---
-
-## 💾 Persistencia
-
-- json-server como backend local  
-- Guarda nombre, fecha y cartas seleccionadas  
+👥 Equipo
+Fabiana Leonardo · Andrea Tapia · Johanna Monroy · Nayeli C M · Siuzanna Vachaganian
 
 ---
-
-## 🔧 Instalación
-
-```bash
-git clone https://github.com/fabileoruf/tarot-repo.git
-cd tarot-repo
-npm install
-npm run dev
-```
-
-### Backend local
-
-```bash
-npx json-server --watch db.json --port 3001
-```
-
----
-
-## 📦 Buenas Prácticas
-
-- Uso de Tailwind sin CSS innecesario  
-- Manejo de errores con Axios  
-- Código modular y limpio  
-- Revisión antes de merge  
-
----
-
-## 🚀 Estado
-
-🟡 En desarrollo  
-
----
-
-## 🔮 Futuro
-
-- Animaciones de cartas  
-- Backend real  
-- Internacionalización  
-- Mejoras de accesibilidad  
-
----
-
-## 📄 Licencia
-
-Proyecto educativo – Bootcamp FemCoders
+🔮 Próximamente
+Animaciones de cartas · Backend real · Internacionalización · Mejoras de accesibilidad
