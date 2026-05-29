@@ -5,6 +5,7 @@ import { createHistoryItem } from "../services/historialApiService";
 
 const TarotContext = createContext();
 
+// Algoritmo de ordenamiento aleatorio (Fisher-Yates)
 const shuffleArray = (array) => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -17,6 +18,7 @@ const shuffleArray = (array) => {
 export function TarotProvider({ children }) {
   const navigate = useNavigate();
 
+  // --- ESTADOS LOCALES ---
   const [isNameModalOpen, setIsNameModalOpen] = useState(false);
   const [isSelectionProgressOpen, setIsSelectionProgressOpen] = useState(false);
   const [userName, setUserName] = useState("");
@@ -25,6 +27,7 @@ export function TarotProvider({ children }) {
   const [tarotApiData, setTarotApiData] = useState([]);
   const [shuffledDeck, setShuffledDeck] = useState([]);
 
+  // --- MEMOIZACIONES / DERIVADOS ---
   const filledCount = selectedCards.filter(Boolean).length;
 
   const selectedCardIds = useMemo(
@@ -39,6 +42,9 @@ export function TarotProvider({ children }) {
     });
   }, [selectedCards, tarotApiData]);
 
+  // --- EFECTOS (EFFECTS) ---
+  
+  // Carga inicial de cartas desde la API
   useEffect(() => {
     getTarotCards()
       .then((cards) => {
@@ -48,16 +54,19 @@ export function TarotProvider({ children }) {
       .catch((err) => console.error("Error cargando cartas:", err));
   }, []);
 
+  // Reinicia la selección si cambia el usuario
   useEffect(() => {
     setSelectedCards([null, null, null]);
   }, [userName]);
 
+  // Temporizador para abrir el modal del nombre de usuario
   useEffect(() => {
     if (timerTriggered || userName) return;
     const timer = setTimeout(() => setIsNameModalOpen(true), 800);
     return () => clearTimeout(timer);
   }, [timerTriggered, userName]);
 
+  // --- MANEJADORES DE EVENTOS ---
   const handleSaveName = (name) => {
     setTimerTriggered(true);
     setUserName(name);
@@ -81,7 +90,6 @@ export function TarotProvider({ children }) {
     });
   };
 
-  // ✅ Función corregida (limpia y sin duplicados)
   const handleGuardarTirada = async () => {
     if (cardsForModal.includes(null)) return;
 
@@ -97,8 +105,6 @@ export function TarotProvider({ children }) {
 
     try {
       await createHistoryItem(nuevaTirada);
-      // Aquí ya no navegamos ni cerramos el modal, 
-      // dejamos que SelectionProgress.jsx maneje su propio estado de "Guardado".
     } catch (error) {
       console.error("Hubo un problema guardando la lectura", error);
     }

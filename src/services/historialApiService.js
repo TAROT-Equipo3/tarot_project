@@ -13,7 +13,7 @@ export async function deleteHistoryItem(id) {
     await axios.delete(`${API_URL}/${id}`);
 }
 
-// Reutilizamos el API_URL de arriba, sin volver a declararlo
+
 export const updateHistoryName = async (id, updatedData) => {
   const response = await axios.patch(`${API_URL}/${id}`, updatedData);
   return response.data;

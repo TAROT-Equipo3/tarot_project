@@ -6,7 +6,7 @@ const STEPS = [
   { label: "SELECCIONA TU FUTURO" },
 ];
 
-// ✅ onStartReading viene de Home
+
 const ModalSelectionProgress = ({ currentSelection, onStartReading }) => {
   const isComplete = currentSelection >= 3;
   const stepLabel = STEPS[currentSelection]?.label ?? "CARTAS SELECCIONADAS";

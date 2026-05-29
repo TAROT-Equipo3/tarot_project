@@ -51,7 +51,7 @@ export default function TarotDeck({ userName, selectedCardIds, onCardClick, deck
     });
 
   return (
-    <div className="w-full flex flex-col items-center justify-center font-syne pb-12 ">
+    <div className="w-full flex flex-col items-center justify-center font-syne pb-4 ">
       {/* Mobile */}
       <div
         ref={scrollRef}
@@ -80,10 +80,10 @@ export default function TarotDeck({ userName, selectedCardIds, onCardClick, deck
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:flex w-full overflow-x-auto justify-center">
+      <div className="hidden md:flex w-full overflow-x-auto overflow-y-hidden justify-center">
         <div
-          className="relative"
-          style={{ width: "700px", height: "440px", flexShrink: 0 }}
+          className="relative md:scale-125 lg:scale-[1.3] origin-top "
+          style={{ width: "700px", height: "480px", flexShrink: 0 }}
         >
           {renderCards(null)}
         </div>

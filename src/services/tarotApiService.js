@@ -1,4 +1,3 @@
-// src/services/tarotApiService.js
 import axios from 'axios';
 
 const API_URL = 'https://6872278c76a5723aacd3cbb3.mockapi.io/api/v1/tarot';

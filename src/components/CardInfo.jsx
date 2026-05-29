@@ -1,34 +1,34 @@
-// src/components/CardInfo.jsx
+import React from "react";
 import PropTypes from "prop-types";
 
 const CardInfo = ({ 
   cardNumber, 
   meaning, 
   stemName, 
-  stemLocation, 
+  stemLocation, // Mantenida aunque no se renderiza en el JSX original
   stemImage, 
   stemBio 
 }) => {
   return (
-    <div className="w-full max-w-lg mx-auto font-mono mt-8 mb-8 px-4 md:px-0 text-justify md:text-left">
+    <div className="w-full max-w-lg mx-auto px-4 md:px-0 mt-8 mb-8 font-mono text-justify md:text-left">
       
       {/* SECCIÓN DEL ARCANO */}
-      <div className="mb-10">
-        <h3 className="text-accent font-bold text-[12px] uppercase mb-4 tracking-widest">
+      <section className="mb-10">
+        <h3 className="text-accent text-[12px] font-bold uppercase tracking-widest mb-4">
           Nº ARCANO: {cardNumber}
         </h3>
         <p className="text-white text-[11px] md:text-[13px] leading-loose">
           {meaning}
         </p>
-      </div>
+      </section>
 
       {/* SECCIÓN DE LA MUJER STEM */}
-      <div className="pt-10">
-        <h3 className="text-accent font-bold text-[12px] uppercase mb-6 tracking-widest text-center md:text-center">
+      <section className="pt-10 border-t border-white/10">
+        <h3 className="text-accent text-[12px] font-bold uppercase tracking-widest mb-6 text-center">
           MUJER STEM: {stemName}
         </h3>
 
-        <div className="flex justify-center md:justify-center mb-8">
+        <div className="flex justify-center mb-8">
           <img
             src={stemImage}
             alt={`Retrato de ${stemName}`}
@@ -39,7 +39,7 @@ const CardInfo = ({
         <p className="text-white text-[11px] md:text-[13px] leading-loose">
           {stemBio}
         </p>
-      </div>
+      </section>
       
     </div>
   );

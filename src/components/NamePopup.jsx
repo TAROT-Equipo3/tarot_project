@@ -15,36 +15,29 @@ const NamePopup = ({ onSubmitName }) => {
   };
 
   return (
-    <div className="p-8 max-w-sm w-full mx-4 text-center rounded-xl bg-pink-100 border-solid shadow-[4px_4px_0px_0px_rgba(108,94,6,1.00)] outline outline-2 outline-offset-[-2px] outline-goldDark gap-3 flex flex-col">
+    <div className="flex flex-col gap-3 p-8 max-w-sm w-full mx-4 text-center rounded-xl bg-pink-100 border-solid shadow-[4px_4px_0px_0px_rgba(108,94,6,1.00)] outline outline-2 outline-offset-[-2px] outline-goldDark">
       <h2 className="text-center justify-center text-goldDark text-xs font-bold font-mono leading-3 tracking-wider">
         ¿QUIÉN ME PREGUNTA?
       </h2>
 
       <form onSubmit={handleSubmit} className="flex justify-center gap-4">
-        {/* Wrapper relativo para anclar el tooltip */}
         <div className="relative w-full">
           <input
             type="text"
             value={localName}
             onChange={(e) => {
               setLocalName(e.target.value);
-              if (error) setError(""); // limpia el error al escribir
+              if (error) setError("");
             }}
             placeholder="PON TU FIRMA CÓSMICA"
-            className="w-full text-center justify-center text-goldDark text-xs font-bold font-mono tracking-wider px-10 py-4 rounded-full outline outline-1 outline-offset-[-1px] outline-goldDark inline-flex flex-col items-center bg-pink-100 placeholder-yellow-800/40"
+            className="w-full inline-flex flex-col items-center justify-center text-center bg-pink-100 text-goldDark text-xs font-bold font-mono tracking-wider px-10 py-4 rounded-full outline outline-1 outline-offset-[-1px] outline-goldDark placeholder-yellow-800/40"
           />
 
           {error && (
-            <span className="absolute -bottom-11 left-1/2 -translate-x-1/2
-                             bg-primary text-accent text-xs font-mono font-bold
-                             p-3 rounded-lg whitespace-nowrap z-10
-                             outline outline-1 outline-goldDark
-                             shadow-[0_0_8px_rgba(0, 0, 0, 0.4)]
-                             pointer-events-none">
+            <span className="absolute -bottom-11 left-1/2 -translate-x-1/2 bg-primary text-accent text-xs font-mono font-bold p-3 rounded-lg whitespace-nowrap z-10 outline outline-1 outline-goldDark shadow-[0_0_8px_rgba(0,0,0,0.4)] pointer-events-none">
               {error}
-              {/* Flechita hacia arriba */}
-              <span className="absolute bottom-full left-1/2 -translate-x-1/2
-                               border-8 border-transparent border-b-primary" />
+              {/* Flecha del tooltip */}
+              <span className="absolute bottom-full left-1/2 -translate-x-1/2 border-8 border-transparent border-b-primary" />
             </span>
           )}
         </div>

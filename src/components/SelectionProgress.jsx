@@ -15,7 +15,6 @@ const SelectionProgress = ({
   userName,
   cards,
   onSaveReading,
-  onRestart,
 }) => {
   const idPasado = cards[0]?.id || "0";
   const idPresente = cards[1]?.id || "0";
@@ -108,8 +107,7 @@ const SelectionProgress = ({
           })}
         </div>
 
-        {/* 4. Contenedor para el botón y el mensaje de éxito */}
-        <div className="flex flex-row items-center gap-4">
+        <div className="flex flex-col items-center gap-4">
           <Button
             variant="outline"
             size="lg"
@@ -119,13 +117,9 @@ const SelectionProgress = ({
           >
             GUARDAR TIRADA
           </Button>
-          <Button variant="outline" size="lg" onClick={onRestart}>
-            REINICIAR TIRADA
-          </Button>
 
-          {/* 5. Renderizado condicional del mensaje */}
           {isSaved && (
-            <span className="text-white font-mono text-xs md:text-sm tracking-wider text-center animate-pulse">
+            <span className="text-white font-mono text-xs md:text-sm tracking-wider text-center animate-pulse mt-2">
               ✨ Tirada guardada, consúltala en el historial ✨
             </span>
           )}
